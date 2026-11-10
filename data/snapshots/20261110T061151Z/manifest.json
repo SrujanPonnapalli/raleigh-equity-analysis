@@ -1,0 +1,66 @@
+{
+  "retrieved_at_utc": "2026-11-10T06:11:51.225411+00:00",
+  "completed_at_utc": "2026-11-10T06:12:46.295244+00:00",
+  "requests_source": "https://services.arcgis.com/v400IkDOw1ad7Yad/arcgis/rest/services/Ask_Raleigh_Requests/FeatureServer/0",
+  "requests_item": "https://www.arcgis.com/sharing/rest/content/items/9ce6bd1524bc445d9fe7c852ee73b4fb",
+  "income_source": "https://www2.census.gov/programs-surveys/acs/summary_file/2024/table-based-SF/data/5YRData/acsdt5y2024-b19013.dat",
+  "income_period": "2020-2024",
+  "income_dollar_year": 2024,
+  "income_moe_confidence_percent": 90,
+  "analysis_zips": [
+    "27601",
+    "27603",
+    "27604",
+    "27605",
+    "27606",
+    "27607",
+    "27608",
+    "27609",
+    "27610",
+    "27612",
+    "27613",
+    "27614",
+    "27615",
+    "27616",
+    "27617"
+  ],
+  "requests_count": 18526,
+  "submitted_min_utc": "2025-04-03T19:20:35+00:00",
+  "submitted_max_utc": "2026-11-09T11:10:49+00:00",
+  "status_counts": {
+    "Closed": 15517,
+    "New": 1607,
+    "Work in Progress": 1062,
+    "Open": 136,
+    "Awaiting Info": 56,
+    "Cancelled": 12,
+    "Work Assignment in Progress": 22,
+    "Resolved": 109,
+    "Inspection in progress": 5
+  },
+  "missing_resolution_hours": 2900,
+  "negative_resolution_hours": 0,
+  "missing_coordinates": 2799,
+  "requests_outside_analysis_zip_scope": 2594,
+  "request_zips_without_census_match": [
+    "27602",
+    "27611",
+    "27619",
+    "27620",
+    "27626"
+  ],
+  "source_editing_info": {
+    "lastEditDate": 1794291005884,
+    "schemaLastEditDate": 1794291005884,
+    "dataLastEditDate": 1794290891548
+  },
+  "files_sha256": {
+    "Ask_Raleigh_Requests.csv": "7725d7f5288e2c915c39a8edffb34050759e3f10982c4165d851892483a033f7",
+    "requests_raw.json": "4601bae844a6430274a49bf3175bb9852947f649138a5000aac9a04a02c4d31c",
+    "acsdt5y2024-b19013.dat": "b25a176b0e6c339b6f3a2a0d3d8446bf06f5f080b4395993ec9a8313efb1c229",
+    "raleigh_income.csv": "ab0b5c0e3c2d70e9c2ccde3440a4321efd43b430c6c109d81ad8f37bcf930e9d",
+    "income_all_request_zctas.csv": "8e26fd843a6c09ae4aa0fffa30bfc9f9950c2e5bd28fea47dc1e6a2b417ee660",
+    "arcgis_layer.json": "3f71b7c11c1716ffc7fb17809accd93e978f2408de9da717fb8f7825c4dd1830",
+    "arcgis_item.json": "9d53bb2e796276bab65ffc8476c27d315ac66dd76fb56e49942942ab46cf5e94"
+  }
+}

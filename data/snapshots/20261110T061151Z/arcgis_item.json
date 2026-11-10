@@ -1,0 +1,173 @@
+{
+  "id": "9ce6bd1524bc445d9fe7c852ee73b4fb",
+  "owner": "RaleighGIS",
+  "ownerId": "b1f52820f465a04e2281241b8e2bb5d7",
+  "orgId": "v400IkDOw1ad7Yad",
+  "created": 1756141269000,
+  "modified": 1761837661000,
+  "guid": null,
+  "name": "Ask_Raleigh_Requests",
+  "title": "Ask Raleigh Requests",
+  "type": "Feature Service",
+  "typeKeywords": [
+    "ArcGIS API for JavaScript",
+    "ArcGIS Server",
+    "Data",
+    "Feature Access",
+    "Feature Service",
+    "Metadata",
+    "Service",
+    "Singlelayer",
+    "Hosted Service",
+    "View Service"
+  ],
+  "description": "<p>Dataset is updated twice a day and includes the location of the request, status and when it was submitted and resolved.</p><p>Requests can be submitted for the following categories:</p><ul><li><strong>Buses</strong><ul><li><strong>Bus Stop Service</strong> - Help keep our transit stops clean, safe, and accessible. Let us know if you need service at a local bus stop.</li><li><strong>Request Bus Stop Enhancement</strong> - Request something new at a bus stop. Let us know if we can add something to a bus stop, like a bench or new signs.</li></ul></li><li><strong>Customer Experience</strong><ul><li><strong>Request not found</strong> - Submit issues or requests services not listed in other categories. If you\u2019ve looked on our website but couldn\u2019t find the answer to your question or the contact information you need, please let us know.</li></ul></li><li><strong>Dead Animals</strong><ul><li><strong>Dead Animal Removal</strong> - Report dead animals in public spaces. We will collect a dead animal placed curbside at a residence, in the public right of way, or on a city street.</li></ul></li><li><strong>Housing &amp; Neighborhoods</strong><ul><li><strong>Public Nuisance</strong> - Issues that impact the safety and cleanliness of our neighborhoods.</li><li><strong>Unsafe or Unit Housing Conditions</strong> - Concerns about safe and livable housing Let us know if your residence may not meet the minimum standards required by Raleigh Housing Code for safe and livable housing.</li></ul></li><li><strong>Neighborhood &amp; Environment</strong><ul><li><strong>Graffiti</strong> -<strong> </strong>Help us maintain a clean community. Tell us about graffiti in a public space.</li><li><strong>Vehicles(s): Abandoned, Parked in Yard</strong> - Report vehicles that are a problem or out of place. An abandoned vehicle is usually found on a public road, highway, or in a city parking lot. They may not always have a license plate. A vehicle left in the front yard of a residence might break city rules. Let us know and we\u2019ll check it out.</li></ul></li><li><strong>Parks &amp; Recreation</strong><ul><li><strong>Park and Greenway Service</strong> - Help keep our outdoor spaces clean and enjoyable. Let us know you need service at a park, greenway or other recreational areas.</li><li><strong>Playgrounds</strong> - Help maintain City playgrounds. Let us know you need service for a playground.</li><li><strong>Tree Service</strong> - Help ensure tree safety and maintain healthy green spaces. Let us know you need tree service for a park, greenway, or City property. We typically handle trees on City property, so if we can't provide the service, we'll let you know.</li></ul></li><li><strong>Permits &amp; Planning</strong><ul><li><strong>Development Process </strong>- Ask us about the development process, including entitlement and plan review.</li><li><strong>Permit Portal</strong> - Report issues or get help for the Permit Portal.</li><li><strong>Permits &amp; Inspections</strong> - Ask a question about getting a permit.</li><li><strong>Zoning</strong> - Ask questions related to Zoning, including regulations, verifications, and enforcement.</li></ul></li><li><strong>Stormwater &amp; Water</strong><ul><li><strong>Flooding, Drainage, or Runoff</strong> - Address water management concerns in your area. Let us know if you notice notice flooding or drainage issues.</li><li><strong>Waterway Spills &amp; Pollution </strong>- Help protect our environment and water quality. Tell us about a spill or pollution that impacts a waterway in Raleigh. This includes a creek, stream, dam, river, etc.</li></ul></li><li><strong>Transportation &amp; Mobility</strong><ul><li><strong>Bike &amp; Scooters</strong> - Report scooter or bike share issues. Notify the City of Raleigh when a scooter or bikeshare is blocking a sidewalk.</li><li><strong>Downtown Services</strong> - If you find something in downtown Raleigh that needs to be addressed, please let us know.</li><li><strong>Potholes &amp; Sinkholes</strong> - Large holes in the road or ground. Tell us about a pothole or sinkhole so we can repair them and keep our roads safe.</li><li><strong>Sidewalk Issues</strong> - Help maintain safe and accessible pathways. Tell us about a safety issue with a sidewalk. This can include items like broken curbs, cracks and items blocking the path.</li><li><strong>Signs and Signals</strong> - Report issues with traffic signs, lights, or signals. Tell us about an issue with a sign, signal, or light. This could be for a broken traffic signal, streetlight, or a knocked down sign. This helps ensure safe and efficient travel for everyone on the road.</li><li><strong>Something in My Way</strong> - Issues with street view or blocked paths. Tell us about issues with streets or sidewalks caused by overgrown plants or landscaping. This includes bushes blocking visibility, overgrowth on sidewalks, or fences, signs and trees creating problems.</li><li><strong>Street Service</strong> - Help keep roads safe and repaired. Let us know if you see a problem on a street. This includes debris, faded crosswalks, or other marking issues. For pavement issues, see the Pothole/Sinkhole service request.</li><li><strong>Transportation Improvement Request</strong> - Request an improvement with any aspect of the transportation system. Request new infrastructure, such as a new traffic signal, or an improvement to existing infrastructure, like a flashing beacon at an existing crosswalk.</li></ul></li></ul><p>&nbsp;</p>",
+  "tags": [
+    "Service Requests",
+    "Customer Service",
+    "government"
+  ],
+  "snippet": "The Ask Raleigh dataset captures citizen-initiated service requests, reports, and inquiries submitted through the City of Raleigh\u2019s Ask Raleigh portal, the City\u2019s centralized Customer Experience Center for requesting services and reporting issues such as potholes, dead animals, sidewalk problems, trees, signs and signals, and other neighborhood or city service requests.",
+  "thumbnail": "thumbnail/thumbnail.JPEG",
+  "documentation": null,
+  "extent": [
+    [
+      -78.99509099985563,
+      35.51940899993487
+    ],
+    [
+      -78.25347799985742,
+      36.077104999934015
+    ]
+  ],
+  "categories": [],
+  "spatialReference": "4326",
+  "accessInformation": "",
+  "classification": null,
+  "licenseInfo": "<p><strong>Open Raleigh Data Policy</strong></p><p>By using data made available through this site, the user agrees to all the conditions stated in the following paragraphs as well as the terms and conditions described under the City of Raleigh Open Data Privacy Policy. THE CITY OF RALEIGH MAKES NO REPRESENTATIONS OR WARRANTY AS TO THE COMPLETENESS, ACCURACY, TIMELINESS, OR CONTENT OF ANY DATA MADE AVAILABLE THROUGH THIS SITE. THE CITY OF RALEIGH EXPRESSLY DISCLAIMS ALL WARRANTIES, WHETHER EXPRESS OR IMPLIED, INCLUDING ANY IMPLIED WARRANTIES OF MERCHANTABILITY, OR FITNESS FOR A PARTICULAR PURPOSE. While the City will take care to refrain from changes to the data format or schemas, there may be an occasional need to change the data format or schema as the data is modified and/or updates or addendums to the data are completed. It is understood that the information contained in the site is being used at one's own risk.</p><p><strong>Right to Modify and/or Discontinue Feeds</strong></p><p>The City of Raleigh reserves the right to modify and/or discontinue providing any or all of the data feeds at any time and to require the termination of any and all displaying, distributing or otherwise using any or all of the data for any reason including, without limitation, violation of any provision of these Terms of Use.</p><p><strong>Terms of Use and Moderation Disclaimer</strong></p><p>Communications made through data.raleighnc.gov will in no way constitute a legal or official notice to the City of Raleigh or its departments or any official or employee of the City of Raleigh for any purpose. Use of the data.raleighnc.gov website constitutes acceptance of this policy. Any information posted here may be considered a public record and may be subject to disclosure to third parties. The City reserves the right to amend these terms of service at any time and without further notice.</p>",
+  "culture": "en-us",
+  "properties": {
+    "location": {
+      "type": "org",
+      "extent": [
+        [
+          -78.99509099985563,
+          35.51940899993487
+        ],
+        [
+          -78.25347799985742,
+          36.077104999934015
+        ]
+      ],
+      "spatialReference": {
+        "wkid": 4326
+      },
+      "geometries": [
+        {
+          "spatialReference": {
+            "wkid": 4326
+          },
+          "rings": [
+            [
+              [
+                -78.99509099985563,
+                35.51940899993487
+              ],
+              [
+                -78.99509099985563,
+                36.077104999934015
+              ],
+              [
+                -78.25347799985742,
+                36.077104999934015
+              ],
+              [
+                -78.25347799985742,
+                35.51940899993487
+              ],
+              [
+                -78.99509099985563,
+                35.51940899993487
+              ]
+            ]
+          ],
+          "type": "polygon"
+        }
+      ]
+    },
+    "view": {
+      "mapSettings": {
+        "featureLayerStyle": "item"
+      }
+    },
+    "downloads": {
+      "flowType": "createReplica",
+      "formats": [
+        {
+          "key": "csv",
+          "hidden": false
+        },
+        {
+          "key": "shapefile",
+          "hidden": false
+        },
+        {
+          "key": "geojson",
+          "hidden": false
+        },
+        {
+          "key": "kml",
+          "hidden": false
+        },
+        {
+          "key": "filegdb",
+          "hidden": false
+        },
+        {
+          "key": "featureCollection",
+          "hidden": false
+        },
+        {
+          "key": "excel",
+          "hidden": false
+        },
+        {
+          "key": "geoPackage",
+          "hidden": false
+        },
+        {
+          "key": "sqlite",
+          "hidden": false
+        },
+        {
+          "key": "additionalResource::0",
+          "hidden": false
+        }
+      ]
+    }
+  },
+  "advancedSettings": null,
+  "url": "https://services.arcgis.com/v400IkDOw1ad7Yad/arcgis/rest/services/Ask_Raleigh_Requests/FeatureServer",
+  "proxyFilter": null,
+  "access": "public",
+  "size": 0,
+  "subInfo": 0,
+  "appCategories": [],
+  "industries": [],
+  "languages": [],
+  "largeThumbnail": null,
+  "banner": null,
+  "screenshots": [],
+  "listed": false,
+  "commentsEnabled": false,
+  "numComments": 0,
+  "numRatings": 0,
+  "avgRating": 0,
+  "numViews": 81843,
+  "contentStatus": "public_authoritative",
+  "scoreCompleteness": 100,
+  "groupDesignations": null,
+  "apiToken1ExpirationDate": -1,
+  "apiToken2ExpirationDate": -1,
+  "lastViewed": 1794290400000
+}
