@@ -156,3 +156,38 @@ Regression tests: `python3 -m unittest -v`. The tests cover eligibility,
 duplicate identities and joins, invalid durations, disjoint income groups,
 fixed-window boundaries, unresolved denominators, one-sided strata, and an
 artificial task-mix gap that should disappear after standardization.
+
+## Stopping policy for the parks follow-up
+
+This is an exploratory decision policy adopted after seeing the initial results,
+not a preregistered hypothesis test or a statistical significance threshold.
+Do not keep changing outcomes or geography until a desired story appears.
+
+1. **Income headline:** do not claim an established income disparity if the
+   adjusted 90-day result changes sign when any one ZIP is omitted. The current
+   six-ZIP comparison already fails this gate.
+2. **Local investigation flag:** screen all 15 ZIPs in the original income scope,
+   without selecting locations for their income or observed outcome. Compare each
+   with the other 14 analysis ZIPs, within the same recorded task and submission
+   month. Use July–December 2025 and January–April 2026 separately; both periods
+   are mature for 180 days at the saved snapshot. Require at least 30 submissions
+   in each period and comparable coverage for at least 80% of the focal ZIP's
+   submissions in each period. A comparison stratum needs at least one focal
+   request and five reference requests. Flag only a shortfall of at least
+   10 percentage points in **both periods at both 90 and 180 days**. These are
+   pragmatic screening thresholds for investigation, not evidence of a causal
+   ZIP or income effect. Failure means no flag under this policy, not proof of
+   equal outcomes. No additional location search is planned if no ZIP qualifies.
+3. **Physical work:** describe the outcome as recorded resolution unless official
+   documentation explicitly links the field to completed physical work for the
+   service in question. Request-specific work orders, referrals, reopenings, and
+   status-update practices are not recoverable from this snapshot. If the link
+   remains unverified, stop short of claiming residents' underlying problems
+   were repaired or left unrepaired.
+
+The local screen uses the same submitted-request denominators for 90 and 180 days,
+retains unfinished requests, and requires no coordinates. Common-support rates
+use the same pooled task/month weights for focal and reference requests, as in
+the income comparison. The two periods have different lengths; each ZIP is
+compared with the reference within that period, not against a raw rate from the
+other period. The thresholds and scope are fixed before running this new screen.
