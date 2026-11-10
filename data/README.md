@@ -56,6 +56,10 @@ these are not automatically included in analysis. ZIP-to-ZCTA matching needs
 review before making geographic claims. The existing third-party boundary file
 was not refreshed and has no verified vintage; it remains a separate review item.
 
-Saved charts and HTML maps predate this refresh and must not be presented as
-results for the new snapshot. Re-running old code successfully would demonstrate
-compatibility, not validate its statistical conclusions.
+The main pipeline was rerun on November 10, 2026 using this snapshot, regenerating
+`output/equity_scatter.png`, `output/service_disparity.png`, and
+`output/raleigh_equity_map.html`. It included 12,871 income-matched requests across
+15 ZIPs under the existing exclusions. The map displays a sample of 2,500 markers
+from 12,709 requests with coordinates, resolution times, and service categories.
+The EDA and presentation outputs have not been regenerated. Successful execution
+demonstrates compatibility, not validation of the statistical conclusions.

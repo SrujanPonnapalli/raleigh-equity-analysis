@@ -106,7 +106,7 @@ def build_equity_map(
     equity_map = folium.Map(
         location=[center_lat, center_lon],
         zoom_start=DEFAULT_ZOOM,
-        tiles="CartoDB positron",
+        tiles="OpenStreetMap",
         control_scale=True,
     )
 
