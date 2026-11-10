@@ -216,8 +216,9 @@ validation before making claims about complete city coverage.
 
 The branch `explore/wake-equity-atlas-pilot` now links request locations to the
 county-published [2020 to 2024 Community Vulnerability Index](https://www.arcgis.com/home/item.html?id=eb973c734de14652bcadd9af211c751d).
-This pilot examines geography, index definitions, and sample sizes. **No Atlas
-resolution-outcome comparison has been run.**
+The initial pilot examined geography, index definitions, and sample sizes without
+resolution outcomes. A separate comparison then followed a specification fixed
+before calculating Atlas outcome differences.
 
 The join provides usable neighborhood context for **761 of 773 parks requests
 (98.4%)** in the original local-screen cohort. Eleven requests lack coordinates,
@@ -233,10 +234,15 @@ and an explicit decision about city/service boundaries. The county Atlas alone
 does not establish Raleigh jurisdiction.
 
 The [pilot specification and results](docs/atlas-pilot.md) explain the source
-lineage, coverage, common-task sample sizes, and remaining limits. The existing
-27610 finding is unchanged. The Atlas may reveal patterns hidden by ZIP averages
-or weaken the existing pattern; it cannot establish what a resolved ticket means
-or identify everyone who benefits from work at a park.
+lineage, coverage, common-task sample sizes, and remaining limits. In the
+[subsequent outcome comparison](docs/atlas-outcome-results.md), higher-vulnerability
+areas had a 4.3-percentage-point lower adjusted 90-day resolution rate. The
+direction reversed in the later period and in the poverty-rate sensitivity, so
+the analysis did not meet its rule for an additional follow-up lead. We stopped
+at the specified comparison.
+
+The existing 27610 finding is unchanged. The Atlas cannot establish what a
+resolved ticket means or identify everyone who benefits from work at a park.
 
 ## Reproduce the analysis
 
@@ -257,10 +263,12 @@ calculations also reproduced the adjusted income comparison and all four
 flagged local comparisons. The original income-comparison CSV and JSON outputs
 were unchanged when the local screen was added.
 
-The exploratory Atlas pilot adds five spatial tests. Install
-`requirements-atlas.txt` to run the full 20-test suite and `python atlas_pilot.py`
-against the saved county snapshot. See the [pilot reproduction instructions](docs/atlas-pilot.md#reproduce)
-for downloading or verifying a new county snapshot.
+The exploratory Atlas work adds five spatial tests and two outcome-comparison
+tests. Install `requirements-atlas.txt` for the full 22-test suite. Run
+`python atlas_pilot.py` for the geographic checks and `python atlas_outcomes.py`
+for the specified outcome comparison. See the
+[pilot reproduction instructions](docs/atlas-pilot.md#reproduce) for downloading
+or verifying a new county snapshot.
 
 To fetch new source snapshots, run `python refresh_data.py`. Refreshing changes
 the active inputs; rerun the analyses and review the conclusions before reusing

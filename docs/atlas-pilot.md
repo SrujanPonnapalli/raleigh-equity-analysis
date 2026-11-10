@@ -152,30 +152,31 @@ metadata. The server supplied polygons in WGS84 for the join; the native layer
 uses a projected coordinate system. Source snapshots and query parameters are
 preserved so these distinctions can be inspected.
 
-## Decision and remaining work
+## Decision and handoff
 
 Proceed to a separately specified **pooled** vulnerability comparison, with
 explicit geographic scope and an index sensitivity check. Do not run separate
 tests for each block group, interpret request counts as unmet need, or treat
 this feasibility result as evidence of a service disparity.
 
-Before the outcome stage:
+The subsequent [outcome specification](atlas-outcome-plan.md) kept the original
+15-ZIP population and fixed the comparison and sensitivity checks before reading
+resolution differences. The [outcome results](atlas-outcome-results.md) are now
+available separately. These limits from the pilot continue to apply:
 
-1. Fix whether the population stays within the original 15-ZIP parks scope or
-   expands to geocoded requests within Raleigh's city/service jurisdiction.
-   The latter requires a verified boundary and an explicit policy for Raleigh
+1. Expanding beyond the original scope to geocoded requests within Raleigh's
+   city/service jurisdiction requires a verified boundary and a policy for Raleigh
    locations outside Wake County. Current boundaries may differ from those at
    the time of a request.
-2. Specify the primary published vulnerability grouping and a poverty-rate
-   sensitivity, the fixed-follow-up endpoint, adjustment weights, comparable
-   coverage requirements, and treatment of within-area dependence. Freeze these
-   choices before examining resolution differences.
+2. The published index has undocumented rank-tie handling and no supplied margins
+   of error. The subsequent analysis includes the planned poverty-rate check;
+   within-area and spatial dependence still limit statistical interpretation.
 3. Carry forward the uncertainty about whether a resolved ticket represents
    completed work. That issue is unchanged by the Atlas join.
 
-The original 27610 results and all saved request inputs are unchanged. This
-branch contains no Atlas outcome comparisons, significance tests, or newly
-selected disparity headline.
+The original 27610 results and all saved request inputs are unchanged. The
+feasibility outputs contain no resolution outcomes. Subsequent outcome results
+are stored separately and do not produce an additional follow-up lead.
 
 ## Reproduce
 
@@ -198,4 +199,5 @@ coverage by ZIP/month/service, band and area counts, common-support counts,
 source-index audits, and the sampled server verification. The five spatial
 regression tests cover holes, multipart polygons, ambiguous boundaries,
 overlaps, missing and invalid coordinates, duplicate geography keys, and legend
-cutoffs. The complete optional-environment suite has 20 tests.
+cutoffs. The feasibility stage passed 20 tests; the separate outcome stage adds
+two more tests.
