@@ -191,3 +191,60 @@ use the same pooled task/month weights for focal and reference requests, as in
 the income comparison. The two periods have different lengths; each ZIP is
 compared with the reference within that period, not against a raw rate from the
 other period. The thresholds and scope are fixed before running this new screen.
+
+Run `python3 stopping_check.py` to reproduce the screen. The policy was committed
+as `196fb9e` before the first run. Detailed rates and coverage for **every** ZIP
+and period/window are in `output/stopping_check/zip_period_windows.csv`; decisions
+and provenance are saved alongside it. Nothing is selected for display merely
+because its income association looks favorable.
+
+### Stopping-check results, November 10, 2026 snapshot
+
+One ZIP meets the fixed local investigation gate: **27610**. ZIPs 27604 and 27607
+have sufficient data but do not meet the persistent-shortfall criterion. The
+other 12 ZIPs have insufficient comparable data under the policy; they are not
+classified as equitable or as having no backlog.
+
+| Submission period | Focal / comparable requests | 90-day adjusted gap | 180-day adjusted gap |
+| --- | ---: | ---: | ---: |
+| July–December 2025 | 59 / 50 | -11.3 pp | -10.9 pp |
+| January–April 2026 | 40 / 33 | -12.3 pp | -15.9 pp |
+
+Gaps are recorded-resolution rates in 27610 minus rates in the other 14 analysis
+ZIPs, after using common task/month weights. Comparable coverage is 84.7% and
+82.5%. Rates apply to the supported task/month subsets, not every parks request.
+The two follow-up windows reuse the same requests; they are not independent
+replications. Screening 15 locations with pragmatic thresholds does not supply
+a calibrated significance test or establish that income caused the difference.
+
+Across the 99 focal requests, 46 still have status `New` and no recorded resolution
+at the snapshot: 26 Tree Service, 15 Park and Greenway Service, and 5 Playgrounds.
+The 99 requests have 84 distinct nonempty address strings; separate requests
+cannot be assumed to represent separate underlying problems. Four lack
+coordinates and are retained. These counts describe public records, not verified
+unperformed work. Sparse/unmatched task/months, including small playground
+samples, are not silently extrapolated into the adjusted comparison.
+
+### Outcome-definition gate
+
+The saved official layer describes `RESOLVED_AT` only as when the request was
+resolved, and `RESOLVED_HOURS` as the number of hours to resolution. It does not
+define physical completion; the description of `CLOSED_AT` is blank. The official
+[dataset metadata](https://www.arcgis.com/sharing/rest/content/items/9ce6bd1524bc445d9fe7c852ee73b4fb/info/metadata/metadata.xml?format=default&output=html)
+describes service-request tracking but does not establish a request-to-work-order
+completion mapping. The
+[city's portal launch announcement](https://raleighnc.gov/government/news/ask-raleigh-launches-july-1)
+describes tracking request progress, not a field-level completion definition.
+The public portal returned only a loading page to the reader used here; two potentially relevant
+council documents could not be retrieved in this review. These are limits of the
+review, not evidence that a definition does not exist.
+
+**Physical completion remains unverified.** Stop short of a claim about completed
+repairs, unmet physical service, or discriminatory treatment. The surviving
+finding is a persistent **recorded-resolution shortfall in 27610 under this
+screen**, warranting a targeted records/process review. No further search for
+an income headline is planned from this snapshot. To advance the physical-work
+claim, ask the city whether resolution means work completed, referral/transfer,
+out-of-scope disposition, or ticket closure; whether timestamps survive
+reopenings; and whether linked work orders validate both resolved and long-open
+requests. No contact or data request was sent as part of this analysis.

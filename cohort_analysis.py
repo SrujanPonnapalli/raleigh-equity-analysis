@@ -20,7 +20,7 @@ ROOT = Path(__file__).resolve().parent
 LOCAL_TIME = "America/New_York"
 
 
-def prepare_cohort(requests, income, as_of, start, end, horizon=90):
+def prepare_cohort(requests, income, as_of, start, end, horizon=90, include_middle=False):
     """Use all submissions in [start, end), with complete follow-up for everyone.
 
     A request succeeds only if Resolved At is within horizon calendar days of
@@ -41,9 +41,12 @@ def prepare_cohort(requests, income, as_of, start, end, horizon=90):
     if (resolved.notna() & (resolved.lt(submitted) | resolved.gt(as_of))).any():
         raise ValueError("Resolution timestamp outside submission-to-snapshot interval.")
     higher, lower = wealth_segments(income)
-    mask = submitted.ge(start) & submitted.lt(end) & requests["zip_code"].isin(higher | lower)
+    scope = set(income["zip_code"]) if include_middle else higher | lower
+    mask = submitted.ge(start) & submitted.lt(end) & requests["zip_code"].isin(scope)
     cohort = requests.loc[mask].copy()
-    cohort["income_group"] = np.where(cohort["zip_code"].isin(lower), "Lower", "Higher")
+    cohort["income_group"] = np.select(
+        [cohort["zip_code"].isin(lower), cohort["zip_code"].isin(higher)], ["Lower", "Higher"], default="Middle"
+    )
     cohort["submission_month"] = submitted[mask].dt.tz_convert(LOCAL_TIME).dt.strftime("%Y-%m")
     cohort["task"] = cohort["service"].fillna("<missing service>") + " / " + cohort["request_type"].fillna("<unspecified type>")
     elapsed = (resolved[mask] - submitted[mask]).dt.total_seconds() / 86400
@@ -119,10 +122,8 @@ def plot_comparison(result, output_path):
     plt.close(fig)
 
 
-def main():
-    parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--output-dir", type=Path, default=ROOT / "output" / "cohorts")
-    args = parser.parse_args()
+def load_snapshot():
+    """Require active inputs to match the same saved source snapshot."""
     snapshot = ROOT / (ROOT / "data/latest_snapshot.txt").read_text().strip()
     manifest = json.loads((snapshot / "manifest.json").read_text())
     for name in ["Ask_Raleigh_Requests.csv", "raleigh_income.csv"]:
@@ -131,6 +132,14 @@ def main():
     requests = load_requests(ROOT / "Ask_Raleigh_Requests.csv")
     income = load_income(ROOT / "raleigh_income.csv")
     as_of = min(pd.Timestamp(manifest["retrieved_at_utc"]), pd.to_datetime(manifest["source_editing_info"]["dataLastEditDate"], unit="ms", utc=True))
+    return requests, income, as_of, snapshot
+
+
+def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--output-dir", type=Path, default=ROOT / "output" / "cohorts")
+    args = parser.parse_args()
+    requests, income, as_of, snapshot = load_snapshot()
     # Complete local months after the public portal launch, mature for 90 days.
     start = pd.Timestamp("2025-07-01", tz=LOCAL_TIME)
     maturity = (as_of - pd.Timedelta(days=90)).tz_convert(LOCAL_TIME)
