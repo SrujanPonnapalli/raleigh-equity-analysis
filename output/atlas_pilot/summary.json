@@ -1,0 +1,51 @@
+{
+  "request_snapshot": "data/snapshots/20261110T061151Z",
+  "atlas_snapshot": "data/atlas_pilot/20261110T071740Z",
+  "outcomes_examined": false,
+  "source_polygons": 597,
+  "unique_geoids": 597,
+  "zero_population_polygons": 1,
+  "population_under_100_polygons": 2,
+  "rank_sum_matches_total_calc": 597,
+  "published_score_range": [
+    1.0,
+    597.0
+  ],
+  "source_fields_with_nulls": {},
+  "tied_total_calc_rows_beyond_unique": 100,
+  "score_increases_with_total_calc": true,
+  "all_request_join_status": {
+    "matched": 15670,
+    "missing_coordinates": 2799,
+    "outside_atlas": 57
+  },
+  "all_request_score_status": {
+    "usable": 15669,
+    "not_matched": 2856,
+    "zero_population": 1
+  },
+  "pilot_requests": 773,
+  "pilot_join_status": {
+    "matched": 762,
+    "missing_coordinates": 11
+  },
+  "pilot_score_status": {
+    "usable": 761,
+    "not_matched": 11,
+    "zero_population": 1
+  },
+  "pilot_usable_coverage": 0.9844760672703752,
+  "coverage_gate_passed": true,
+  "pilot_distinct_block_groups": 201,
+  "median_requests_per_block_group": 3.0,
+  "max_requests_per_block_group": 23,
+  "matched_requests_in_population_under_100": 0,
+  "legend_breaks": [
+    119,
+    238,
+    358,
+    477,
+    597
+  ],
+  "scope_limit": "County block groups and request ZIP scope; city limits and historical service jurisdiction have not been established."
+}

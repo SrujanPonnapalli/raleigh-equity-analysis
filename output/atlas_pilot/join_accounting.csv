@@ -1,0 +1,9 @@
+pilot_cohort,join_status,score_status,requests
+False,matched,usable,14711
+False,missing_coordinates,not_matched,2764
+False,outside_atlas,not_matched,57
+True,matched,usable,761
+True,matched,zero_population,1
+True,missing_coordinates,not_matched,11
+,matched,usable,197
+,missing_coordinates,not_matched,24
