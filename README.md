@@ -1,9 +1,10 @@
 # Raleigh service-request equity analysis
 
 Do reported service needs receive different responses across Raleigh neighborhoods,
-and do those differences track neighborhood income?
+and do those differences track neighborhood income or social vulnerability?
 
-This project examines Ask Raleigh service requests alongside Census income data.
+This project examines Ask Raleigh service requests alongside Census income data
+and Wake County's Community Vulnerability Index.
 The findings below use the snapshot downloaded on **November 10, 2026**, with
 submissions through November 9. The analysis is exploratory.
 
@@ -14,10 +15,12 @@ Its recorded resolution rate falls below the comparison ZIPs after accounting fo
 recorded task and submission month. The shortfall persists across two submission
 periods and both 90-day and 180-day follow-up windows.
 
-The broader comparison between lower-income and higher-income ZIPs is less
-stable. We have not established a citywide income disparity, an income effect,
-or discriminatory treatment. We also cannot yet equate a resolved ticket with
-completed physical work.
+Broader comparisons using ZIP-level income and block-group social vulnerability
+do not show a consistent pattern of disadvantage across the checks we specified.
+The Atlas comparison finds a modest pooled shortfall, but its direction changes
+with submission period and socioeconomic measure. The local 27610 concern remains
+the main investigation lead. We have not established an income or vulnerability
+effect, discriminatory treatment, or whether physical work remained unfinished.
 
 ## Data and scope
 
@@ -25,6 +28,7 @@ completed physical work.
 | --- | --- | --- |
 | [Ask Raleigh Requests](https://www.arcgis.com/home/item.html?id=9ce6bd1524bc445d9fe7c852ee73b4fb) | Submission and resolution timestamps, status, service labels, ZIP, and coordinates | 18,526 requests in the saved snapshot |
 | [2020 to 2024 American Community Survey, table B19013](https://www2.census.gov/programs-surveys/acs/summary_file/2024/table-based-SF/data/5YRData/acsdt5y2024-b19013.dat) | Median household income and margins of error | The original 15 ZIP-code matches, using Census ZIP Code Tabulation Areas |
+| [Wake County Community Vulnerability Index, 2020 to 2024](https://www.arcgis.com/home/item.html?id=eb973c734de14652bcadd9af211c751d) | Published area rankings combining five socioeconomic indicators | 597 county block groups; 761 usable parks-request matches in the original scope |
 
 The refreshed request data contain 6,806 more request IDs than the original class
 export; all original IDs remain. The 15 original income estimates match the
@@ -36,6 +40,11 @@ include 13,117 requests matched to the income table. The parks income comparison
 uses 497 submissions in six ZIPs from July 2025 through July 2026. The local parks
 screen uses 773 submissions across all 15 analysis ZIPs from July 2025 through
 April 2026, allowing everyone at least 180 days of follow-up.
+
+The Atlas analysis starts with that same 773-request parks cohort. It retains 761
+usable geographic matches, compares 651 requests in the higher and lower
+vulnerability bands, and uses 630 with comparable task/month coverage for its
+primary adjusted result. The middle band is excluded from that contrast.
 
 These are overlapping populations, not counts to add together. The 15 analysis
 ZIPs do not establish complete coverage of all Raleigh residents or service needs.
@@ -131,7 +140,68 @@ between ZIP income and average recorded resolution time (Pearson r is about
 -0.06). This does not demonstrate equal service: it combines different tasks
 and excludes unfinished requests.
 
-## 3. Recorded resolution needs a clearer operational definition
+## 3. Finer geography does not produce a consistent vulnerability pattern
+
+The completed Atlas extension tests whether ZIP-level income was hiding a clearer
+neighborhood pattern. We first checked the geographic join without examining
+resolution outcomes, then committed a separate outcome specification before
+calculating differences by vulnerability. This remains an exploratory follow-up;
+parks and the request snapshot were already selected in the earlier analysis.
+
+The join provides usable neighborhood context for **761 of 773 parks requests
+(98.4%)**. Eleven requests lack coordinates, and one lies in a zero-population
+area. Those matches span 201 Census block groups, with a median of only three
+requests per group. We pooled areas by the county's published vulnerability
+bands instead of estimating performance separately for each small area.
+
+The primary comparison uses the higher two vulnerability bands against the lower
+two. After matching tasks and submission months and applying the same weights
+to both groups, the 90-day recorded resolution rates are **55.1% in
+higher-vulnerability areas and 59.4% in lower-vulnerability areas**, a shortfall
+of 4.3 percentage points.
+
+| Comparison | 90-day gap | 180-day gap |
+| --- | ---: | ---: |
+| Published index, pooled | -4.3 pp | -5.8 pp |
+| At least five requests per group in each task/month | -3.8 pp | -2.7 pp |
+| July to December 2025 | -7.9 pp | -5.9 pp |
+| January to April 2026 | +1.9 pp | -5.7 pp |
+| Poverty-rate sensitivity | +1.6 pp | +0.6 pp |
+
+Gaps are higher minus lower vulnerability or poverty. Negative values mean lower
+recorded resolution in the higher group. The poverty check defines different
+groups, testing dependence on the socioeconomic measure. Matching and the
+five-per-cell requirement also change the retained population; exact counts
+appear in the chart and detailed results.
+
+![All specified Atlas comparisons, showing the pooled gap and its sensitivity to period and socioeconomic measure](output/atlas_outcomes/comparison.png)
+
+Removing one block group at a time leaves the primary gap negative, from -6.5
+to -3.2 points. No single area reverses the pooled result, but that stability
+does not resolve the reversals across period and measure. The omission range is
+not a confidence interval, and these comparisons do not establish statistical
+significance or a causal vulnerability effect.
+
+The primary gap falls below the specified 10-point threshold for considering an
+additional follow-up lead. The later-period 90-day comparison and the poverty
+sensitivity also fail to retain its direction. We stopped at the specified
+comparison. **The Atlas adds geographic detail and limits how broadly we can
+interpret the local finding; it does not add another actionable location or
+establish a consistent disadvantage by income or vulnerability.**
+
+The index has its own limitations. Equal raw indicator values sometimes receive
+different component ranks, its tie-handling rules are undocumented, and the
+source contains no margins of error. The county Atlas also does not establish
+Raleigh service jurisdiction. Neither its rankings nor a park's location
+identify the individual residents affected by a request.
+
+See the [feasibility findings](docs/atlas-pilot.md),
+[outcome specification](docs/atlas-outcome-plan.md), and
+[complete outcome results](docs/atlas-outcome-results.md) for the source audit,
+sample sizes, and every planned check. The original 27610 investigation flag
+remains unchanged.
+
+## 4. Recorded resolution needs a clearer operational definition
 
 The [official dataset metadata](https://www.arcgis.com/sharing/rest/content/items/9ce6bd1524bc445d9fe7c852ee73b4fb/info/metadata/metadata.xml?format=default&output=html)
 describe request status and resolution dates. The saved field descriptions do
@@ -173,7 +243,8 @@ Several earlier choices could change the interpretation of the results:
 
 - Requests without coordinates were excluded from nonspatial statistics. The
   shared loader now retains them, restoring 246 completed requests to the main
-  income-matched analysis. Coordinates are required only for maps.
+  income-matched analysis. Maps and Atlas linkage require coordinates;
+  nonspatial ZIP comparisons do not.
 - Unfinished requests disappeared from completed-request averages. Those charts
   now state their scope, and the fixed-window comparisons include unfinished
   requests in their denominators.
@@ -212,38 +283,6 @@ estimate. Most locations remain inconclusive because the comparable samples
 are small. The source data and boundary files also need further geographic
 validation before making claims about complete city coverage.
 
-## Atlas feasibility pilot on the exploratory branch
-
-The branch `explore/wake-equity-atlas-pilot` now links request locations to the
-county-published [2020 to 2024 Community Vulnerability Index](https://www.arcgis.com/home/item.html?id=eb973c734de14652bcadd9af211c751d).
-The initial pilot examined geography, index definitions, and sample sizes without
-resolution outcomes. A separate comparison then followed a specification fixed
-before calculating Atlas outcome differences.
-
-The join provides usable neighborhood context for **761 of 773 parks requests
-(98.4%)** in the original local-screen cohort. Eleven requests lack coordinates,
-and one lies in a zero-population area. The 761 usable matches span 201 Census
-block groups, with a median of only three requests per group. Pooling requests
-across vulnerability bands is feasible; separate outcome tests for each small
-area would be poorly supported.
-
-The pilot also found undocumented tie handling in the index's ranks. Equal raw
-indicator values can receive different ranks, and the source contains no margins
-of error. A future outcome analysis needs a simpler-indicator sensitivity check
-and an explicit decision about city/service boundaries. The county Atlas alone
-does not establish Raleigh jurisdiction.
-
-The [pilot specification and results](docs/atlas-pilot.md) explain the source
-lineage, coverage, common-task sample sizes, and remaining limits. In the
-[subsequent outcome comparison](docs/atlas-outcome-results.md), higher-vulnerability
-areas had a 4.3-percentage-point lower adjusted 90-day resolution rate. The
-direction reversed in the later period and in the poverty-rate sensitivity, so
-the analysis did not meet its rule for an additional follow-up lead. We stopped
-at the specified comparison.
-
-The existing 27610 finding is unchanged. The Atlas cannot establish what a
-resolved ticket means or identify everyone who benefits from work at a park.
-
 ## Reproduce the analysis
 
 With Python 3.10 or later and an activated virtual environment:
@@ -258,13 +297,15 @@ python stopping_check.py
 python -m unittest -v
 ```
 
-The 15 automated tests passed at this documentation update. Independent
-calculations also reproduced the adjusted income comparison and all four
-flagged local comparisons. The original income-comparison CSV and JSON outputs
-were unchanged when the local screen was added.
+The original analysis has 15 automated tests. Independent calculations reproduced
+the adjusted income comparison and all four flagged local comparisons. The
+original income-comparison CSV and JSON outputs were unchanged when the local
+screen was added.
 
 The exploratory Atlas work adds five spatial tests and two outcome-comparison
-tests. Install `requirements-atlas.txt` for the full 22-test suite. Run
+tests. All 22 tests passed with `requirements-atlas.txt` installed. Independent
+calculations also reproduced all ten Atlas comparisons and all 170 block-group
+omission checks. Run
 `python atlas_pilot.py` for the geographic checks and `python atlas_outcomes.py`
 for the specified outcome comparison. See the
 [pilot reproduction instructions](docs/atlas-pilot.md#reproduce) for downloading
@@ -282,6 +323,9 @@ the findings above. Detailed provenance, definitions, and formulas are in the
 | [output/](output/) | Main charts and the sampled request map |
 | [output/cohorts/](output/cohorts/) | Parks income comparison, request cohort, and sensitivity results |
 | [output/stopping_check/](output/stopping_check/) | All-ZIP investigation screen, decisions, and provenance |
+| [output/atlas_pilot/](output/atlas_pilot/) | Atlas geographic coverage, source-index checks, and sample sizes |
+| [output/atlas_outcomes/](output/atlas_outcomes/) | Specified vulnerability comparison and all sensitivity results |
+| [docs/atlas-outcome-results.md](docs/atlas-outcome-results.md) | Interpretation of the Atlas findings and stopping decision |
 | [data/README.md](data/README.md) | Source data, exact eligibility rules, formulas, and stopping policy |
 
 The graphics in `presentation/output/` and `final_presentation/output/` are
