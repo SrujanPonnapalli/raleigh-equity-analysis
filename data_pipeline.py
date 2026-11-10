@@ -34,12 +34,13 @@ INCOME_COLUMNS = {
 
 def _normalize_zip(series: pd.Series) -> pd.Series:
     """Normalize ZIP codes to comparable string values."""
-    return (
+    normalized = (
         series.astype("string")
         .str.strip()
         .str.replace(r"\.0$", "", regex=True)
         .str.zfill(5)
     )
+    return normalized.where(normalized.str.fullmatch(r"\d{5}", na=False) & normalized.ne("00000"))
 
 
 def load_requests(path: str | Path) -> pd.DataFrame:
@@ -54,7 +55,8 @@ def load_requests(path: str | Path) -> pd.DataFrame:
     Returns
     -------
     pd.DataFrame
-        Cleaned request-level records with derived ``days_to_resolve``.
+        All request records, including unresolved and ungeocoded requests.
+        Use :func:`completed_requests` for completed-only ZIP comparisons.
 
     Raises
     ------
@@ -71,14 +73,25 @@ def load_requests(path: str | Path) -> pd.DataFrame:
     missing = [col for col in REQUESTS_COLUMNS.values() if col not in df.columns]
     if missing:
         raise ValueError(f"Requests file is missing required columns: {missing}")
+    if "Service Request Number" in df:
+        ids = df["Service Request Number"].astype("string").str.strip()
+        if ids.isna().any() or ids.eq("").any() or ids.duplicated().any():
+            raise ValueError("Missing or duplicate service request numbers.")
 
     cleaned = df.copy()
     cleaned["zip_code"] = _normalize_zip(cleaned[REQUESTS_COLUMNS["zip"]])
     cleaned["hours_to_resolve"] = pd.to_numeric(
         cleaned[REQUESTS_COLUMNS["hours"]], errors="coerce"
     )
+    invalid_hours = cleaned["hours_to_resolve"].notna() & (
+        ~np.isfinite(cleaned["hours_to_resolve"]) | cleaned["hours_to_resolve"].lt(0)
+    )
+    if invalid_hours.any():
+        raise ValueError("Resolution hours must be finite and nonnegative.")
     cleaned["days_to_resolve"] = cleaned["hours_to_resolve"] / HOURS_PER_DAY
-    cleaned["service_category"] = cleaned[REQUESTS_COLUMNS["category"]].astype("string")
+    for output, source in [("service_category", "Service Category"), ("service", "Service"), ("request_type", "Request Type")]:
+        cleaned[output] = cleaned.get(source, pd.Series(pd.NA, index=cleaned.index)).astype("string").str.strip().replace("", pd.NA)
+    cleaned["specific_request"] = cleaned["request_type"].fillna(cleaned["service"])
     cleaned["longitude"] = pd.to_numeric(
         cleaned[REQUESTS_COLUMNS["longitude"]], errors="coerce"
     )
@@ -86,23 +99,17 @@ def load_requests(path: str | Path) -> pd.DataFrame:
         cleaned[REQUESTS_COLUMNS["latitude"]], errors="coerce"
     )
 
-    invalid_coords = cleaned["longitude"].isna() | cleaned["latitude"].isna()
-    if invalid_coords.any():
-        logger.warning(
-            "Dropping %d request(s) with missing or invalid coordinates.",
-            int(invalid_coords.sum()),
-        )
-        cleaned = cleaned.loc[~invalid_coords].copy()
-
-    invalid_hours = cleaned["hours_to_resolve"].isna()
-    if invalid_hours.any():
-        logger.warning(
-            "Dropping %d request(s) with missing resolution time.",
-            int(invalid_hours.sum()),
-        )
-        cleaned = cleaned.loc[~invalid_hours].copy()
+    for col, lower, upper in [("longitude", -180, 180), ("latitude", -90, 90)]:
+        cleaned[col] = cleaned[col].where(cleaned[col].between(lower, upper))
 
     return cleaned.reset_index(drop=True)
+
+
+def completed_requests(requests: pd.DataFrame) -> pd.DataFrame:
+    """Completed-only ZIP cohort. Coordinates are required only when mapping."""
+    eligible = requests["zip_code"].notna() & requests["hours_to_resolve"].notna()
+    logger.info("Completed ZIP cohort: %d of %d requests.", int(eligible.sum()), len(requests))
+    return requests.loc[eligible].copy().reset_index(drop=True)
 
 
 def load_income(path: str | Path) -> pd.DataFrame:
@@ -141,7 +148,7 @@ def load_income(path: str | Path) -> pd.DataFrame:
         cleaned[INCOME_COLUMNS["income"]], errors="coerce"
     )
 
-    invalid_income = cleaned["median_income"].isna()
+    invalid_income = cleaned["median_income"].isna() | ~np.isfinite(cleaned["median_income"]) | cleaned["median_income"].le(0) | cleaned["zip_code"].isna()
     if invalid_income.any():
         logger.warning(
             "Dropping %d ZIP code(s) with missing median income.",
@@ -149,7 +156,9 @@ def load_income(path: str | Path) -> pd.DataFrame:
         )
         cleaned = cleaned.loc[~invalid_income].copy()
 
-    return cleaned[["zip_code", "median_income"]].drop_duplicates("zip_code")
+    if cleaned["zip_code"].duplicated().any():
+        raise ValueError("Income data must contain exactly one row per ZIP code.")
+    return cleaned[["zip_code", "median_income"]]
 
 
 def aggregate_by_zip(requests: pd.DataFrame) -> pd.DataFrame:
@@ -166,6 +175,7 @@ def aggregate_by_zip(requests: pd.DataFrame) -> pd.DataFrame:
     pd.DataFrame
         ZIP-level summary with request volume and average resolution time.
     """
+    requests = completed_requests(requests)
     if requests.empty:
         return pd.DataFrame(
             columns=[
@@ -214,8 +224,9 @@ def merge_datasets(
     if zip_summary is None:
         zip_summary = aggregate_by_zip(requests)
 
-    merged_requests = requests.merge(income, on="zip_code", how="inner")
-    merged_zip = zip_summary.merge(income, on="zip_code", how="inner")
+    requests = completed_requests(requests)
+    merged_requests = requests.merge(income, on="zip_code", how="inner", validate="many_to_one")
+    merged_zip = zip_summary.merge(income, on="zip_code", how="inner", validate="one_to_one")
 
     unmatched_requests = len(requests) - len(merged_requests)
     if unmatched_requests > 0:
@@ -253,18 +264,7 @@ def wealth_segments(
     tuple[set[str], set[str]]
         ``(wealthy_zips, low_income_zips)`` based on median income ranks.
     """
-    zip_income = (
-        merged_requests[["zip_code", "median_income"]]
-        .drop_duplicates()
-        .sort_values("median_income")
-    )
-    n_zips = len(zip_income)
-    if n_zips == 0:
-        return set(), set()
-
-    segment_size = max(1, int(np.ceil(n_zips * quantile)))
-    low_income_zips = set(zip_income.head(segment_size)["zip_code"])
-    wealthy_zips = set(zip_income.tail(segment_size)["zip_code"])
+    low_income_zips, _, wealthy_zips = income_tiers(merged_requests, quantile)
     return wealthy_zips, low_income_zips
 
 
@@ -288,16 +288,26 @@ def income_tiers(
     tuple[set[str], set[str], set[str]]
         ``(low_income_zips, middle_zips, wealthy_zips)`` ordered by median income.
     """
+    if not 0 < quantile <= 0.5:
+        raise ValueError("Income-tail fraction must be greater than 0 and at most 0.5.")
     zip_income = (
         merged_requests[["zip_code", "median_income"]]
         .drop_duplicates()
-        .sort_values("median_income")
+        .dropna()
+        .sort_values(["median_income", "zip_code"])
     )
+    if zip_income["zip_code"].duplicated().any():
+        raise ValueError("Conflicting income values for a ZIP code.")
     n_zips = len(zip_income)
     if n_zips == 0:
         return set(), set(), set()
 
     segment_size = max(1, int(np.ceil(n_zips * quantile)))
+    if segment_size * 2 > n_zips:
+        raise ValueError("Too few ZIP codes to form disjoint income segments.")
+    incomes = zip_income["median_income"].to_numpy()
+    if incomes[segment_size - 1] == incomes[segment_size] or incomes[-segment_size - 1] == incomes[-segment_size]:
+        raise ValueError("Income ties prevent distinct lower- and higher-income segments.")
     low_income_zips = set(zip_income.head(segment_size)["zip_code"])
     wealthy_zips = set(zip_income.tail(segment_size)["zip_code"])
     if segment_size >= n_zips - segment_size:
@@ -333,7 +343,7 @@ def build_pipeline(
     income = load_income(income_path)
     zip_summary = aggregate_by_zip(requests)
     merged_requests, merged_zip = merge_datasets(requests, income, zip_summary)
-    segments = wealth_segments(merged_requests)
+    segments = wealth_segments(income)
 
     return {
         "requests": requests,

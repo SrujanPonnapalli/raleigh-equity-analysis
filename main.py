@@ -156,7 +156,11 @@ def main(argv: list[str] | None = None) -> int:
         print("\nRaleigh Civic Equity Analysis complete.")
         print(f"  ZIP codes analyzed: {len(merged_zip)}")
         print(f"  Requests with income match: {len(merged_requests):,}")
-        print(f"  Geocoded requests mapped: {len(artifacts['requests']):,}")
+        print(f"  All requests retained: {len(artifacts['requests']):,}")
+        map_eligible = artifacts["requests"].dropna(
+            subset=["latitude", "longitude", "days_to_resolve", "service_category"]
+        )
+        print(f"  Map-eligible requests: {len(map_eligible):,}; markers shown: {min(2500, len(map_eligible)):,}")
         print("\nOutputs:")
         print(f"  {scatter_path}")
         print(f"  {disparity_path}")

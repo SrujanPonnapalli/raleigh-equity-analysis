@@ -30,9 +30,10 @@ PROJECT_ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(PROJECT_ROOT))
 
 from data_pipeline import (  # noqa: E402
-    HOURS_PER_DAY,
+    completed_requests,
     income_tiers,
     load_income,
+    load_requests,
     wealth_segments,
 )
 from main import _resolve_requests_path  # noqa: E402
@@ -89,31 +90,9 @@ class SegmentMedians:
     low_income_days: float
 
 
-def _normalize_zip(series: pd.Series) -> pd.Series:
-    return (
-        series.astype("string")
-        .str.strip()
-        .str.replace(r"\.0$", "", regex=True)
-        .str.zfill(5)
-    )
-
-
 def load_requests_with_tasks(path: Path) -> pd.DataFrame:
     """Load request records with service, request type, and resolution time."""
-    df = pd.read_csv(path)
-    required = ["ZIP Code", "Hours to Resolve", "Service", "Request Type"]
-    missing = [col for col in required if col not in df.columns]
-    if missing:
-        raise ValueError(f"Requests CSV missing columns: {missing}")
-
-    out = df.copy()
-    out["zip_code"] = _normalize_zip(out["ZIP Code"])
-    out["days_to_resolve"] = (
-        pd.to_numeric(out["Hours to Resolve"], errors="coerce") / HOURS_PER_DAY
-    )
-    out["service"] = out["Service"].astype("string").str.strip()
-    out["request_type"] = out["Request Type"].astype("string").str.strip()
-    return out.dropna(subset=["zip_code", "days_to_resolve"]).reset_index(drop=True)
+    return completed_requests(load_requests(path))
 
 
 def _filter_task(df: pd.DataFrame, column: str, value: str) -> pd.DataFrame:

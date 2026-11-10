@@ -1,0 +1,12 @@
+task,income_group,requests,resolved,rate
+Park and Greenway Service / Greenway,Higher,17,8,0.47058823529411764
+Park and Greenway Service / Greenway,Lower,35,21,0.6
+Park and Greenway Service / Grounds,Higher,12,8,0.6666666666666666
+Park and Greenway Service / Grounds,Lower,36,16,0.4444444444444444
+Park and Greenway Service / Litter,Higher,8,4,0.5
+Park and Greenway Service / Litter,Lower,15,4,0.26666666666666666
+Playgrounds / <unspecified type>,Higher,2,0,0.0
+Playgrounds / <unspecified type>,Lower,11,0,0.0
+Tree Service / <unspecified type>,Higher,159,92,0.5786163522012578
+Tree Service / <unspecified type>,Lower,201,101,0.5024875621890548
+Tree Service / Vegetation/landscaping blocking view while driving or biking,Lower,1,0,0.0

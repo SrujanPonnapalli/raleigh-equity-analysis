@@ -1,0 +1,90 @@
+task,submission_month,income_group,requests,resolved,rate
+Park and Greenway Service / Greenway,2025-07,Higher,5,4,0.8
+Park and Greenway Service / Greenway,2025-07,Lower,5,2,0.4
+Park and Greenway Service / Greenway,2025-08,Higher,1,0,0.0
+Park and Greenway Service / Greenway,2025-08,Lower,4,1,0.25
+Park and Greenway Service / Greenway,2025-09,Higher,1,1,1.0
+Park and Greenway Service / Greenway,2025-09,Lower,3,2,0.6666666666666666
+Park and Greenway Service / Greenway,2025-10,Lower,2,1,0.5
+Park and Greenway Service / Greenway,2025-11,Higher,1,1,1.0
+Park and Greenway Service / Greenway,2025-12,Lower,1,1,1.0
+Park and Greenway Service / Greenway,2026-01,Higher,2,0,0.0
+Park and Greenway Service / Greenway,2026-01,Lower,2,2,1.0
+Park and Greenway Service / Greenway,2026-02,Lower,1,1,1.0
+Park and Greenway Service / Greenway,2026-03,Higher,1,0,0.0
+Park and Greenway Service / Greenway,2026-03,Lower,3,2,0.6666666666666666
+Park and Greenway Service / Greenway,2026-04,Higher,1,0,0.0
+Park and Greenway Service / Greenway,2026-04,Lower,1,0,0.0
+Park and Greenway Service / Greenway,2026-05,Higher,1,0,0.0
+Park and Greenway Service / Greenway,2026-05,Lower,4,4,1.0
+Park and Greenway Service / Greenway,2026-06,Lower,4,2,0.5
+Park and Greenway Service / Greenway,2026-07,Higher,4,2,0.5
+Park and Greenway Service / Greenway,2026-07,Lower,5,3,0.6
+Park and Greenway Service / Grounds,2025-07,Higher,2,1,0.5
+Park and Greenway Service / Grounds,2025-07,Lower,1,0,0.0
+Park and Greenway Service / Grounds,2025-08,Lower,6,3,0.5
+Park and Greenway Service / Grounds,2025-09,Lower,5,1,0.2
+Park and Greenway Service / Grounds,2025-10,Lower,3,1,0.3333333333333333
+Park and Greenway Service / Grounds,2025-11,Lower,1,0,0.0
+Park and Greenway Service / Grounds,2025-12,Higher,1,1,1.0
+Park and Greenway Service / Grounds,2025-12,Lower,2,1,0.5
+Park and Greenway Service / Grounds,2026-01,Lower,3,3,1.0
+Park and Greenway Service / Grounds,2026-02,Higher,1,1,1.0
+Park and Greenway Service / Grounds,2026-02,Lower,1,1,1.0
+Park and Greenway Service / Grounds,2026-03,Higher,1,1,1.0
+Park and Greenway Service / Grounds,2026-03,Lower,5,2,0.4
+Park and Greenway Service / Grounds,2026-04,Higher,2,2,1.0
+Park and Greenway Service / Grounds,2026-04,Lower,2,2,1.0
+Park and Greenway Service / Grounds,2026-05,Higher,2,1,0.5
+Park and Greenway Service / Grounds,2026-05,Lower,1,1,1.0
+Park and Greenway Service / Grounds,2026-06,Higher,1,0,0.0
+Park and Greenway Service / Grounds,2026-06,Lower,3,1,0.3333333333333333
+Park and Greenway Service / Grounds,2026-07,Higher,2,1,0.5
+Park and Greenway Service / Grounds,2026-07,Lower,3,0,0.0
+Park and Greenway Service / Litter,2025-07,Lower,4,0,0.0
+Park and Greenway Service / Litter,2025-09,Higher,1,0,0.0
+Park and Greenway Service / Litter,2025-09,Lower,1,1,1.0
+Park and Greenway Service / Litter,2026-01,Higher,3,1,0.3333333333333333
+Park and Greenway Service / Litter,2026-01,Lower,1,0,0.0
+Park and Greenway Service / Litter,2026-02,Lower,2,0,0.0
+Park and Greenway Service / Litter,2026-03,Lower,2,0,0.0
+Park and Greenway Service / Litter,2026-04,Lower,3,1,0.3333333333333333
+Park and Greenway Service / Litter,2026-06,Higher,1,0,0.0
+Park and Greenway Service / Litter,2026-07,Higher,3,3,1.0
+Park and Greenway Service / Litter,2026-07,Lower,2,2,1.0
+Playgrounds / <unspecified type>,2025-07,Lower,1,0,0.0
+Playgrounds / <unspecified type>,2025-08,Lower,2,0,0.0
+Playgrounds / <unspecified type>,2025-10,Lower,2,0,0.0
+Playgrounds / <unspecified type>,2025-11,Lower,1,0,0.0
+Playgrounds / <unspecified type>,2026-01,Lower,1,0,0.0
+Playgrounds / <unspecified type>,2026-02,Lower,2,0,0.0
+Playgrounds / <unspecified type>,2026-03,Higher,1,0,0.0
+Playgrounds / <unspecified type>,2026-03,Lower,2,0,0.0
+Playgrounds / <unspecified type>,2026-06,Higher,1,0,0.0
+Tree Service / <unspecified type>,2025-07,Higher,13,9,0.6923076923076923
+Tree Service / <unspecified type>,2025-07,Lower,30,14,0.4666666666666667
+Tree Service / <unspecified type>,2025-08,Higher,19,6,0.3157894736842105
+Tree Service / <unspecified type>,2025-08,Lower,19,14,0.7368421052631579
+Tree Service / <unspecified type>,2025-09,Higher,7,3,0.42857142857142855
+Tree Service / <unspecified type>,2025-09,Lower,16,5,0.3125
+Tree Service / <unspecified type>,2025-10,Higher,8,2,0.25
+Tree Service / <unspecified type>,2025-10,Lower,13,7,0.5384615384615384
+Tree Service / <unspecified type>,2025-11,Higher,6,3,0.5
+Tree Service / <unspecified type>,2025-11,Lower,6,3,0.5
+Tree Service / <unspecified type>,2025-12,Higher,4,2,0.5
+Tree Service / <unspecified type>,2025-12,Lower,3,1,0.3333333333333333
+Tree Service / <unspecified type>,2026-01,Higher,7,5,0.7142857142857143
+Tree Service / <unspecified type>,2026-01,Lower,6,4,0.6666666666666666
+Tree Service / <unspecified type>,2026-02,Higher,3,2,0.6666666666666666
+Tree Service / <unspecified type>,2026-02,Lower,6,2,0.3333333333333333
+Tree Service / <unspecified type>,2026-03,Higher,8,6,0.75
+Tree Service / <unspecified type>,2026-03,Lower,15,10,0.6666666666666666
+Tree Service / <unspecified type>,2026-04,Higher,22,15,0.6818181818181818
+Tree Service / <unspecified type>,2026-04,Lower,16,11,0.6875
+Tree Service / <unspecified type>,2026-05,Higher,17,11,0.6470588235294118
+Tree Service / <unspecified type>,2026-05,Lower,22,9,0.4090909090909091
+Tree Service / <unspecified type>,2026-06,Higher,14,9,0.6428571428571429
+Tree Service / <unspecified type>,2026-06,Lower,19,6,0.3157894736842105
+Tree Service / <unspecified type>,2026-07,Higher,31,19,0.6129032258064516
+Tree Service / <unspecified type>,2026-07,Lower,30,15,0.5
+Tree Service / Vegetation/landscaping blocking view while driving or biking,2025-07,Lower,1,0,0.0

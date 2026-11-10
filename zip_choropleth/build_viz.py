@@ -1,7 +1,7 @@
 """
 Raleigh ZIP choropleth map + paired bar chart.
 
-The Folium map shows *where* response-time inequity clusters geographically.
+The Folium map shows completed-request resolution durations geographically.
 The bar chart shows *how much* each ZIP deviates in ranked, comparable
 magnitudes — something color gradients on a map cannot convey precisely.
 
@@ -35,7 +35,7 @@ import seaborn as sns
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(PROJECT_ROOT))
 
-from data_pipeline import load_income, wealth_segments  # noqa: E402
+from data_pipeline import completed_requests, load_income, load_requests as load_all_requests, wealth_segments  # noqa: E402
 from main import _resolve_requests_path  # noqa: E402
 from viz_theme import (  # noqa: E402
     PALETTE,
@@ -63,7 +63,6 @@ NC_GEOJSON_URL = (
 )
 NC_GEOJSON_CACHE = DATA_DIR / "nc_zip_boundaries.min.json"
 
-HOURS_PER_DAY = 24.0
 NEGLECT_THRESHOLD_DAYS = 30
 
 
@@ -76,33 +75,9 @@ SERVICE_DISPARITY_CATEGORIES: tuple[str, ...] = (
 )
 
 
-def _normalize_zip(series: pd.Series) -> pd.Series:
-    return (
-        series.astype("string")
-        .str.strip()
-        .str.replace(r"\.0$", "", regex=True)
-        .str.zfill(5)
-    )
-
-
 def load_requests(path: Path) -> pd.DataFrame:
     """Load 311 requests with fields needed for ZIP-level metrics."""
-    df = pd.read_csv(path)
-    required = ["ZIP Code", "Hours to Resolve", "Service Category"]
-    missing = [c for c in required if c not in df.columns]
-    if missing:
-        raise ValueError(f"Requests CSV missing columns: {missing}")
-
-    out = df.copy()
-    out["zip_code"] = _normalize_zip(out["ZIP Code"])
-    out["days_to_resolve"] = pd.to_numeric(out["Hours to Resolve"], errors="coerce") / HOURS_PER_DAY
-    out["service_category"] = out["Service Category"].astype("string").str.strip()
-    if "Service" in df.columns:
-        out["service"] = df["Service"].astype("string").str.strip()
-    if "Request Type" in df.columns:
-        out["request_type"] = df["Request Type"].astype("string").str.strip()
-    out = out.dropna(subset=["zip_code", "days_to_resolve"])
-    return out.reset_index(drop=True)
+    return completed_requests(load_all_requests(path))
 
 
 def build_zip_metrics(requests: pd.DataFrame, income: pd.DataFrame) -> pd.DataFrame:
@@ -156,12 +131,12 @@ def filter_geojson(geojson: dict, zip_codes: set[str]) -> dict:
 
 
 def _neglect_colormap(vmin: float, vmax: float) -> cm.LinearColormap:
-    """Sequential scale for neglect rate (Folium legend)."""
+    """Sequential scale for completed-request long-delay shares."""
     return cm.LinearColormap(
         colors=[PALETTE["seq_low"], PALETTE["seq_mid"], PALETTE["seq_high"]],
         vmin=vmin,
         vmax=vmax,
-        caption=f"% Requests Unresolved Beyond {NEGLECT_THRESHOLD_DAYS} Days",
+        caption=f"Completed requests taking over {NEGLECT_THRESHOLD_DAYS} days (%)",
     )
 
 
@@ -169,7 +144,7 @@ def build_choropleth_map(metrics: pd.DataFrame, geojson: dict, output_path: Path
     """
     Dark-mode Folium choropleth of ZIP polygons.
 
-    Fill color encodes 30-day neglect rate; outlines keep adjacent ZIPs
+    Fill color encodes completed-request long-delay shares; outlines keep adjacent ZIPs
     visually distinct on the dark basemap.
     """
     metric_lookup = metrics.set_index("zip_code").to_dict("index")
@@ -199,7 +174,7 @@ def build_choropleth_map(metrics: pd.DataFrame, geojson: dict, output_path: Path
     equity_map = folium.Map(
         location=center,
         zoom_start=10,
-        tiles="CartoDB positron",
+        tiles="OpenStreetMap",
         control_scale=True,
     )
 
@@ -238,11 +213,11 @@ def build_choropleth_map(metrics: pd.DataFrame, geojson: dict, output_path: Path
             <div>Requests: <b>{int(row['request_volume']):,}</b></div>
             <div>Median resolve: <b>{row['median_days']:.1f} days</b></div>
             <div>Mean resolve: <b>{row['mean_days']:.1f} days</b></div>
-            <div>30-day neglect: <b>{row['neglect_rate']:.1f}%</b></div>
+            <div>Completed requests taking over 30 days: <b>{row['neglect_rate']:.1f}%</b></div>
         </div>
         """
         tooltip = (
-            f"ZIP {zcta} | Neglect {row['neglect_rate']:.1f}% "
+            f"ZIP {zcta} | Completed requests over 30 days: {row['neglect_rate']:.1f}% "
             f"| Median {row['median_days']:.1f}d"
         )
         layer.bind_popup(folium.Popup(popup_html, max_width=280))
@@ -265,7 +240,7 @@ def build_choropleth_map(metrics: pd.DataFrame, geojson: dict, output_path: Path
                 color:{PALETTE['ink']}; box-shadow:0 4px 18px rgba(27,40,56,0.12);">
         <div style="font-size:15px; font-weight:600;">Raleigh 311 ZIP Equity Map</div>
         <div style="font-size:12px; font-weight:400; color:{PALETTE['muted']}; margin-top:4px;">
-            Polygon color = share of requests taking &gt; {NEGLECT_THRESHOLD_DAYS} days
+            Completed requests only: share taking &gt; {NEGLECT_THRESHOLD_DAYS} days; unresolved requests excluded
         </div>
     </div>
     """
@@ -366,7 +341,7 @@ def build_choropleth_image(
 
     ax.set_title(
         f"Raleigh 311 ZIP Equity Map\n"
-        f"Color = % of requests taking > {NEGLECT_THRESHOLD_DAYS} days to resolve",
+        f"Completed requests only: % taking > {NEGLECT_THRESHOLD_DAYS} days to resolve",
         fontsize=TYPE["title_size"],
         fontweight=TYPE["title_weight"],
         color=PALETTE["ink"],
@@ -377,7 +352,7 @@ def build_choropleth_image(
     sm.set_array([])
     cbar = fig.colorbar(sm, ax=ax, fraction=0.03, pad=0.02)
     cbar.set_label(
-        "30-Day Neglect Rate (%)",
+        "Completed requests taking over 30 days (%)",
         color=PALETTE["muted"],
         fontsize=TYPE["legend_size"],
         fontweight=TYPE["body_weight"],
@@ -388,7 +363,7 @@ def build_choropleth_image(
     fig.text(
         0.5,
         0.02,
-        "ZIP choropleth | Data: Ask Raleigh 311 + Census median income",
+        "Unresolved requests excluded. Not a backlog measure. Data: Ask Raleigh + Census",
         ha="center",
         fontsize=TYPE["caption_size"],
         fontweight=TYPE["body_weight"],
@@ -518,20 +493,20 @@ def build_zip_ranking_bar(metrics: pd.DataFrame, output_path: Path) -> Path:
     bar_height = 0.36
 
     apply_chart_style()
-    fig, ax = plt.subplots(figsize=(11, 7))
+    fig, (ax, duration_ax) = plt.subplots(1, 2, figsize=(13, 7), sharey=True)
 
     ax.barh(
-        y_pos - bar_height / 2,
+        y_pos,
         data["neglect_rate"],
         height=bar_height,
         color=PALETTE["seq_high"],
         alpha=0.88,
-        label=f"Neglect rate (>{NEGLECT_THRESHOLD_DAYS}d)",
+        label=f"Completed requests >{NEGLECT_THRESHOLD_DAYS}d",
         edgecolor=PALETTE["point_edge"],
         linewidth=0.6,
     )
-    ax.barh(
-        y_pos + bar_height / 2,
+    duration_ax.barh(
+        y_pos,
         data["median_days"],
         height=bar_height,
         color=PALETTE["seq_low"],
@@ -547,21 +522,19 @@ def build_zip_ranking_bar(metrics: pd.DataFrame, output_path: Path) -> Path:
         fontsize=TYPE["tick_size"],
         color=PALETTE["ink"],
     )
-    ax.set_xlabel("Days / Percent", color=PALETTE["ink"])
-    ax.set_title(
-        "ZIP Rankings: Neglect Rate vs. Typical Wait Time",
-        fontsize=TYPE["title_size"],
-        fontweight=TYPE["title_weight"],
-        color=PALETTE["ink"],
-        pad=14,
-    )
-    trim_spines(ax)
-    ax.grid(axis="x", color=PALETTE["border"], alpha=0.35, linestyle="--")
-    style_legend(ax, loc="lower right")
+    ax.set_xlabel("Completed requests taking over 30 days (%)")
+    duration_ax.set_xlabel("Median recorded resolution time (days)")
+    ax.set_title("Long-delay share")
+    duration_ax.set_title("Median duration")
+    fig.suptitle("ZIP Comparisons: Completed Requests Only")
+    fig.subplots_adjust(bottom=0.18, wspace=0.1)
+    for panel in (ax, duration_ax):
+        trim_spines(panel)
+        panel.grid(axis="x", color=PALETTE["border"], alpha=0.35, linestyle="--")
 
     add_caption(
         fig,
-        "Sorted by neglect rate | Labels include ZIP median income",
+        "Unresolved requests excluded. Separate axes show percent and days; labels include ZIP median income.",
     )
 
     return save_figure(fig, output_path)
@@ -613,7 +586,7 @@ def main() -> int:
         print(f"  ZIP ranking bars:          {ranking_bar_path}")
         print(
             "\nPairing rationale:"
-            "\n  Map  -> spatial clustering of 30-day neglect"
+            "\n  Map  -> completed-request long-delay shares (unresolved cases excluded)"
             "\n  Bars -> exact service-type gaps & ranked ZIP magnitudes"
         )
         return 0

@@ -3,7 +3,7 @@ Deep-dive exploratory analysis for Raleigh 311 civic equity.
 
 Tests three hypotheses that broad ZIP-level aggregation may mask real
 income–response-time relationships: standardized sub-category comparison,
-30-day neglect rate thresholding, and median-based typical experience.
+completed-request long-delay shares, and median-based typical experience.
 """
 
 from __future__ import annotations
@@ -16,7 +16,6 @@ from pathlib import Path
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
-import seaborn as sns
 from scipy import stats
 
 from viz_theme import (
@@ -30,7 +29,7 @@ from viz_theme import (
     style_legend,
     trim_spines,
 )
-from data_pipeline import load_income, wealth_segments
+from data_pipeline import completed_requests, load_income, load_requests, wealth_segments
 from main import _resolve_requests_path
 
 logger = logging.getLogger(__name__)
@@ -38,20 +37,9 @@ logger = logging.getLogger(__name__)
 PROJECT_ROOT = Path(__file__).resolve().parent
 DEFAULT_OUTPUT_DIR = PROJECT_ROOT / "output" / "eda"
 
-HOURS_PER_DAY = 24.0
 NEGLECT_THRESHOLD_DAYS = 30
 DISTRIBUTION_CAP_DAYS = 60
 MIN_ZIPS_FOR_CORRELATION = 3
-
-
-def _normalize_zip(series: pd.Series) -> pd.Series:
-    """Normalize ZIP codes to comparable string values."""
-    return (
-        series.astype("string")
-        .str.strip()
-        .str.replace(r"\.0$", "", regex=True)
-        .str.zfill(5)
-    )
 
 
 def load_requests_for_eda(path: str | Path) -> pd.DataFrame:
@@ -61,43 +49,15 @@ def load_requests_for_eda(path: str | Path) -> pd.DataFrame:
     Missing resolution times and ZIP codes are dropped so downstream
     statistics are computed on comparable, complete records only.
     """
-    path = Path(path)
-    if not path.exists():
-        raise FileNotFoundError(f"Requests file not found: {path}")
-
-    df = pd.read_csv(path)
-    required = ["ZIP Code", "Hours to Resolve", "Service Category", "Service", "Request Type"]
-    missing = [col for col in required if col not in df.columns]
-    if missing:
-        raise ValueError(f"Requests file is missing required columns: {missing}")
-
-    cleaned = df.copy()
-    cleaned["zip_code"] = _normalize_zip(cleaned["ZIP Code"])
-    cleaned["hours_to_resolve"] = pd.to_numeric(cleaned["Hours to Resolve"], errors="coerce")
-    cleaned["days_to_resolve"] = cleaned["hours_to_resolve"] / HOURS_PER_DAY
-    cleaned["service_category"] = cleaned["Service Category"].astype("string").str.strip()
-    cleaned["service"] = cleaned["Service"].astype("string").str.strip()
-    cleaned["request_type"] = cleaned["Request Type"].astype("string").str.strip()
-
-    # Prefer the most specific label available; fall back to broader Service.
-    cleaned["specific_request"] = cleaned["request_type"].where(
-        cleaned["request_type"].notna() & (cleaned["request_type"] != "<NA>") & (cleaned["request_type"] != ""),
-        cleaned["service"],
-    )
-    cleaned["specific_request"] = cleaned["specific_request"].replace({"<NA>": pd.NA, "": pd.NA})
-
-    before = len(cleaned)
-    cleaned = cleaned.dropna(subset=["zip_code", "days_to_resolve", "specific_request"])
-    dropped = before - len(cleaned)
-    if dropped:
-        logger.warning("Dropped %d row(s) with missing ZIP, resolve time, or request label.", dropped)
-
-    return cleaned.reset_index(drop=True)
+    result = completed_requests(load_requests(path)).dropna(subset=["specific_request"]).reset_index(drop=True)
+    result["task_label"] = (result["service_category"].fillna("<missing category>") + " / "
+                            + result["service"].fillna("<missing service>") + " / " + result["specific_request"])
+    return result
 
 
 def merge_with_income(requests: pd.DataFrame, income: pd.DataFrame) -> pd.DataFrame:
     """Attach median income; keep only ZIP codes present in both datasets."""
-    merged = requests.merge(income, on="zip_code", how="inner")
+    merged = requests.merge(income, on="zip_code", how="inner", validate="many_to_one")
     excluded = len(requests) - len(merged)
     if excluded:
         logger.warning(
@@ -116,7 +76,7 @@ def _pearson_at_zip_level(zip_metrics: pd.DataFrame) -> tuple[float, float, int]
     """
     data = zip_metrics.dropna(subset=["median_income", "metric_value"])
     n = len(data)
-    if n < MIN_ZIPS_FOR_CORRELATION:
+    if n < MIN_ZIPS_FOR_CORRELATION or data["median_income"].nunique() < 2 or data["metric_value"].nunique() < 2:
         return float("nan"), float("nan"), n
 
     r, p = stats.pearsonr(data["median_income"], data["metric_value"])
@@ -125,29 +85,29 @@ def _pearson_at_zip_level(zip_metrics: pd.DataFrame) -> tuple[float, float, int]
 
 def apples_to_apples_test(merged: pd.DataFrame) -> pd.DataFrame:
     """
-    Hypothesis 1: Broad categories hide standardized-task disparities.
+    Explore correlations within specific recorded task labels.
 
     For each of the top 5 most common specific requests, we compare
-    median income to average wait time across ZIP codes *for that exact
-  task only*. This controls for the mix of easy vs. hard work types.
+    median income to average wait time across ZIP codes for that task label.
+    This does not control severity, season, or unresolved-request selection.
     """
     print("\n" + "=" * 72)
-    print("HYPOTHESIS 1 - Apples-to-Apples Sub-category Drilldown")
+    print("EXPLORATORY CHECK - Correlations Within Recorded Task Labels")
     print("=" * 72)
     print(
         "Rationale: Aggregating all service types within a ZIP blends fast tasks\n"
         "(e.g., potholes) with slow ones (e.g., tree removal), diluting any\n"
-        "income gradient. We re-test correlation on identical, standardized tasks.\n"
+        "income gradient. Task labels improve comparability but do not establish identical work.\n"
     )
 
-    top_requests = merged["specific_request"].value_counts().head(5)
+    top_requests = merged["task_label"].value_counts().head(5)
     results: list[dict[str, object]] = []
 
     print(f"{'Specific Request':<34} {'N':>6} {'ZIPs':>5} {'r':>8} {'p-value':>10}")
     print("-" * 72)
 
     for request_name, count in top_requests.items():
-        subset = merged.loc[merged["specific_request"] == request_name]
+        subset = merged.loc[merged["task_label"] == request_name]
         zip_metrics = (
             subset.groupby("zip_code", as_index=False)
             .agg(
@@ -173,18 +133,10 @@ def apples_to_apples_test(merged: pd.DataFrame) -> pd.DataFrame:
         print(f"{str(request_name)[:33]:<34} {count:>6} {n_zips:>5} {r_str:>8} {p_str:>10}")
 
     result_df = pd.DataFrame(results)
-    significant = result_df.loc[result_df["p_value"] < 0.05]
-    if not significant.empty:
-        print(
-            f"\n-> {len(significant)} of 5 standardized tasks show p < 0.05 "
-            "(suggesting sub-category drilldown reveals signal)."
-        )
-    else:
-        print(
-            "\n-> No standardized task reached p < 0.05 at the ZIP level. "
-            "Income may still not predict wait time even within task type, "
-            "or sample sizes per ZIP are too thin."
-        )
+    result_df["p_value_bonferroni"] = (result_df["p_value"] * len(result_df)).clip(upper=1)
+    print("\nExploratory comparisons, restricted to completed requests.")
+    print("Bonferroni correction across these task tests:")
+    print(result_df[["specific_request", "p_value_bonferroni"]].to_string(index=False))
 
     return result_df
 
@@ -193,16 +145,15 @@ def extreme_neglect_test(merged: pd.DataFrame, output_dir: Path) -> pd.DataFrame
     """
     Hypothesis 2: Averages are distorted by extreme delays.
 
-    The 30-day neglect rate (% of requests unresolved beyond 30 days)
-    captures systemic abandonment better than the arithmetic mean.
+    Share of completed requests whose reported duration exceeded 30 days.
+    This is not a backlog rate or evidence of neglect; unresolved cases are absent.
     """
     print("\n" + "=" * 72)
-    print("HYPOTHESIS 2 - Extreme Neglect (30-Day Threshold)")
+    print("EXPLORATORY CHECK - Completed Requests Taking Over 30 Days")
     print("=" * 72)
     print(
-        "Rationale: A handful of 400-day outliers inflate ZIP-level means.\n"
-        "Neglect rate measures how often a ZIP's residents experience\n"
-        f"effectively forgotten service (>{NEGLECT_THRESHOLD_DAYS} days).\n"
+        f"Share of completed requests taking >{NEGLECT_THRESHOLD_DAYS} days.\n"
+        "Unresolved requests are excluded; this does not measure the backlog.\n"
     )
 
     zip_neglect = (
@@ -226,16 +177,12 @@ def extreme_neglect_test(merged: pd.DataFrame, output_dir: Path) -> pd.DataFrame
     )
 
     print(f"ZIP codes analyzed:          {len(data)}")
-    print(f"Mean neglect rate:           {data['neglect_rate'].mean():.1f}%")
-    print(f"Pearson r (income vs neglect): {r:+.3f}")
+    print(f"Unweighted mean ZIP long-delay share: {data['neglect_rate'].mean():.1f}%")
+    print(f"Pearson r (income vs long-delay share): {r:+.3f}")
     print(f"p-value:                     {p:.4f}")
     print(f"Regression slope:            {slope * 1000:.4f} pp per $1k income")
 
-    if p < 0.05:
-        direction = "higher-income" if slope < 0 else "lower-income"
-        print(f"\n-> Significant relationship: {direction} ZIPs show different neglect rates.")
-    else:
-        print("\n-> No significant income-neglect relationship at the ZIP level.")
+    print("\nExploratory, unadjusted p-value; no causal or service-standard interpretation.")
 
     apply_chart_style()
     fig, ax = plt.subplots(figsize=(10, 6.5))
@@ -275,13 +222,14 @@ def extreme_neglect_test(merged: pd.DataFrame, output_dir: Path) -> pd.DataFrame
             color=PALETTE["muted"],
         )
 
-    ax.set_title(f"Median Income vs. {NEGLECT_THRESHOLD_DAYS}-Day Neglect Rate")
+    ax.set_title(f"Completed Requests Taking Over {NEGLECT_THRESHOLD_DAYS} Days")
     ax.set_xlabel("Median Household Income")
-    ax.set_ylabel(f"Neglect Rate (% requests > {NEGLECT_THRESHOLD_DAYS} days)")
+    ax.set_ylabel(f"Share of completed requests > {NEGLECT_THRESHOLD_DAYS} days (%)")
     ax.yaxis.set_major_formatter(plt.FuncFormatter(percent_formatter))
     ax.xaxis.set_major_formatter(plt.FuncFormatter(currency_formatter))
     style_legend(ax, loc="upper left")
     trim_spines(ax)
+    add_caption(fig, "Completed requests only; unresolved requests excluded. This is not a backlog measure.")
 
     output_path = output_dir / "neglect_rate_scatter.png"
     save_figure(fig, output_path)
@@ -316,6 +264,8 @@ def typical_experience_test(merged: pd.DataFrame, output_dir: Path) -> pd.DataFr
     )
 
     data = zip_median.dropna(subset=["median_income", "median_days"])
+    if len(data) < MIN_ZIPS_FOR_CORRELATION or data["median_income"].nunique() < 2:
+        raise ValueError("Insufficient distinct ZIP incomes for median-duration regression.")
     slope, intercept, r, p, _ = stats.linregress(
         data["median_income"], data["median_days"]
     )
@@ -332,12 +282,12 @@ def typical_experience_test(merged: pd.DataFrame, output_dir: Path) -> pd.DataFr
 
     wealthy_times = merged.loc[
         merged["zip_code"].isin(wealthy_zips), "days_to_resolve"
-    ].clip(upper=DISTRIBUTION_CAP_DAYS)
+    ]
     low_times = merged.loc[
         merged["zip_code"].isin(low_income_zips), "days_to_resolve"
-    ].clip(upper=DISTRIBUTION_CAP_DAYS)
+    ]
 
-    print(f"\nSegment medians (all requests, uncapped):")
+    print(f"\nSegment medians (completed requests, uncapped):")
     print(
         f"  {wealthy_label}: "
         f"{merged.loc[merged['zip_code'].isin(wealthy_zips), 'days_to_resolve'].median():.1f} days"
@@ -347,12 +297,13 @@ def typical_experience_test(merged: pd.DataFrame, output_dir: Path) -> pd.DataFr
         f"{merged.loc[merged['zip_code'].isin(low_income_zips), 'days_to_resolve'].median():.1f} days"
     )
     print(
-        f"\nDistribution plot capped at {DISTRIBUTION_CAP_DAYS} days "
-        "so the bulk of the distribution is readable."
+        f"\nDistribution display ends at {DISTRIBUTION_CAP_DAYS} days; longer durations "
+        "remain in the denominator and are not moved into the final bin."
     )
 
     apply_chart_style()
     fig, axes = plt.subplots(1, 2, figsize=(12, 5.5), sharey=True)
+    fig.subplots_adjust(bottom=0.22)
 
     plot_specs = [
         (axes[0], wealthy_times, wealthy_label, PALETTE["wealthy"]),
@@ -365,16 +316,14 @@ def typical_experience_test(merged: pd.DataFrame, output_dir: Path) -> pd.DataFr
             ax.set_title(title)
             continue
 
-        sns.histplot(
+        ax.hist(
             series,
-            bins=30,
-            stat="density",
-            kde=True,
+            bins=np.linspace(0, DISTRIBUTION_CAP_DAYS, 31),
+            weights=np.full(len(series), 1 / len(series)),
             color=color,
             alpha=0.55,
             edgecolor="white",
             linewidth=0.6,
-            ax=ax,
         )
         ax.axvline(
             series.median(),
@@ -389,7 +338,7 @@ def typical_experience_test(merged: pd.DataFrame, output_dir: Path) -> pd.DataFr
         style_legend(ax, fontsize=TYPE["legend_size"])
         trim_spines(ax)
 
-    axes[0].set_ylabel("Density")
+    axes[0].set_ylabel("Share of completed requests per 2-day bin")
     fig.suptitle(
         "Resolution Time Distributions by Income Segment",
         fontsize=TYPE["title_size"],
@@ -399,6 +348,7 @@ def typical_experience_test(merged: pd.DataFrame, output_dir: Path) -> pd.DataFr
     )
 
     output_path = output_dir / "distribution_skew.png"
+    add_caption(fig, "Completed requests only. Durations above 60 days are outside the display, not capped.")
     save_figure(fig, output_path, bbox_inches="tight")
     print(f"Saved chart: {output_path}")
 

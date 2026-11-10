@@ -1,0 +1,405 @@
+{
+  "snapshot": "data/snapshots/20261110T061151Z",
+  "as_of_utc": "2026-11-10T06:08:11.548000+00:00",
+  "start_inclusive": "2025-07-01T00:00:00-04:00",
+  "end_exclusive": "2026-08-01T00:00:00-04:00",
+  "lower_income_zips": [
+    "27604",
+    "27605",
+    "27610"
+  ],
+  "higher_income_zips": [
+    "27608",
+    "27613",
+    "27614"
+  ],
+  "gap_definition": "lower minus higher recorded-resolution rate, percentage points",
+  "method": "Pooled request weights on common task-by-submission-month strata; descriptive, no independence-based p-values.",
+  "analysis_status": "Exploratory follow-up to an observed parks signal; not a held-out confirmation.",
+  "windows": {
+    "30": {
+      "crude": [
+        {
+          "income_group": "Higher",
+          "requests": 198,
+          "resolved": 102,
+          "rate": 0.5151515151515151
+        },
+        {
+          "income_group": "Lower",
+          "requests": 299,
+          "resolved": 120,
+          "rate": 0.4013377926421405
+        }
+      ],
+      "task_adjusted": {
+        "strata": 5,
+        "requests_lower": 298,
+        "requests_higher": 198,
+        "rate_lower": 0.40991270605497854,
+        "rate_higher": 0.5062508950628335,
+        "gap_pp": -9.633818900785496,
+        "crude_rate_lower": 0.40268456375838924,
+        "crude_rate_higher": 0.5151515151515151,
+        "crude_gap_pp": -11.24669513931259
+      },
+      "month_adjusted": {
+        "strata": 13,
+        "requests_lower": 299,
+        "requests_higher": 198,
+        "rate_lower": 0.40768718250155256,
+        "rate_higher": 0.5073687110354171,
+        "gap_pp": -9.968152853386458,
+        "crude_rate_lower": 0.4013377926421405,
+        "crude_rate_higher": 0.5151515151515151,
+        "crude_gap_pp": -11.381372250937465
+      },
+      "task_month_adjusted": {
+        "strata": 33,
+        "requests_lower": 252,
+        "requests_higher": 195,
+        "rate_lower": 0.427881064537723,
+        "rate_higher": 0.5155183499999669,
+        "gap_pp": -8.763728546224392,
+        "crude_rate_lower": 0.42063492063492064,
+        "crude_rate_higher": 0.517948717948718,
+        "crude_gap_pp": -9.731379731379736
+      },
+      "task_month_min5": {
+        "strata": 12,
+        "requests_lower": 197,
+        "requests_higher": 157,
+        "rate_lower": 0.4483413442044129,
+        "rate_higher": 0.5285405907250053,
+        "gap_pp": -8.019924652059235,
+        "crude_rate_lower": 0.4416243654822335,
+        "crude_rate_higher": 0.5286624203821656,
+        "crude_gap_pp": -8.703805489993211
+      },
+      "leave_one_zip_out": {
+        "27604": {
+          "strata": 30,
+          "requests_lower": 151,
+          "requests_higher": 190,
+          "rate_lower": 0.42408823255597444,
+          "rate_higher": 0.5197033965003199,
+          "gap_pp": -9.56151639443455,
+          "crude_rate_lower": 0.3973509933774834,
+          "crude_rate_higher": 0.5157894736842106,
+          "crude_gap_pp": -11.843848030672715
+        },
+        "27605": {
+          "strata": 31,
+          "requests_lower": 223,
+          "requests_higher": 189,
+          "rate_lower": 0.40808821640846193,
+          "rate_higher": 0.5119898158465012,
+          "gap_pp": -10.390159943803923,
+          "crude_rate_lower": 0.40358744394618834,
+          "crude_rate_higher": 0.5132275132275133,
+          "crude_gap_pp": -10.964006928132491
+        },
+        "27608": {
+          "strata": 28,
+          "requests_lower": 240,
+          "requests_higher": 149,
+          "rate_lower": 0.43562064711097315,
+          "rate_higher": 0.48859212766667776,
+          "gap_pp": -5.297148055570461,
+          "crude_rate_lower": 0.43333333333333335,
+          "crude_rate_higher": 0.4966442953020134,
+          "crude_gap_pp": -6.331096196868008
+        },
+        "27610": {
+          "strata": 28,
+          "requests_lower": 130,
+          "requests_higher": 189,
+          "rate_lower": 0.46857802159526296,
+          "rate_higher": 0.5194819516131748,
+          "gap_pp": -5.090393001791183,
+          "crude_rate_lower": 0.47692307692307695,
+          "crude_rate_higher": 0.5291005291005291,
+          "crude_gap_pp": -5.217745217745212
+        },
+        "27613": {
+          "strata": 30,
+          "requests_lower": 246,
+          "requests_higher": 153,
+          "rate_lower": 0.4268525488054573,
+          "rate_higher": 0.4506505190715717,
+          "gap_pp": -2.379797026611441,
+          "crude_rate_lower": 0.42276422764227645,
+          "crude_rate_higher": 0.4444444444444444,
+          "crude_gap_pp": -2.168021680216797
+        },
+        "27614": {
+          "strata": 25,
+          "requests_lower": 228,
+          "requests_higher": 88,
+          "rate_lower": 0.4296046613834755,
+          "rate_higher": 0.6849922141852521,
+          "gap_pp": -25.538755280177668,
+          "crude_rate_lower": 0.42543859649122806,
+          "crude_rate_higher": 0.6818181818181818,
+          "crude_gap_pp": -25.63795853269537
+        }
+      }
+    },
+    "60": {
+      "crude": [
+        {
+          "income_group": "Higher",
+          "requests": 198,
+          "resolved": 107,
+          "rate": 0.5404040404040404
+        },
+        {
+          "income_group": "Lower",
+          "requests": 299,
+          "resolved": 133,
+          "rate": 0.44481605351170567
+        }
+      ],
+      "task_adjusted": {
+        "strata": 5,
+        "requests_lower": 298,
+        "requests_higher": 198,
+        "rate_lower": 0.45387348969438523,
+        "rate_higher": 0.5341768554652537,
+        "gap_pp": -8.03033657708685,
+        "crude_rate_lower": 0.4463087248322148,
+        "crude_rate_higher": 0.5404040404040404,
+        "crude_gap_pp": -9.409531557182566
+      },
+      "month_adjusted": {
+        "strata": 13,
+        "requests_lower": 299,
+        "requests_higher": 198,
+        "rate_lower": 0.4545300065677167,
+        "rate_higher": 0.5346862449632008,
+        "gap_pp": -8.015623839548415,
+        "crude_rate_lower": 0.44481605351170567,
+        "crude_rate_higher": 0.5404040404040404,
+        "crude_gap_pp": -9.558798689233477
+      },
+      "task_month_adjusted": {
+        "strata": 33,
+        "requests_lower": 252,
+        "requests_higher": 195,
+        "rate_lower": 0.4820189195983968,
+        "rate_higher": 0.5395276181367518,
+        "gap_pp": -5.7508698538354945,
+        "crude_rate_lower": 0.4722222222222222,
+        "crude_rate_higher": 0.5435897435897435,
+        "crude_gap_pp": -7.136752136752134
+      },
+      "task_month_min5": {
+        "strata": 12,
+        "requests_lower": 197,
+        "requests_higher": 157,
+        "rate_lower": 0.49137228924806986,
+        "rate_higher": 0.554620090321454,
+        "gap_pp": -6.3247801073384124,
+        "crude_rate_lower": 0.48223350253807107,
+        "crude_rate_higher": 0.554140127388535,
+        "crude_gap_pp": -7.190662485046396
+      },
+      "leave_one_zip_out": {
+        "27604": {
+          "strata": 30,
+          "requests_lower": 151,
+          "requests_higher": 190,
+          "rate_lower": 0.4918831168831169,
+          "rate_higher": 0.5442076556819986,
+          "gap_pp": -5.2324538798881655,
+          "crude_rate_lower": 0.46357615894039733,
+          "crude_rate_higher": 0.5421052631578948,
+          "crude_gap_pp": -7.852910421749742
+        },
+        "27605": {
+          "strata": 31,
+          "requests_lower": 223,
+          "requests_higher": 189,
+          "rate_lower": 0.46330216822435555,
+          "rate_higher": 0.5375619378992057,
+          "gap_pp": -7.425976967485015,
+          "crude_rate_lower": 0.45739910313901344,
+          "crude_rate_higher": 0.5396825396825397,
+          "crude_gap_pp": -8.22834365435262
+        },
+        "27608": {
+          "strata": 28,
+          "requests_lower": 240,
+          "requests_higher": 149,
+          "rate_lower": 0.4879479042582817,
+          "rate_higher": 0.511361132440824,
+          "gap_pp": -2.3413228182542323,
+          "crude_rate_lower": 0.48333333333333334,
+          "crude_rate_higher": 0.5167785234899329,
+          "crude_gap_pp": -3.344519015659958
+        },
+        "27610": {
+          "strata": 28,
+          "requests_lower": 130,
+          "requests_higher": 189,
+          "rate_lower": 0.5050200278648553,
+          "rate_higher": 0.5400857730790652,
+          "gap_pp": -3.506574521420991,
+          "crude_rate_lower": 0.5076923076923077,
+          "crude_rate_higher": 0.5502645502645502,
+          "crude_gap_pp": -4.257224257224257
+        },
+        "27613": {
+          "strata": 30,
+          "requests_lower": 246,
+          "requests_higher": 153,
+          "rate_lower": 0.4731643510383122,
+          "rate_higher": 0.47987743250901144,
+          "gap_pp": -0.6713081470699211,
+          "crude_rate_lower": 0.46747967479674796,
+          "crude_rate_higher": 0.477124183006536,
+          "crude_gap_pp": -0.9644508209788016
+        },
+        "27614": {
+          "strata": 25,
+          "requests_lower": 228,
+          "requests_higher": 88,
+          "rate_lower": 0.488356339557622,
+          "rate_higher": 0.6982833534257584,
+          "gap_pp": -20.992701386813646,
+          "crude_rate_lower": 0.4780701754385965,
+          "crude_rate_higher": 0.7045454545454546,
+          "crude_gap_pp": -22.64752791068581
+        }
+      }
+    },
+    "90": {
+      "crude": [
+        {
+          "income_group": "Higher",
+          "requests": 198,
+          "resolved": 112,
+          "rate": 0.5656565656565656
+        },
+        {
+          "income_group": "Lower",
+          "requests": 299,
+          "resolved": 142,
+          "rate": 0.47491638795986624
+        }
+      ],
+      "task_adjusted": {
+        "strata": 5,
+        "requests_lower": 298,
+        "requests_higher": 198,
+        "rate_lower": 0.482988284384529,
+        "rate_higher": 0.5570009577172318,
+        "gap_pp": -7.401267333270278,
+        "crude_rate_lower": 0.47651006711409394,
+        "crude_rate_higher": 0.5656565656565656,
+        "crude_gap_pp": -8.91464985424717
+      },
+      "month_adjusted": {
+        "strata": 13,
+        "requests_lower": 299,
+        "requests_higher": 198,
+        "rate_lower": 0.4843174182166199,
+        "rate_higher": 0.5585293033133014,
+        "gap_pp": -7.421188509668153,
+        "crude_rate_lower": 0.47491638795986624,
+        "crude_rate_higher": 0.5656565656565656,
+        "crude_gap_pp": -9.07401776966994
+      },
+      "task_month_adjusted": {
+        "strata": 33,
+        "requests_lower": 252,
+        "requests_higher": 195,
+        "rate_lower": 0.5170301052807235,
+        "rate_higher": 0.5637386773168647,
+        "gap_pp": -4.670857203614121,
+        "crude_rate_lower": 0.5079365079365079,
+        "crude_rate_higher": 0.5692307692307692,
+        "crude_gap_pp": -6.12942612942613
+      },
+      "task_month_min5": {
+        "strata": 12,
+        "requests_lower": 197,
+        "requests_higher": 157,
+        "rate_lower": 0.5185380142951508,
+        "rate_higher": 0.5851916819980372,
+        "gap_pp": -6.665366770288639,
+        "crude_rate_lower": 0.5076142131979695,
+        "crude_rate_higher": 0.5859872611464968,
+        "crude_gap_pp": -7.837304794852729
+      },
+      "leave_one_zip_out": {
+        "27604": {
+          "strata": 30,
+          "requests_lower": 151,
+          "requests_higher": 190,
+          "rate_lower": 0.5349101615230648,
+          "rate_higher": 0.5698723487657404,
+          "gap_pp": -3.4962187242675635,
+          "crude_rate_lower": 0.5099337748344371,
+          "crude_rate_higher": 0.5684210526315789,
+          "crude_gap_pp": -5.84872777971418
+        },
+        "27605": {
+          "strata": 31,
+          "requests_lower": 223,
+          "requests_higher": 189,
+          "rate_lower": 0.4950152633869082,
+          "rate_higher": 0.5612246836113334,
+          "gap_pp": -6.620942022442517,
+          "crude_rate_lower": 0.48878923766816146,
+          "crude_rate_higher": 0.5661375661375662,
+          "crude_gap_pp": -7.734832846940471
+        },
+        "27608": {
+          "strata": 28,
+          "requests_lower": 240,
+          "requests_higher": 149,
+          "rate_lower": 0.5189337879907492,
+          "rate_higher": 0.541657656824752,
+          "gap_pp": -2.272386883400279,
+          "crude_rate_lower": 0.5125,
+          "crude_rate_higher": 0.5503355704697986,
+          "crude_gap_pp": -3.7835570469798685
+        },
+        "27610": {
+          "strata": 28,
+          "requests_lower": 130,
+          "requests_higher": 189,
+          "rate_lower": 0.533842737722048,
+          "rate_higher": 0.5656154763143891,
+          "gap_pp": -3.1772738592341088,
+          "crude_rate_lower": 0.5384615384615384,
+          "crude_rate_higher": 0.5767195767195767,
+          "crude_gap_pp": -3.8258038258038307
+        },
+        "27613": {
+          "strata": 30,
+          "requests_lower": 246,
+          "requests_higher": 153,
+          "rate_lower": 0.5053434830789401,
+          "rate_higher": 0.4976491344912397,
+          "gap_pp": 0.769434858770035,
+          "crude_rate_lower": 0.5,
+          "crude_rate_higher": 0.49673202614379086,
+          "crude_gap_pp": 0.32679738562091387
+        },
+        "27614": {
+          "strata": 25,
+          "requests_lower": 228,
+          "requests_higher": 88,
+          "rate_lower": 0.524454496341988,
+          "rate_higher": 0.7351278380550532,
+          "gap_pp": -21.067334171306516,
+          "crude_rate_lower": 0.5131578947368421,
+          "crude_rate_higher": 0.7272727272727273,
+          "crude_gap_pp": -21.411483253588514
+        }
+      }
+    }
+  }
+}

@@ -56,10 +56,103 @@ these are not automatically included in analysis. ZIP-to-ZCTA matching needs
 review before making geographic claims. The existing third-party boundary file
 was not refreshed and has no verified vintage; it remains a separate review item.
 
-The main pipeline was rerun on November 10, 2026 using this snapshot, regenerating
-`output/equity_scatter.png`, `output/service_disparity.png`, and
-`output/raleigh_equity_map.html`. It included 12,871 income-matched requests across
-15 ZIPs under the existing exclusions. The map displays a sample of 2,500 markers
-from 12,709 requests with coordinates, resolution times, and service categories.
-The EDA and presentation outputs have not been regenerated. Successful execution
-demonstrates compatibility, not validation of the statistical conclusions.
+## Request eligibility and duration checks
+
+The shared request loader retains all 18,526 requests, including unresolved cases
+and missing coordinates. Completed-only ZIP comparisons explicitly select known
+ZIPs and reported resolution hours, without requiring coordinates. All output
+loaders now use that common eligibility rule. EDA further excludes missing task
+labels. Income joins reject duplicate ZIP keys rather than multiplying records,
+and the main pipeline defines income groups from the income table independently
+of completion outcomes.
+
+In this snapshot, all 15,626 reported durations agree with submission-to-resolution
+elapsed calendar hours to within one hour: 15,625 are rounded down to whole hours,
+and one retains fractional precision. There are no negative resolution durations.
+`Closed At` is a different endpoint: 52 records have closure before their recorded
+resolution, and two have closure before submission. Nine nonterminal-status
+records retain resolution timestamps but no reported resolution hours. A single
+snapshot cannot reconstruct reopenings or explain these exceptions. Recorded
+resolution must not be equated with verified completion of physical work.
+
+The main pipeline, EDA, and ZIP choropleth outputs were regenerated after the
+eligibility corrections. The main completed-only analysis now includes 13,117
+income-matched requests across 15 ZIPs, up from 12,871 when coordinates were
+required. The map still displays 2,500 sampled markers from 12,709 requests with
+coordinates, reported resolution hours, and service categories. Map display
+counts are separate from analytical sample counts.
+
+The legacy `neglect_rate` field and output filename remain for compatibility,
+but labels now describe the metric accurately: the share of **completed requests**
+taking over 30 days, not the share of all requests still waiting. EDA task keys
+include category and service to prevent conflating generic request-type labels.
+The five task correlation tests now include Bonferroni-adjusted p-values; the
+other EDA correlations are explicitly exploratory and unadjusted. Charts display
+long durations outside a 60-day window without moving them into the final bin,
+and ZIP rankings use separate axes for percentages and days.
+
+The historical presentation outputs in `presentation/output/` and
+`final_presentation/output/` were not regenerated. Their hardcoded examples and
+selected tasks are exploratory illustrations, not confirmed equity findings.
+
+## Fixed-follow-up parks comparison
+
+Run `python3 cohort_analysis.py` with the packages in `requirements.txt` installed.
+Outputs go to `output/cohorts/`: a record-level cohort, counts by task, month,
+task/month and ZIP, a JSON summary, and a comparison chart. The script verifies
+both active input hashes against the snapshot manifest before calculation.
+
+The primary endpoint is a recorded `Resolved At` timestamp within **90 elapsed
+calendar days** of submission. Missing resolution timestamps remain in the
+denominator and count as no recorded resolution within the window. Neither
+administrative closure nor rounded hours substitute for the endpoint. Cancelled
+requests would count as no recorded resolution unless they have a resolution
+timestamp; none of the 497 primary parks-cohort records is cancelled. The city
+has not been shown to promise 90-day completion: this is an analytical window.
+
+Use complete submission months in America/New_York from July 2025, when the
+[public portal launched](https://raleighnc.gov/government/news/ask-raleigh-launches-july-1),
+through July 2026, the latest complete month giving every request at least
+90 days of observation at the snapshot's source-data edit timestamp. Exclude
+prelaunch records from this primary comparison. Sensitivities use 30 and 60 days
+on the same submission cohort. The analysis is a follow-up to an observed pattern,
+not a held-out or preregistered confirmation.
+
+Lower-income ZIPs: 27604, 27605, 27610. Higher-income ZIPs: 27608, 27613, 27614.
+These are the bottom and top three estimates in the original 15-ZIP income scope.
+They are area-level groups, not individual household classifications. ACS margins
+of error are retained in the source but are not propagated into rank uncertainty.
+Notably, ZIPs 27605 and 27601 differ by only $254 in estimated income, much less
+than either estimate's margin of error; membership near the cutoff is uncertain.
+
+For direct standardization, define tasks as service plus request type (keeping an
+explicit unspecified-type bucket) within Parks & Recreation. Retain task/month
+strata represented in both income groups. Give both groups the **same** weight
+for each retained stratum: combined request count in that stratum divided by all
+requests in retained strata. The adjusted group rate is the weighted sum of its
+within-stratum resolution rates. This controls observed task/month composition
+on common support; it does not control severity, routing, precise location,
+repeat reports of the same issue, or reporting propensity. Matching a task label
+does not prove equivalent work. Do not extrapolate to excluded task/months.
+
+For the 90-day endpoint, all 497 eligible requests show recorded-resolution rates
+of 47.5% in lower-income ZIPs (142/299) and 56.6% in higher-income ZIPs (112/198).
+Common task/month support retains 447 requests: 252 lower-income and 195
+higher-income. Their unadjusted rates are 50.8% and 56.9%; standardization gives
+51.7% and 56.4%, a lower-minus-higher gap of **-4.7 percentage points**.
+The change from the original -9.1-point gap reflects both support restriction
+and reweighting; it is not all attributable to task/month adjustment.
+
+Requiring five requests per group in each stratum retains only 354 requests
+and gives a -6.7-point gap. Recomputing after removing each ZIP in turn gives
+gaps from -21.1 to +0.8 points; excluding 27613 reverses the sign slightly.
+Those sensitivities re-estimate common support and weights. They are not
+confidence intervals. With only three ZIPs per group, request-level independence
+would exaggerate the evidence. No request-independent p-value or causal effect
+is claimed. The results support investigation of local backlogs, not a stable
+citywide income-disparity headline.
+
+Regression tests: `python3 -m unittest -v`. The tests cover eligibility,
+duplicate identities and joins, invalid durations, disjoint income groups,
+fixed-window boundaries, unresolved denominators, one-sided strata, and an
+artificial task-mix gap that should disappear after standardization.

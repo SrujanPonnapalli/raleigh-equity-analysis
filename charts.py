@@ -52,8 +52,8 @@ def plot_equity_scatter(
     data = merged_zip.dropna(
         subset=["median_income", "avg_days_to_resolve", "request_volume"]
     ).copy()
-    if data.empty:
-        raise ValueError("No valid ZIP-level records available for scatter plot.")
+    if len(data) < 3 or data["median_income"].nunique() < 2:
+        raise ValueError("At least three valid ZIPs and distinct incomes are required.")
 
     fig, ax = plt.subplots(figsize=(10, 6.5))
 
@@ -84,7 +84,7 @@ def plot_equity_scatter(
         color=PALETTE["trend"],
         linewidth=2.2,
         linestyle="--",
-        label=f"Trend (r = {r_value:.2f}, p = {p_value:.3g})",
+        label=f"Exploratory trend (r = {r_value:.2f}, p = {p_value:.3g})",
         zorder=2,
     )
 
@@ -99,17 +99,18 @@ def plot_equity_scatter(
             color=PALETTE["muted"],
         )
 
-    ax.set_title("Wealth and Response Time by ZIP Code")
+    ax.set_title("Income and Recorded Resolution Time by ZIP Code")
     ax.set_xlabel("Median Household Income")
     ax.set_ylabel("Average Days to Resolve")
     ax.xaxis.set_major_formatter(plt.FuncFormatter(currency_formatter))
     ax.yaxis.set_major_formatter(plt.FuncFormatter(days_formatter))
-    style_legend(ax, loc="upper left")
+    style_legend(ax, loc="upper right")
     trim_spines(ax)
+    fig.subplots_adjust(bottom=0.2)
 
     add_caption(
         fig,
-        "Point size reflects request volume. Only ZIP codes with matched income data are shown.",
+        "Completed requests with matched income only; unfinished requests excluded. Point size = completed count.",
     )
     return save_figure(fig, output_path)
 
@@ -204,15 +205,16 @@ def plot_service_disparity_bars(
         linewidth=0.8,
     )
 
-    ax.set_title("Service Response Disparity by Income Segment")
+    ax.set_title("Completed-Request Resolution Time by Income Segment")
     ax.set_xlabel("Average Days to Resolve")
     ax.set_ylabel("")
     ax.xaxis.set_major_formatter(plt.FuncFormatter(days_formatter))
-    style_legend(ax, loc="lower right")
+    style_legend(ax, loc="upper center", bbox_to_anchor=(0.5, -0.12), ncol=2)
+    fig.subplots_adjust(bottom=0.24)
     trim_spines(ax)
 
     add_caption(
         fig,
-        "Top 5 service categories | Wealth segments defined by ZIP-level median income",
+        "Completed requests only; unfinished requests excluded. Top 5 categories; top/bottom 20% of income ZIPs.",
     )
     return save_figure(fig, output_path)

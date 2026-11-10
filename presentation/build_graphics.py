@@ -28,7 +28,7 @@ import seaborn as sns
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(PROJECT_ROOT))
 
-from data_pipeline import load_income, merge_datasets, wealth_segments  # noqa: E402
+from data_pipeline import completed_requests, load_income, load_requests, merge_datasets, wealth_segments  # noqa: E402
 from main import _resolve_requests_path  # noqa: E402
 from viz_theme import (  # noqa: E402
     PALETTE,
@@ -54,7 +54,6 @@ logger = logging.getLogger(__name__)
 MODULE_DIR = Path(__file__).resolve().parent
 OUTPUT_DIR = MODULE_DIR / "output"
 
-HOURS_PER_DAY = 24.0
 MIN_TASK_REQUESTS = 40
 MIN_ZIPS_WITH_DATA = 5
 
@@ -91,29 +90,9 @@ SERVICE_WAIT_MAPS: tuple[ServiceMapTask, ...] = (
 )
 
 
-def _normalize_zip(series: pd.Series) -> pd.Series:
-    return (
-        series.astype("string")
-        .str.strip()
-        .str.replace(r"\.0$", "", regex=True)
-        .str.zfill(5)
-    )
-
-
 def load_requests_with_service(path: Path) -> pd.DataFrame:
     """Load requests with service, request type, and resolution time."""
-    df = pd.read_csv(path)
-    required = ["ZIP Code", "Hours to Resolve", "Service", "Request Type"]
-    missing = [c for c in required if c not in df.columns]
-    if missing:
-        raise ValueError(f"Requests CSV missing columns: {missing}")
-
-    out = df.copy()
-    out["zip_code"] = _normalize_zip(out["ZIP Code"])
-    out["days_to_resolve"] = pd.to_numeric(out["Hours to Resolve"], errors="coerce") / HOURS_PER_DAY
-    out["service"] = out["Service"].astype("string").str.strip()
-    out["request_type"] = out["Request Type"].astype("string").str.strip()
-    return out.dropna(subset=["zip_code", "days_to_resolve"]).reset_index(drop=True)
+    return completed_requests(load_requests(path))
 
 
 def _filter_task_requests(requests: pd.DataFrame, task: ServiceMapTask) -> pd.DataFrame:

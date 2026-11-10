@@ -1,0 +1,498 @@
+Service Request Number,zip_code,income_group,Service,Request Type,Submittal Date,Resolved At,Status,submission_month,task,resolved_within_window
+SRC0003796,27613,Higher,Tree Service,,2025-07-04T13:04:14+00:00,2025-07-18T13:45:20+00:00,Closed,2025-07,Tree Service / <unspecified type>,True
+SRC0004398,27604,Lower,Tree Service,,2025-07-22T00:45:51+00:00,2025-07-24T18:21:56+00:00,Closed,2025-07,Tree Service / <unspecified type>,True
+SRC0004502,27604,Lower,Tree Service,,2025-07-24T19:02:18+00:00,,New,2025-07,Tree Service / <unspecified type>,False
+SRC0004939,27614,Higher,Tree Service,,2025-08-06T20:03:05+00:00,,New,2025-08,Tree Service / <unspecified type>,False
+SRC0005296,27608,Higher,Tree Service,,2025-08-15T12:51:02+00:00,2025-09-02T15:02:11+00:00,Closed,2025-08,Tree Service / <unspecified type>,True
+SRC0005370,27604,Lower,Tree Service,,2025-08-17T22:36:38+00:00,2025-08-25T16:25:41+00:00,Closed,2025-08,Tree Service / <unspecified type>,True
+SRC0005426,27614,Higher,Tree Service,,2025-08-18T20:35:16+00:00,,New,2025-08,Tree Service / <unspecified type>,False
+SRC0005362,27610,Lower,Park and Greenway Service,Greenway,2025-08-17T15:22:32+00:00,2025-12-19T11:15:17+00:00,Closed,2025-08,Park and Greenway Service / Greenway,False
+SRC0005336,27608,Higher,Tree Service,,2025-08-16T00:37:16+00:00,2026-10-21T14:08:49+00:00,Closed,2025-08,Tree Service / <unspecified type>,False
+SRC0005384,27610,Lower,Park and Greenway Service,Greenway,2025-08-18T12:14:58+00:00,2025-12-19T11:15:19+00:00,Closed,2025-08,Park and Greenway Service / Greenway,False
+SRC0005420,27614,Higher,Tree Service,,2025-08-18T18:55:34+00:00,2025-08-19T16:25:11+00:00,Closed,2025-08,Tree Service / <unspecified type>,True
+SRC0005328,27610,Lower,Tree Service,,2025-08-15T19:37:23+00:00,2025-08-18T10:28:59+00:00,Closed,2025-08,Tree Service / <unspecified type>,True
+SRC0005526,27614,Higher,Tree Service,,2025-08-20T20:21:49+00:00,,New,2025-08,Tree Service / <unspecified type>,False
+SRC0005533,27614,Higher,Tree Service,,2025-08-21T12:18:40+00:00,2025-12-01T13:08:20+00:00,Closed,2025-08,Tree Service / <unspecified type>,False
+SRC0005539,27610,Lower,Park and Greenway Service,Greenway,2025-08-21T13:36:22+00:00,2025-08-25T11:56:18+00:00,Closed,2025-08,Park and Greenway Service / Greenway,True
+SRC0005538,27614,Higher,Tree Service,,2025-08-21T13:40:58+00:00,2026-07-01T12:12:46+00:00,Closed,2025-08,Tree Service / <unspecified type>,False
+SRC0005542,27605,Lower,Tree Service,,2025-08-21T15:00:35+00:00,2025-08-21T19:56:50+00:00,Closed,2025-08,Tree Service / <unspecified type>,True
+SRC0005297,27610,Lower,Tree Service,,2025-08-15T12:58:46+00:00,2025-08-21T10:55:28+00:00,Closed,2025-08,Tree Service / <unspecified type>,True
+SRC0003747,27604,Lower,Tree Service,,2025-07-02T14:06:39+00:00,2025-07-07T17:13:36+00:00,Closed,2025-07,Tree Service / <unspecified type>,True
+SRC0003697,27604,Lower,Tree Service,,2025-07-01T12:28:12+00:00,2026-06-16T19:55:23+00:00,Closed,2025-07,Tree Service / <unspecified type>,False
+SRC0004315,27605,Lower,Tree Service,,2025-07-18T13:53:28+00:00,2025-08-15T17:44:24+00:00,Closed,2025-07,Tree Service / <unspecified type>,True
+SRC0004625,27614,Higher,Park and Greenway Service,Greenway,2025-07-29T15:16:10+00:00,2025-08-06T14:00:43+00:00,Closed,2025-07,Park and Greenway Service / Greenway,True
+SRC0004044,27610,Lower,Tree Service,,2025-07-11T19:43:20+00:00,2025-08-06T13:03:06+00:00,Closed,2025-07,Tree Service / <unspecified type>,True
+SRC0003710,27614,Higher,Tree Service,,2025-07-01T14:33:12+00:00,2025-07-23T17:04:51+00:00,Closed,2025-07,Tree Service / <unspecified type>,True
+SRC0003761,27604,Lower,Tree Service,,2025-07-02T18:28:37+00:00,2025-07-23T17:07:37+00:00,Closed,2025-07,Tree Service / <unspecified type>,True
+SRC0004132,27614,Higher,Tree Service,,2025-07-14T17:01:22+00:00,2025-07-17T14:13:19+00:00,Closed,2025-07,Tree Service / <unspecified type>,True
+SRC0003758,27610,Lower,Tree Service,,2025-07-02T17:09:13+00:00,2025-07-07T11:22:47+00:00,Closed,2025-07,Tree Service / <unspecified type>,True
+SRC0003743,27604,Lower,Tree Service,,2025-07-02T11:50:19+00:00,2025-07-02T14:09:03+00:00,Closed,2025-07,Tree Service / <unspecified type>,True
+SRC0003797,27610,Lower,Tree Service,Vegetation/landscaping blocking view while driving or biking,2025-07-04T13:23:57+00:00,2026-04-27T17:13:51+00:00,Closed,2025-07,Tree Service / Vegetation/landscaping blocking view while driving or biking,False
+SRC0003799,27610,Lower,Park and Greenway Service,Greenway,2025-07-04T14:12:15+00:00,,New,2025-07,Park and Greenway Service / Greenway,False
+SRC0003884,27604,Lower,Tree Service,,2025-07-08T14:42:07+00:00,2026-06-17T12:38:31+00:00,Closed,2025-07,Tree Service / <unspecified type>,False
+SRC0003903,27614,Higher,Tree Service,,2025-07-08T18:54:46+00:00,2025-07-09T15:10:56+00:00,Closed,2025-07,Tree Service / <unspecified type>,True
+SRC0003788,27614,Higher,Tree Service,,2025-07-03T19:21:29+00:00,,New,2025-07,Tree Service / <unspecified type>,False
+SRC0003787,27605,Lower,Tree Service,,2025-07-03T19:10:26+00:00,2025-09-08T10:51:43+00:00,Closed,2025-07,Tree Service / <unspecified type>,True
+SRC0004230,27604,Lower,Park and Greenway Service,Greenway,2025-07-16T13:50:12+00:00,,New,2025-07,Park and Greenway Service / Greenway,False
+SRC0003847,27610,Lower,Park and Greenway Service,Greenway,2025-07-07T15:56:35+00:00,2025-07-14T18:29:13+00:00,Closed,2025-07,Park and Greenway Service / Greenway,True
+SRC0003994,27604,Lower,Tree Service,,2025-07-10T19:08:09+00:00,2025-11-06T13:36:40+00:00,Closed,2025-07,Tree Service / <unspecified type>,False
+SRC0003992,27605,Lower,Tree Service,,2025-07-10T18:12:40+00:00,2026-11-06T19:46:16+00:00,Resolved,2025-07,Tree Service / <unspecified type>,False
+SRC0004249,27610,Lower,Tree Service,,2025-07-16T19:15:32+00:00,,New,2025-07,Tree Service / <unspecified type>,False
+SRC0004185,27610,Lower,Tree Service,,2025-07-15T17:06:21+00:00,2026-06-16T19:57:30+00:00,Closed,2025-07,Tree Service / <unspecified type>,False
+SRC0005123,27604,Lower,Tree Service,,2025-08-12T13:07:59+00:00,2025-08-20T14:57:26+00:00,Closed,2025-08,Tree Service / <unspecified type>,True
+SRC0005116,27604,Lower,Park and Greenway Service,Grounds,2025-08-12T11:49:47+00:00,2025-08-14T15:54:36+00:00,Closed,2025-08,Park and Greenway Service / Grounds,True
+SRC0004985,27605,Lower,Park and Greenway Service,Grounds,2025-08-08T12:34:22+00:00,2025-08-15T15:36:55+00:00,Closed,2025-08,Park and Greenway Service / Grounds,True
+SRC0004459,27604,Lower,Tree Service,,2025-07-23T16:28:29+00:00,2025-10-17T09:13:34+00:00,Closed,2025-07,Tree Service / <unspecified type>,True
+SRC0004494,27604,Lower,Tree Service,,2025-07-24T16:58:41+00:00,,New,2025-07,Tree Service / <unspecified type>,False
+SRC0003701,27605,Lower,Park and Greenway Service,Litter,2025-07-01T12:51:33+00:00,,New,2025-07,Park and Greenway Service / Litter,False
+SRC0003702,27610,Lower,Park and Greenway Service,Litter,2025-07-01T13:05:19+00:00,,New,2025-07,Park and Greenway Service / Litter,False
+SRC0004901,27613,Higher,Tree Service,,2025-08-06T11:13:35+00:00,2025-08-08T12:05:56+00:00,Closed,2025-08,Tree Service / <unspecified type>,True
+SRC0004613,27610,Lower,Tree Service,,2025-07-29T13:13:44+00:00,2025-08-08T18:03:03+00:00,Closed,2025-07,Tree Service / <unspecified type>,True
+SRC0004673,27614,Higher,Park and Greenway Service,Greenway,2025-07-30T16:36:59+00:00,2025-08-08T17:48:55+00:00,Closed,2025-07,Park and Greenway Service / Greenway,True
+SRC0004748,27605,Lower,Tree Service,,2025-08-02T01:52:24+00:00,2025-08-05T11:27:21+00:00,Closed,2025-08,Tree Service / <unspecified type>,True
+SRC0003952,27604,Lower,Tree Service,,2025-07-09T22:48:04+00:00,,New,2025-07,Tree Service / <unspecified type>,False
+SRC0004664,27608,Higher,Park and Greenway Service,Grounds,2025-07-30T14:25:50+00:00,2025-08-04T10:24:06+00:00,Closed,2025-07,Park and Greenway Service / Grounds,True
+SRC0004407,27610,Lower,Park and Greenway Service,Greenway,2025-07-22T12:48:30+00:00,2025-08-04T11:08:18+00:00,Closed,2025-07,Park and Greenway Service / Greenway,True
+SRC0003750,27614,Higher,Park and Greenway Service,Greenway,2025-07-02T14:20:25+00:00,2025-08-06T12:51:16+00:00,Closed,2025-07,Park and Greenway Service / Greenway,True
+SRC0004584,27608,Higher,Tree Service,,2025-07-28T14:10:14+00:00,2025-07-30T12:41:32+00:00,Closed,2025-07,Tree Service / <unspecified type>,True
+SRC0004334,27613,Higher,Tree Service,,2025-07-19T14:43:06+00:00,2025-07-21T11:21:06+00:00,Closed,2025-07,Tree Service / <unspecified type>,True
+SRC0004210,27608,Higher,Tree Service,,2025-07-15T13:54:03+00:00,2025-07-21T15:44:01+00:00,Closed,2025-07,Tree Service / <unspecified type>,True
+SRC0004088,27610,Lower,Tree Service,,2025-07-13T20:45:47+00:00,2025-07-21T10:38:15+00:00,Closed,2025-07,Tree Service / <unspecified type>,True
+SRC0004395,27610,Lower,Tree Service,,2025-07-21T23:35:42+00:00,2025-09-11T16:41:44+00:00,Closed,2025-07,Tree Service / <unspecified type>,True
+SRC0004085,27614,Higher,Tree Service,,2025-07-13T17:15:39+00:00,2025-07-16T14:08:23+00:00,Closed,2025-07,Tree Service / <unspecified type>,True
+SRC0003958,27614,Higher,Park and Greenway Service,Greenway,2025-07-10T11:56:27+00:00,2025-07-14T18:23:20+00:00,Closed,2025-07,Park and Greenway Service / Greenway,True
+SRC0003925,27604,Lower,Tree Service,,2025-07-09T14:21:41+00:00,,New,2025-07,Tree Service / <unspecified type>,False
+SRC0003982,27614,Higher,Tree Service,,2025-07-10T15:44:55+00:00,2025-07-11T14:50:32+00:00,Closed,2025-07,Tree Service / <unspecified type>,True
+SRC0004213,27613,Higher,Tree Service,,2025-07-16T00:14:14+00:00,,New,2025-07,Tree Service / <unspecified type>,False
+SRC0005612,27610,Lower,Playgrounds,,2025-08-24T14:33:36+00:00,,New,2025-08,Playgrounds / <unspecified type>,False
+SRC0005563,27604,Lower,Tree Service,,2025-08-22T12:17:47+00:00,2025-09-19T16:53:32+00:00,Closed,2025-08,Tree Service / <unspecified type>,True
+SRC0005574,27604,Lower,Tree Service,,2025-08-22T16:53:36+00:00,2025-08-25T16:25:48+00:00,Closed,2025-08,Tree Service / <unspecified type>,True
+SRC0005457,27614,Higher,Tree Service,,2025-08-19T15:33:55+00:00,2025-12-01T13:09:13+00:00,Closed,2025-08,Tree Service / <unspecified type>,False
+SRC0005450,27610,Lower,Park and Greenway Service,Grounds,2025-08-19T14:57:24+00:00,2026-06-17T12:27:09+00:00,Closed,2025-08,Park and Greenway Service / Grounds,False
+SRC0005438,27604,Lower,Tree Service,,2025-08-19T12:41:11+00:00,2025-08-25T17:10:06+00:00,Closed,2025-08,Tree Service / <unspecified type>,True
+SRC0005443,27610,Lower,Park and Greenway Service,Greenway,2025-08-19T13:52:50+00:00,2025-12-19T11:15:19+00:00,Closed,2025-08,Park and Greenway Service / Greenway,False
+SRC0005107,27608,Higher,Tree Service,,2025-08-11T20:41:20+00:00,,New,2025-08,Tree Service / <unspecified type>,False
+SRC0005102,27610,Lower,Park and Greenway Service,Grounds,2025-08-11T19:51:56+00:00,,New,2025-08,Park and Greenway Service / Grounds,False
+SRC0004914,27614,Higher,Park and Greenway Service,Greenway,2025-08-06T13:58:10+00:00,,New,2025-08,Park and Greenway Service / Greenway,False
+SRC0004858,27604,Lower,Park and Greenway Service,Grounds,2025-08-05T12:16:24+00:00,,New,2025-08,Park and Greenway Service / Grounds,False
+SRC0004854,27608,Higher,Tree Service,,2025-08-05T01:30:30+00:00,2025-11-06T13:36:06+00:00,Closed,2025-08,Tree Service / <unspecified type>,False
+SRC0004845,27610,Lower,Tree Service,,2025-08-04T21:25:24+00:00,,New,2025-08,Tree Service / <unspecified type>,False
+SRC0005202,27613,Higher,Tree Service,,2025-08-13T18:40:12+00:00,2025-08-13T18:52:27+00:00,Closed,2025-08,Tree Service / <unspecified type>,True
+SRC0005497,27610,Lower,Tree Service,,2025-08-20T12:20:30+00:00,2025-09-11T17:14:49+00:00,Closed,2025-08,Tree Service / <unspecified type>,True
+SRC0005237,27610,Lower,Tree Service,,2025-08-14T15:22:51+00:00,,New,2025-08,Tree Service / <unspecified type>,False
+SRC0004885,27604,Lower,Tree Service,,2025-08-05T18:08:53+00:00,2025-08-25T11:03:40+00:00,Closed,2025-08,Tree Service / <unspecified type>,True
+SRC0004740,27614,Higher,Tree Service,,2025-08-02T00:18:40+00:00,2025-08-28T13:31:54+00:00,Closed,2025-08,Tree Service / <unspecified type>,True
+SRC0004784,27614,Higher,Tree Service,,2025-08-03T21:43:47+00:00,,New,2025-08,Tree Service / <unspecified type>,False
+SRC0004756,27610,Lower,Playgrounds,,2025-08-02T15:44:12+00:00,,New,2025-08,Playgrounds / <unspecified type>,False
+SRC0004729,27604,Lower,Tree Service,,2025-08-01T14:12:00+00:00,2026-06-17T12:32:05+00:00,Closed,2025-08,Tree Service / <unspecified type>,False
+SRC0004689,27613,Higher,Tree Service,,2025-07-31T11:06:23+00:00,2026-03-03T12:25:13+00:00,Closed,2025-07,Tree Service / <unspecified type>,False
+SRC0004684,27604,Lower,Playgrounds,,2025-07-30T20:37:51+00:00,,New,2025-07,Playgrounds / <unspecified type>,False
+SRC0004675,27604,Lower,Park and Greenway Service,Grounds,2025-07-30T17:12:19+00:00,2026-06-17T12:32:46+00:00,Closed,2025-07,Park and Greenway Service / Grounds,False
+SRC0004570,27614,Higher,Tree Service,,2025-07-27T19:58:30+00:00,,New,2025-07,Tree Service / <unspecified type>,False
+SRC0004470,27604,Lower,Park and Greenway Service,Litter,2025-07-23T19:27:13+00:00,2026-06-17T12:34:32+00:00,Closed,2025-07,Park and Greenway Service / Litter,False
+SRC0004463,27610,Lower,Tree Service,,2025-07-23T17:55:06+00:00,2026-06-17T12:35:23+00:00,Closed,2025-07,Tree Service / <unspecified type>,False
+SRC0004445,27604,Lower,Tree Service,,2025-07-23T12:12:18+00:00,2026-10-19T11:25:01+00:00,Closed,2025-07,Tree Service / <unspecified type>,False
+SRC0004400,27614,Higher,Park and Greenway Service,Grounds,2025-07-22T12:08:12+00:00,2026-06-16T19:59:44+00:00,Closed,2025-07,Park and Greenway Service / Grounds,False
+SRC0004660,27610,Lower,Tree Service,,2025-07-30T13:31:33+00:00,,New,2025-07,Tree Service / <unspecified type>,False
+SRC0004644,27610,Lower,Tree Service,,2025-07-29T20:44:25+00:00,,New,2025-07,Tree Service / <unspecified type>,False
+SRC0004672,27610,Lower,Tree Service,,2025-07-30T16:33:37+00:00,2025-08-27T10:50:26+00:00,Closed,2025-07,Tree Service / <unspecified type>,True
+SRC0004361,27604,Lower,Tree Service,,2025-07-21T12:04:09+00:00,,New,2025-07,Tree Service / <unspecified type>,False
+SRC0004272,27614,Higher,Park and Greenway Service,Greenway,2025-07-17T13:50:48+00:00,,New,2025-07,Park and Greenway Service / Greenway,False
+SRC0004243,27610,Lower,Park and Greenway Service,Litter,2025-07-16T18:21:46+00:00,,New,2025-07,Park and Greenway Service / Litter,False
+SRC0004180,27604,Lower,Park and Greenway Service,Greenway,2025-07-15T16:15:18+00:00,,New,2025-07,Park and Greenway Service / Greenway,False
+SRC0004056,27610,Lower,Tree Service,,2025-07-12T16:12:14+00:00,,New,2025-07,Tree Service / <unspecified type>,False
+SRC0004484,27604,Lower,Tree Service,,2025-07-24T11:49:44+00:00,2025-07-25T11:28:23+00:00,Closed,2025-07,Tree Service / <unspecified type>,True
+SRC0005642,27604,Lower,Park and Greenway Service,Grounds,2025-08-25T16:18:03+00:00,2025-08-26T17:41:10+00:00,Closed,2025-08,Park and Greenway Service / Grounds,True
+SRC0005648,27610,Lower,Tree Service,,2025-08-25T16:26:27+00:00,2025-11-03T12:13:21+00:00,Closed,2025-08,Tree Service / <unspecified type>,True
+SRC0005734,27604,Lower,Tree Service,,2025-08-28T03:49:20+00:00,,New,2025-08,Tree Service / <unspecified type>,False
+SRC0005740,27604,Lower,Tree Service,,2025-08-28T12:25:15+00:00,,New,2025-08,Tree Service / <unspecified type>,False
+SRC0005764,27613,Higher,Tree Service,,2025-08-28T17:36:18+00:00,2025-09-02T19:44:40+00:00,Closed,2025-08,Tree Service / <unspecified type>,True
+SRC0005785,27613,Higher,Tree Service,,2025-08-29T14:47:44+00:00,,New,2025-08,Tree Service / <unspecified type>,False
+SRC0005797,27614,Higher,Tree Service,,2025-08-29T15:34:26+00:00,,New,2025-08,Tree Service / <unspecified type>,False
+SRC0005827,27610,Lower,Tree Service,,2025-08-30T19:07:13+00:00,2025-09-15T17:17:22+00:00,Closed,2025-08,Tree Service / <unspecified type>,True
+SRC0005838,27608,Higher,Tree Service,,2025-08-31T16:14:06+00:00,2026-04-07T11:06:20+00:00,Closed,2025-08,Tree Service / <unspecified type>,False
+SRC0005842,27604,Lower,Tree Service,,2025-08-31T20:11:46+00:00,2025-09-02T14:38:29+00:00,Closed,2025-08,Tree Service / <unspecified type>,True
+SRC0005847,27614,Higher,Tree Service,,2025-09-01T13:04:03+00:00,2026-10-02T16:25:45+00:00,Closed,2025-09,Tree Service / <unspecified type>,False
+SRC0005879,27604,Lower,Tree Service,,2025-09-02T13:50:02+00:00,2025-09-11T09:10:16+00:00,Closed,2025-09,Tree Service / <unspecified type>,True
+SRC0005904,27613,Higher,Park and Greenway Service,Litter,2025-09-02T18:32:32+00:00,,New,2025-09,Park and Greenway Service / Litter,False
+SRC0005918,27610,Lower,Park and Greenway Service,Grounds,2025-09-02T20:00:36+00:00,2026-06-17T12:25:41+00:00,Closed,2025-09,Park and Greenway Service / Grounds,False
+SRC0005977,27610,Lower,Park and Greenway Service,Grounds,2025-09-03T20:41:59+00:00,2025-09-24T19:06:14+00:00,Closed,2025-09,Park and Greenway Service / Grounds,True
+SRC0005984,27604,Lower,Park and Greenway Service,Greenway,2025-09-04T02:01:17+00:00,2025-12-15T19:51:54+00:00,Closed,2025-09,Park and Greenway Service / Greenway,False
+SRC0005989,27604,Lower,Park and Greenway Service,Grounds,2025-09-04T12:53:38+00:00,2026-02-16T14:20:11+00:00,Closed,2025-09,Park and Greenway Service / Grounds,False
+SRC0006029,27610,Lower,Tree Service,,2025-09-04T23:43:04+00:00,,New,2025-09,Tree Service / <unspecified type>,False
+SRC0006109,27610,Lower,Tree Service,,2025-09-08T15:27:22+00:00,,New,2025-09,Tree Service / <unspecified type>,False
+SRC0006129,27605,Lower,Tree Service,,2025-09-08T17:17:06+00:00,,New,2025-09,Tree Service / <unspecified type>,False
+SRC0006161,27613,Higher,Park and Greenway Service,Greenway,2025-09-09T16:23:58+00:00,2025-09-24T10:46:48+00:00,Closed,2025-09,Park and Greenway Service / Greenway,True
+SRC0006230,27604,Lower,Park and Greenway Service,Grounds,2025-09-11T15:30:19+00:00,,New,2025-09,Park and Greenway Service / Grounds,False
+SRC0006242,27610,Lower,Park and Greenway Service,Litter,2025-09-11T22:05:23+00:00,2025-09-12T16:44:43+00:00,Closed,2025-09,Park and Greenway Service / Litter,True
+SRC0006259,27610,Lower,Park and Greenway Service,Greenway,2025-09-12T16:42:31+00:00,2025-11-06T12:24:55+00:00,Closed,2025-09,Park and Greenway Service / Greenway,True
+SRC0006303,27614,Higher,Tree Service,,2025-09-14T20:40:22+00:00,,New,2025-09,Tree Service / <unspecified type>,False
+SRC0006311,27605,Lower,Tree Service,,2025-09-15T12:14:41+00:00,2026-03-10T13:29:44+00:00,Closed,2025-09,Tree Service / <unspecified type>,False
+SRC0006433,27604,Lower,Tree Service,,2025-09-17T18:52:21+00:00,,New,2025-09,Tree Service / <unspecified type>,False
+SRC0006458,27605,Lower,Tree Service,,2025-09-18T14:32:21+00:00,,New,2025-09,Tree Service / <unspecified type>,False
+SRC0006460,27605,Lower,Tree Service,,2025-09-18T16:39:39+00:00,2025-09-22T10:34:40+00:00,Closed,2025-09,Tree Service / <unspecified type>,True
+SRC0006491,27604,Lower,Tree Service,,2025-09-19T14:21:46+00:00,2025-09-22T16:44:54+00:00,Closed,2025-09,Tree Service / <unspecified type>,True
+SRC0006514,27614,Higher,Tree Service,,2025-09-21T15:54:26+00:00,2026-09-21T18:08:27+00:00,Closed,2025-09,Tree Service / <unspecified type>,False
+SRC0006539,27610,Lower,Tree Service,,2025-09-22T13:58:58+00:00,,New,2025-09,Tree Service / <unspecified type>,False
+SRC0006565,27604,Lower,Park and Greenway Service,Grounds,2025-09-22T18:39:42+00:00,,New,2025-09,Park and Greenway Service / Grounds,False
+SRC0006601,27614,Higher,Tree Service,,2025-09-23T15:51:59+00:00,2025-09-24T16:39:37+00:00,Closed,2025-09,Tree Service / <unspecified type>,True
+SRC0006614,27610,Lower,Tree Service,,2025-09-23T17:10:22+00:00,2025-10-29T14:19:33+00:00,Closed,2025-09,Tree Service / <unspecified type>,True
+SRC0006637,27604,Lower,Tree Service,,2025-09-24T13:43:06+00:00,2026-03-05T12:27:13+00:00,Closed,2025-09,Tree Service / <unspecified type>,False
+SRC0006640,27604,Lower,Tree Service,,2025-09-24T14:39:51+00:00,2025-09-24T16:22:39+00:00,Closed,2025-09,Tree Service / <unspecified type>,True
+SRC0006657,27610,Lower,Tree Service,,2025-09-24T19:23:03+00:00,,New,2025-09,Tree Service / <unspecified type>,False
+SRC0006718,27614,Higher,Tree Service,,2025-09-26T16:42:23+00:00,2025-10-01T15:40:55+00:00,Closed,2025-09,Tree Service / <unspecified type>,True
+SRC0006726,27614,Higher,Tree Service,,2025-09-26T19:32:28+00:00,2026-06-03T09:14:56+00:00,Closed,2025-09,Tree Service / <unspecified type>,False
+SRC0006731,27608,Higher,Tree Service,,2025-09-26T22:27:15+00:00,2025-10-08T12:06:20+00:00,Closed,2025-09,Tree Service / <unspecified type>,True
+SRC0006746,27610,Lower,Park and Greenway Service,Greenway,2025-09-28T13:55:29+00:00,2025-12-10T19:47:18+00:00,Closed,2025-09,Park and Greenway Service / Greenway,True
+SRC0006782,27604,Lower,Tree Service,,2025-09-29T21:03:36+00:00,,New,2025-09,Tree Service / <unspecified type>,False
+SRC0006803,27610,Lower,Tree Service,,2025-09-30T14:59:37+00:00,,New,2025-09,Tree Service / <unspecified type>,False
+SRC0006864,27604,Lower,Park and Greenway Service,Grounds,2025-10-01T16:41:45+00:00,2025-10-09T17:50:08+00:00,Closed,2025-10,Park and Greenway Service / Grounds,True
+SRC0006870,27604,Lower,Tree Service,,2025-10-01T20:32:28+00:00,,New,2025-10,Tree Service / <unspecified type>,False
+SRC0006916,27614,Higher,Tree Service,,2025-10-02T23:33:04+00:00,,New,2025-10,Tree Service / <unspecified type>,False
+SRC0006924,27605,Lower,Tree Service,,2025-10-03T10:10:03+00:00,,New,2025-10,Tree Service / <unspecified type>,False
+SRC0006980,27604,Lower,Park and Greenway Service,Grounds,2025-10-03T21:47:44+00:00,,New,2025-10,Park and Greenway Service / Grounds,False
+SRC0007008,27614,Higher,Tree Service,,2025-10-05T13:18:37+00:00,2026-10-02T16:27:06+00:00,Closed,2025-10,Tree Service / <unspecified type>,False
+SRC0007016,27610,Lower,Playgrounds,,2025-10-05T18:43:21+00:00,,New,2025-10,Playgrounds / <unspecified type>,False
+SRC0007172,27610,Lower,Tree Service,,2025-10-09T18:20:25+00:00,2025-11-03T11:14:36+00:00,Closed,2025-10,Tree Service / <unspecified type>,True
+SRC0007195,27604,Lower,Tree Service,,2025-10-10T14:42:06+00:00,2025-10-13T11:07:26+00:00,Closed,2025-10,Tree Service / <unspecified type>,True
+SRC0007211,27610,Lower,Playgrounds,,2025-10-10T21:25:53+00:00,,New,2025-10,Playgrounds / <unspecified type>,False
+SRC0007233,27610,Lower,Tree Service,,2025-10-12T17:27:17+00:00,2025-10-17T09:10:51+00:00,Closed,2025-10,Tree Service / <unspecified type>,True
+SRC0007274,27605,Lower,Tree Service,,2025-10-13T16:12:54+00:00,,New,2025-10,Tree Service / <unspecified type>,False
+SRC0007295,27614,Higher,Tree Service,,2025-10-13T19:55:05+00:00,,New,2025-10,Tree Service / <unspecified type>,False
+SRC0007335,27610,Lower,Tree Service,,2025-10-14T16:58:12+00:00,,New,2025-10,Tree Service / <unspecified type>,False
+SRC0007337,27614,Higher,Tree Service,,2025-10-14T17:15:52+00:00,,New,2025-10,Tree Service / <unspecified type>,False
+SRC0007350,27614,Higher,Tree Service,,2025-10-14T19:18:29+00:00,2025-10-15T16:02:12+00:00,Closed,2025-10,Tree Service / <unspecified type>,True
+SRC0007351,27613,Higher,Tree Service,,2025-10-14T19:49:24+00:00,2025-12-18T12:32:18+00:00,Closed,2025-10,Tree Service / <unspecified type>,True
+SRC0007352,27604,Lower,Tree Service,,2025-10-14T19:48:42+00:00,2026-03-05T12:26:43+00:00,Closed,2025-10,Tree Service / <unspecified type>,False
+SRC0007428,27605,Lower,Tree Service,,2025-10-15T18:44:59+00:00,2025-10-30T17:34:24+00:00,Closed,2025-10,Tree Service / <unspecified type>,True
+SRC0007432,27610,Lower,Park and Greenway Service,Grounds,2025-10-15T19:37:58+00:00,,New,2025-10,Park and Greenway Service / Grounds,False
+SRC0007489,27604,Lower,Park and Greenway Service,Greenway,2025-10-17T12:58:41+00:00,2025-10-20T12:52:32+00:00,Closed,2025-10,Park and Greenway Service / Greenway,True
+SRC0007635,27614,Higher,Tree Service,,2025-10-22T11:40:23+00:00,,New,2025-10,Tree Service / <unspecified type>,False
+SRC0007676,27604,Lower,Tree Service,,2025-10-22T17:04:32+00:00,2025-10-30T11:46:08+00:00,Closed,2025-10,Tree Service / <unspecified type>,True
+SRC0007797,27604,Lower,Tree Service,,2025-10-25T15:20:05+00:00,2025-10-27T16:53:01+00:00,Closed,2025-10,Tree Service / <unspecified type>,True
+SRC0007818,27604,Lower,Tree Service,,2025-10-26T16:02:10+00:00,2025-11-05T13:13:35+00:00,Closed,2025-10,Tree Service / <unspecified type>,True
+SRC0007853,27610,Lower,Park and Greenway Service,Greenway,2025-10-27T15:26:31+00:00,,New,2025-10,Park and Greenway Service / Greenway,False
+SRC0007867,27610,Lower,Tree Service,,2025-10-27T18:29:31+00:00,,New,2025-10,Tree Service / <unspecified type>,False
+SRC0007964,27608,Higher,Tree Service,,2025-10-30T00:43:22+00:00,,New,2025-10,Tree Service / <unspecified type>,False
+SRC0008148,27604,Lower,Park and Greenway Service,Grounds,2025-11-03T20:56:02+00:00,,New,2025-11,Park and Greenway Service / Grounds,False
+SRC0008155,27610,Lower,Tree Service,,2025-11-04T12:40:46+00:00,,New,2025-11,Tree Service / <unspecified type>,False
+SRC0008168,27610,Lower,Tree Service,,2025-11-04T15:52:03+00:00,,New,2025-11,Tree Service / <unspecified type>,False
+SRC0008183,27614,Higher,Park and Greenway Service,Greenway,2025-11-04T19:54:18+00:00,2025-11-10T12:47:07+00:00,Closed,2025-11,Park and Greenway Service / Greenway,True
+SRC0008197,27614,Higher,Tree Service,,2025-11-05T10:09:27+00:00,,New,2025-11,Tree Service / <unspecified type>,False
+SRC0008393,27608,Higher,Tree Service,,2025-11-10T12:39:34+00:00,,New,2025-11,Tree Service / <unspecified type>,False
+SRC0008589,27608,Higher,Tree Service,,2025-11-13T21:37:50+00:00,2025-12-16T12:25:09+00:00,Closed,2025-11,Tree Service / <unspecified type>,True
+SRC0008663,27608,Higher,Tree Service,,2025-11-15T15:57:30+00:00,2025-11-18T17:33:43+00:00,Closed,2025-11,Tree Service / <unspecified type>,True
+SRC0008746,27605,Lower,Playgrounds,,2025-11-17T19:14:56+00:00,,New,2025-11,Playgrounds / <unspecified type>,False
+SRC0008804,27604,Lower,Tree Service,,2025-11-18T20:31:36+00:00,2025-11-20T18:15:18+00:00,Closed,2025-11,Tree Service / <unspecified type>,True
+SRC0008829,27608,Higher,Tree Service,,2025-11-19T15:04:13+00:00,2025-11-24T10:58:40+00:00,Closed,2025-11,Tree Service / <unspecified type>,True
+SRC0008855,27610,Lower,Tree Service,,2025-11-19T21:03:17+00:00,2025-11-20T18:34:12+00:00,Closed,2025-11,Tree Service / <unspecified type>,True
+SRC0009005,27610,Lower,Tree Service,,2025-11-24T16:20:45+00:00,2025-12-03T12:00:15+00:00,Closed,2025-11,Tree Service / <unspecified type>,True
+SRC0009026,27613,Higher,Tree Service,,2025-11-24T21:08:39+00:00,2026-09-25T11:30:57+00:00,Closed,2025-11,Tree Service / <unspecified type>,False
+SRC0009119,27604,Lower,Tree Service,,2025-11-28T04:58:17+00:00,,New,2025-11,Tree Service / <unspecified type>,False
+SRC0009335,27614,Higher,Tree Service,,2025-12-05T15:45:17+00:00,,New,2025-12,Tree Service / <unspecified type>,False
+SRC0009336,27604,Lower,Tree Service,,2025-12-05T15:57:30+00:00,,New,2025-12,Tree Service / <unspecified type>,False
+SRC0009358,27605,Lower,Park and Greenway Service,Grounds,2025-12-06T20:11:59+00:00,2026-02-06T15:11:16+00:00,Closed,2025-12,Park and Greenway Service / Grounds,True
+SRC0009409,27613,Higher,Tree Service,,2025-12-08T19:05:44+00:00,2025-12-16T16:52:01+00:00,Closed,2025-12,Tree Service / <unspecified type>,True
+SRC0009524,27605,Lower,Tree Service,,2025-12-10T20:55:22+00:00,2025-12-16T16:56:27+00:00,Closed,2025-12,Tree Service / <unspecified type>,True
+SRC0009833,27614,Higher,Tree Service,,2025-12-19T14:23:34+00:00,,New,2025-12,Tree Service / <unspecified type>,False
+SRC0009842,27608,Higher,Park and Greenway Service,Grounds,2025-12-19T15:56:04+00:00,2026-01-13T13:33:43+00:00,Closed,2025-12,Park and Greenway Service / Grounds,True
+SRC0009942,27610,Lower,Park and Greenway Service,Greenway,2025-12-22T20:58:52+00:00,2026-01-08T18:54:02+00:00,Closed,2025-12,Park and Greenway Service / Greenway,True
+SRC0010102,27610,Lower,Tree Service,,2025-12-30T14:01:58+00:00,2026-06-17T13:41:15+00:00,Closed,2025-12,Tree Service / <unspecified type>,False
+SRC0010103,27610,Lower,Park and Greenway Service,Grounds,2025-12-30T14:19:42+00:00,,New,2025-12,Park and Greenway Service / Grounds,False
+SRC0010164,27608,Higher,Tree Service,,2025-12-31T21:03:37+00:00,2026-01-06T19:05:50+00:00,Closed,2025-12,Tree Service / <unspecified type>,True
+SRC0010180,27605,Lower,Park and Greenway Service,Litter,2026-01-02T12:09:20+00:00,,New,2026-01,Park and Greenway Service / Litter,False
+SRC0010238,27604,Lower,Playgrounds,,2026-01-04T17:51:57+00:00,,New,2026-01,Playgrounds / <unspecified type>,False
+SRC0010249,27610,Lower,Park and Greenway Service,Greenway,2026-01-04T22:47:41+00:00,2026-01-16T17:25:04+00:00,Closed,2026-01,Park and Greenway Service / Greenway,True
+SRC0010367,27604,Lower,Park and Greenway Service,Grounds,2026-01-07T15:44:36+00:00,2026-01-08T11:34:58+00:00,Closed,2026-01,Park and Greenway Service / Grounds,True
+SRC0010369,27604,Lower,Park and Greenway Service,Grounds,2026-01-07T15:49:09+00:00,2026-01-12T15:49:26+00:00,Closed,2026-01,Park and Greenway Service / Grounds,True
+SRC0010523,27614,Higher,Park and Greenway Service,Litter,2026-01-09T23:43:33+00:00,2026-01-12T15:40:13+00:00,Closed,2026-01,Park and Greenway Service / Litter,True
+SRC0010536,27613,Higher,Park and Greenway Service,Greenway,2026-01-10T14:48:35+00:00,,New,2026-01,Park and Greenway Service / Greenway,False
+SRC0010567,27610,Lower,Tree Service,,2026-01-11T20:17:31+00:00,2026-01-22T12:38:01+00:00,Closed,2026-01,Tree Service / <unspecified type>,True
+SRC0010585,27614,Higher,Park and Greenway Service,Litter,2026-01-12T15:37:27+00:00,,New,2026-01,Park and Greenway Service / Litter,False
+SRC0010587,27604,Lower,Park and Greenway Service,Grounds,2026-01-12T15:46:28+00:00,2026-01-23T10:50:14+00:00,Closed,2026-01,Park and Greenway Service / Grounds,True
+SRC0010638,27614,Higher,Tree Service,,2026-01-13T01:35:31+00:00,2026-01-27T15:29:05+00:00,Closed,2026-01,Tree Service / <unspecified type>,True
+SRC0010639,27614,Higher,Tree Service,,2026-01-13T12:28:26+00:00,2026-01-30T14:03:55+00:00,Closed,2026-01,Tree Service / <unspecified type>,True
+SRC0010657,27604,Lower,Tree Service,,2026-01-13T16:49:12+00:00,2026-01-14T18:04:04+00:00,Closed,2026-01,Tree Service / <unspecified type>,True
+SRC0010683,27610,Lower,Tree Service,,2026-01-14T01:47:53+00:00,,New,2026-01,Tree Service / <unspecified type>,False
+SRC0010742,27610,Lower,Tree Service,,2026-01-15T17:34:15+00:00,2026-02-06T16:31:31+00:00,Closed,2026-01,Tree Service / <unspecified type>,True
+SRC0010788,27608,Higher,Tree Service,,2026-01-16T16:37:46+00:00,,New,2026-01,Tree Service / <unspecified type>,False
+SRC0010864,27604,Lower,Park and Greenway Service,Greenway,2026-01-18T14:10:34+00:00,2026-03-09T18:43:37+00:00,Closed,2026-01,Park and Greenway Service / Greenway,True
+SRC0010895,27614,Higher,Tree Service,,2026-01-20T13:34:21+00:00,2026-02-12T13:54:08+00:00,Closed,2026-01,Tree Service / <unspecified type>,True
+SRC0010912,27613,Higher,Park and Greenway Service,Greenway,2026-01-20T16:55:31+00:00,2026-06-17T12:45:44+00:00,Closed,2026-01,Park and Greenway Service / Greenway,False
+SRC0010956,27610,Lower,Tree Service,,2026-01-21T16:02:38+00:00,,New,2026-01,Tree Service / <unspecified type>,False
+SRC0010926,27605,Lower,Tree Service,,2026-01-20T18:59:06+00:00,2026-01-21T18:53:06+00:00,Closed,2026-01,Tree Service / <unspecified type>,True
+SRC0010977,27614,Higher,Park and Greenway Service,Litter,2026-01-21T21:23:16+00:00,,New,2026-01,Park and Greenway Service / Litter,False
+SRC0011116,27614,Higher,Tree Service,,2026-01-26T21:56:47+00:00,2026-01-27T17:21:01+00:00,Closed,2026-01,Tree Service / <unspecified type>,True
+SRC0011117,27614,Higher,Tree Service,,2026-01-26T22:01:11+00:00,2026-01-27T17:22:56+00:00,Closed,2026-01,Tree Service / <unspecified type>,True
+SRC0011118,27614,Higher,Tree Service,,2026-01-26T22:03:20+00:00,,New,2026-01,Tree Service / <unspecified type>,False
+SRC0011457,27610,Lower,Park and Greenway Service,Grounds,2026-02-06T03:10:55+00:00,2026-04-15T14:06:59+00:00,Closed,2026-02,Park and Greenway Service / Grounds,True
+SRC0011473,27610,Lower,Tree Service,,2026-02-06T16:29:41+00:00,,New,2026-02,Tree Service / <unspecified type>,False
+SRC0011512,27610,Lower,Park and Greenway Service,Litter,2026-02-08T16:27:45+00:00,,New,2026-02,Park and Greenway Service / Litter,False
+SRC0011635,27610,Lower,Park and Greenway Service,Greenway,2026-02-11T12:48:32+00:00,2026-02-12T11:55:18+00:00,Closed,2026-02,Park and Greenway Service / Greenway,True
+SRC0011668,27610,Lower,Tree Service,,2026-02-11T17:33:02+00:00,2026-02-17T17:47:14+00:00,Closed,2026-02,Tree Service / <unspecified type>,True
+SRC0011678,27610,Lower,Tree Service,,2026-02-11T21:02:54+00:00,,New,2026-02,Tree Service / <unspecified type>,False
+SRC0011858,27610,Lower,Tree Service,,2026-02-17T16:02:09+00:00,,New,2026-02,Tree Service / <unspecified type>,False
+SRC0012032,27610,Lower,Park and Greenway Service,Litter,2026-02-20T15:14:58+00:00,,New,2026-02,Park and Greenway Service / Litter,False
+SRC0012037,27610,Lower,Tree Service,,2026-02-20T16:17:38+00:00,2026-02-20T20:50:27+00:00,Closed,2026-02,Tree Service / <unspecified type>,True
+SRC0012098,27610,Lower,Playgrounds,,2026-02-22T17:42:52+00:00,,New,2026-02,Playgrounds / <unspecified type>,False
+SRC0012104,27604,Lower,Playgrounds,,2026-02-22T22:11:08+00:00,,New,2026-02,Playgrounds / <unspecified type>,False
+SRC0012158,27614,Higher,Park and Greenway Service,Grounds,2026-02-23T23:34:18+00:00,2026-02-25T19:23:50+00:00,Closed,2026-02,Park and Greenway Service / Grounds,True
+SRC0012188,27608,Higher,Tree Service,,2026-02-24T18:19:29+00:00,,New,2026-02,Tree Service / <unspecified type>,False
+SRC0012247,27614,Higher,Tree Service,,2026-02-25T19:56:16+00:00,2026-03-04T13:12:00+00:00,Closed,2026-02,Tree Service / <unspecified type>,True
+SRC0012276,27613,Higher,Tree Service,,2026-02-26T03:11:47+00:00,2026-02-26T15:40:42+00:00,Closed,2026-02,Tree Service / <unspecified type>,True
+SRC0012277,27604,Lower,Tree Service,,2026-02-26T03:23:30+00:00,,New,2026-02,Tree Service / <unspecified type>,False
+SRC0012397,27610,Lower,Park and Greenway Service,Grounds,2026-03-01T20:12:52+00:00,,New,2026-03,Park and Greenway Service / Grounds,False
+SRC0012447,27604,Lower,Tree Service,,2026-03-02T17:08:38+00:00,2026-03-03T13:18:55+00:00,Closed,2026-03,Tree Service / <unspecified type>,True
+SRC0012486,27610,Lower,Tree Service,,2026-03-02T23:11:31+00:00,,New,2026-03,Tree Service / <unspecified type>,False
+SRC0012528,27604,Lower,Tree Service,,2026-03-03T20:40:58+00:00,2026-03-09T16:11:05+00:00,Closed,2026-03,Tree Service / <unspecified type>,True
+SRC0012534,27613,Higher,Tree Service,,2026-03-03T20:59:37+00:00,2026-03-10T15:59:12+00:00,Closed,2026-03,Tree Service / <unspecified type>,True
+SRC0012553,27610,Lower,Tree Service,,2026-03-04T14:30:36+00:00,,New,2026-03,Tree Service / <unspecified type>,False
+SRC0012627,27610,Lower,Park and Greenway Service,Grounds,2026-03-05T19:39:52+00:00,2026-09-03T20:24:54+00:00,Closed,2026-03,Park and Greenway Service / Grounds,False
+SRC0012637,27610,Lower,Park and Greenway Service,Litter,2026-03-06T02:35:58+00:00,,New,2026-03,Park and Greenway Service / Litter,False
+SRC0012643,27608,Higher,Park and Greenway Service,Grounds,2026-03-06T12:46:59+00:00,2026-03-13T19:20:25+00:00,Closed,2026-03,Park and Greenway Service / Grounds,True
+SRC0012679,27610,Lower,Tree Service,,2026-03-06T19:46:46+00:00,,New,2026-03,Tree Service / <unspecified type>,False
+SRC0012680,27610,Lower,Park and Greenway Service,Grounds,2026-03-06T20:03:31+00:00,2026-05-13T09:43:30+00:00,Closed,2026-03,Park and Greenway Service / Grounds,True
+SRC0012779,27604,Lower,Tree Service,,2026-03-09T15:01:37+00:00,2026-03-13T11:40:59+00:00,Closed,2026-03,Tree Service / <unspecified type>,True
+SRC0012841,27614,Higher,Park and Greenway Service,Greenway,2026-03-10T13:58:28+00:00,,New,2026-03,Park and Greenway Service / Greenway,False
+SRC0012857,27614,Higher,Tree Service,,2026-03-10T17:48:31+00:00,2026-04-20T11:31:32+00:00,Closed,2026-03,Tree Service / <unspecified type>,True
+SRC0012874,27610,Lower,Park and Greenway Service,Greenway,2026-03-10T22:30:44+00:00,,New,2026-03,Park and Greenway Service / Greenway,False
+SRC0012892,27610,Lower,Tree Service,,2026-03-11T13:46:18+00:00,,New,2026-03,Tree Service / <unspecified type>,False
+SRC0012909,27608,Higher,Playgrounds,,2026-03-11T17:41:14+00:00,,New,2026-03,Playgrounds / <unspecified type>,False
+SRC0012919,27614,Higher,Tree Service,,2026-03-11T22:32:17+00:00,2026-03-13T13:17:15+00:00,Closed,2026-03,Tree Service / <unspecified type>,True
+SRC0013059,27610,Lower,Park and Greenway Service,Greenway,2026-03-15T14:46:05+00:00,2026-04-23T10:48:27+00:00,Closed,2026-03,Park and Greenway Service / Greenway,True
+SRC0013123,27604,Lower,Tree Service,,2026-03-16T16:57:46+00:00,2026-03-16T18:00:26+00:00,Closed,2026-03,Tree Service / <unspecified type>,True
+SRC0013154,27610,Lower,Tree Service,,2026-03-17T12:44:21+00:00,2026-03-23T18:01:29+00:00,Closed,2026-03,Tree Service / <unspecified type>,True
+SRC0013192,27610,Lower,Park and Greenway Service,Grounds,2026-03-17T18:33:55+00:00,2026-03-26T10:12:29+00:00,Closed,2026-03,Park and Greenway Service / Grounds,True
+SRC0013200,27604,Lower,Park and Greenway Service,Grounds,2026-03-17T19:17:14+00:00,,New,2026-03,Park and Greenway Service / Grounds,False
+SRC0013382,27604,Lower,Park and Greenway Service,Litter,2026-03-19T19:40:09+00:00,,New,2026-03,Park and Greenway Service / Litter,False
+SRC0013384,27604,Lower,Tree Service,,2026-03-19T19:49:39+00:00,2026-03-25T18:42:46+00:00,Closed,2026-03,Tree Service / <unspecified type>,True
+SRC0013436,27604,Lower,Tree Service,,2026-03-20T21:02:47+00:00,,New,2026-03,Tree Service / <unspecified type>,False
+SRC0013446,27604,Lower,Tree Service,,2026-03-21T13:42:53+00:00,2026-03-23T17:56:09+00:00,Closed,2026-03,Tree Service / <unspecified type>,True
+SRC0013463,27604,Lower,Playgrounds,,2026-03-21T21:42:44+00:00,,New,2026-03,Playgrounds / <unspecified type>,False
+SRC0013502,27614,Higher,Tree Service,,2026-03-23T14:18:09+00:00,,New,2026-03,Tree Service / <unspecified type>,False
+SRC0013571,27604,Lower,Playgrounds,,2026-03-24T02:06:46+00:00,,New,2026-03,Playgrounds / <unspecified type>,False
+SRC0013598,27608,Higher,Tree Service,,2026-03-24T15:47:59+00:00,2026-04-01T11:17:11+00:00,Closed,2026-03,Tree Service / <unspecified type>,True
+SRC0013610,27614,Higher,Tree Service,,2026-03-24T17:13:57+00:00,2026-03-25T16:45:19+00:00,Closed,2026-03,Tree Service / <unspecified type>,True
+SRC0013621,27604,Lower,Tree Service,,2026-03-24T19:43:52+00:00,2026-03-25T10:30:42+00:00,Closed,2026-03,Tree Service / <unspecified type>,True
+SRC0013666,27614,Higher,Tree Service,,2026-03-25T16:09:45+00:00,2026-09-02T11:11:58+00:00,Closed,2026-03,Tree Service / <unspecified type>,False
+SRC0013671,27613,Higher,Tree Service,,2026-03-25T18:14:14+00:00,2026-03-31T14:31:26+00:00,Closed,2026-03,Tree Service / <unspecified type>,True
+SRC0013791,27610,Lower,Tree Service,,2026-03-27T18:43:03+00:00,2026-03-30T11:46:46+00:00,Closed,2026-03,Tree Service / <unspecified type>,True
+SRC0013801,27604,Lower,Park and Greenway Service,Greenway,2026-03-28T00:25:17+00:00,2026-04-09T18:16:39+00:00,Closed,2026-03,Park and Greenway Service / Greenway,True
+SRC0013957,27608,Higher,Tree Service,,2026-04-01T14:56:50+00:00,2026-04-01T18:37:21+00:00,Closed,2026-04,Tree Service / <unspecified type>,True
+SRC0014047,27604,Lower,Tree Service,,2026-04-03T14:06:55+00:00,,New,2026-04,Tree Service / <unspecified type>,False
+SRC0014073,27604,Lower,Park and Greenway Service,Grounds,2026-04-04T21:39:46+00:00,2026-05-04T10:39:34+00:00,Closed,2026-04,Park and Greenway Service / Grounds,True
+SRC0014075,27614,Higher,Tree Service,,2026-04-04T23:11:08+00:00,2026-10-09T14:49:08+00:00,Closed,2026-04,Tree Service / <unspecified type>,False
+SRC0014080,27610,Lower,Tree Service,,2026-04-05T15:28:28+00:00,2026-04-06T15:13:59+00:00,Closed,2026-04,Tree Service / <unspecified type>,True
+SRC0014088,27614,Higher,Tree Service,,2026-04-05T22:13:41+00:00,2026-04-20T11:30:59+00:00,Closed,2026-04,Tree Service / <unspecified type>,True
+SRC0014127,27613,Higher,Tree Service,,2026-04-06T18:04:00+00:00,2026-04-24T17:34:59+00:00,Closed,2026-04,Tree Service / <unspecified type>,True
+SRC0014185,27614,Higher,Park and Greenway Service,Grounds,2026-04-07T18:52:05+00:00,2026-04-21T12:27:12+00:00,Closed,2026-04,Park and Greenway Service / Grounds,True
+SRC0014197,27610,Lower,Tree Service,,2026-04-08T05:21:45+00:00,,New,2026-04,Tree Service / <unspecified type>,False
+SRC0014214,27613,Higher,Tree Service,,2026-04-08T14:31:06+00:00,2026-04-13T13:26:09+00:00,Closed,2026-04,Tree Service / <unspecified type>,True
+SRC0014230,27614,Higher,Tree Service,,2026-04-08T16:54:49+00:00,2026-10-09T14:49:09+00:00,Closed,2026-04,Tree Service / <unspecified type>,False
+SRC0014286,27610,Lower,Tree Service,,2026-04-09T20:10:21+00:00,2026-06-29T12:27:32+00:00,Closed,2026-04,Tree Service / <unspecified type>,True
+SRC0014303,27610,Lower,Tree Service,,2026-04-10T11:55:57+00:00,2026-05-04T15:09:07+00:00,Closed,2026-04,Tree Service / <unspecified type>,True
+SRC0014345,27604,Lower,Park and Greenway Service,Grounds,2026-04-11T16:20:45+00:00,2026-04-22T09:46:44+00:00,Closed,2026-04,Park and Greenway Service / Grounds,True
+SRC0014383,27610,Lower,Park and Greenway Service,Litter,2026-04-13T14:38:07+00:00,2026-04-21T11:20:14+00:00,Closed,2026-04,Park and Greenway Service / Litter,True
+SRC0014394,27614,Higher,Tree Service,,2026-04-13T16:36:48+00:00,2026-04-20T11:31:33+00:00,Closed,2026-04,Tree Service / <unspecified type>,True
+SRC0014467,27614,Higher,Tree Service,,2026-04-14T19:46:19+00:00,2026-04-17T14:42:01+00:00,Closed,2026-04,Tree Service / <unspecified type>,True
+SRC0014520,27610,Lower,Park and Greenway Service,Litter,2026-04-15T17:19:21+00:00,,New,2026-04,Park and Greenway Service / Litter,False
+SRC0014539,27610,Lower,Park and Greenway Service,Greenway,2026-04-15T21:13:52+00:00,,New,2026-04,Park and Greenway Service / Greenway,False
+SRC0014571,27608,Higher,Tree Service,,2026-04-16T15:22:25+00:00,2026-05-05T16:52:54+00:00,Closed,2026-04,Tree Service / <unspecified type>,True
+SRC0014602,27604,Lower,Tree Service,,2026-04-17T13:44:09+00:00,2026-04-28T11:52:16+00:00,Closed,2026-04,Tree Service / <unspecified type>,True
+SRC0014639,27613,Higher,Tree Service,,2026-04-17T22:01:56+00:00,2026-04-23T17:15:26+00:00,Closed,2026-04,Tree Service / <unspecified type>,True
+SRC0014641,27610,Lower,Tree Service,,2026-04-17T23:06:59+00:00,,New,2026-04,Tree Service / <unspecified type>,False
+SRC0014662,27608,Higher,Park and Greenway Service,Greenway,2026-04-18T18:07:17+00:00,,New,2026-04,Park and Greenway Service / Greenway,False
+SRC0014684,27613,Higher,Tree Service,,2026-04-19T17:45:27+00:00,2026-04-23T17:18:32+00:00,Closed,2026-04,Tree Service / <unspecified type>,True
+SRC0014685,27613,Higher,Tree Service,,2026-04-19T18:07:31+00:00,2026-04-23T17:05:30+00:00,Closed,2026-04,Tree Service / <unspecified type>,True
+SRC0014722,27610,Lower,Tree Service,,2026-04-20T14:13:04+00:00,2026-05-06T18:47:05+00:00,Closed,2026-04,Tree Service / <unspecified type>,True
+SRC0014725,27608,Higher,Tree Service,,2026-04-20T14:28:56+00:00,,New,2026-04,Tree Service / <unspecified type>,False
+SRC0014730,27613,Higher,Tree Service,,2026-04-20T15:17:21+00:00,2026-04-20T15:47:06+00:00,Closed,2026-04,Tree Service / <unspecified type>,True
+SRC0014745,27614,Higher,Tree Service,,2026-04-20T15:50:29+00:00,,New,2026-04,Tree Service / <unspecified type>,False
+SRC0014750,27605,Lower,Tree Service,,2026-04-20T18:38:54+00:00,2026-04-22T17:39:39+00:00,Closed,2026-04,Tree Service / <unspecified type>,True
+SRC0014777,27604,Lower,Tree Service,,2026-04-21T13:48:32+00:00,2026-05-04T09:57:14+00:00,Closed,2026-04,Tree Service / <unspecified type>,True
+SRC0014785,27610,Lower,Tree Service,,2026-04-21T14:50:37+00:00,2026-06-17T13:35:32+00:00,Closed,2026-04,Tree Service / <unspecified type>,True
+SRC0014788,27608,Higher,Park and Greenway Service,Grounds,2026-04-21T15:24:09+00:00,2026-05-07T16:33:33+00:00,Closed,2026-04,Park and Greenway Service / Grounds,True
+SRC0014866,27614,Higher,Tree Service,,2026-04-22T19:08:54+00:00,2026-04-28T12:21:26+00:00,Closed,2026-04,Tree Service / <unspecified type>,True
+SRC0014873,27604,Lower,Tree Service,,2026-04-22T21:07:53+00:00,,New,2026-04,Tree Service / <unspecified type>,False
+SRC0014982,27610,Lower,Tree Service,,2026-04-25T02:11:37+00:00,2026-05-28T11:19:51+00:00,Closed,2026-04,Tree Service / <unspecified type>,True
+SRC0015000,27614,Higher,Tree Service,,2026-04-25T20:20:35+00:00,,New,2026-04,Tree Service / <unspecified type>,False
+SRC0015057,27614,Higher,Tree Service,,2026-04-27T14:49:08+00:00,2026-09-18T13:50:49+00:00,Closed,2026-04,Tree Service / <unspecified type>,False
+SRC0015082,27614,Higher,Tree Service,,2026-04-27T17:41:35+00:00,,New,2026-04,Tree Service / <unspecified type>,False
+SRC0015096,27604,Lower,Tree Service,,2026-04-27T19:12:39+00:00,2026-05-04T18:46:23+00:00,Closed,2026-04,Tree Service / <unspecified type>,True
+SRC0015103,27604,Lower,Tree Service,,2026-04-27T20:57:23+00:00,2026-07-21T11:43:23+00:00,Closed,2026-04,Tree Service / <unspecified type>,True
+SRC0015116,27613,Higher,Tree Service,,2026-04-28T04:31:01+00:00,2026-05-04T18:19:48+00:00,Closed,2026-04,Tree Service / <unspecified type>,True
+SRC0015163,27608,Higher,Tree Service,,2026-04-28T22:50:48+00:00,2026-05-08T16:23:49+00:00,Closed,2026-04,Tree Service / <unspecified type>,True
+SRC0013912,27605,Lower,Tree Service,,2026-03-31T15:09:57+00:00,2026-04-29T16:18:03+00:00,Closed,2026-03,Tree Service / <unspecified type>,True
+SRC0015217,27610,Lower,Park and Greenway Service,Litter,2026-04-29T22:41:31+00:00,,New,2026-04,Park and Greenway Service / Litter,False
+SRC0015254,27604,Lower,Tree Service,,2026-04-30T17:02:44+00:00,,New,2026-04,Tree Service / <unspecified type>,False
+SRC0015262,27613,Higher,Tree Service,,2026-04-30T18:37:09+00:00,2026-05-04T18:33:25+00:00,Closed,2026-04,Tree Service / <unspecified type>,True
+SRC0015286,27610,Lower,Tree Service,,2026-05-01T11:26:06+00:00,2026-05-04T18:59:20+00:00,Closed,2026-05,Tree Service / <unspecified type>,True
+SRC0015310,27613,Higher,Tree Service,,2026-05-01T17:34:25+00:00,2026-05-12T17:48:41+00:00,Closed,2026-05,Tree Service / <unspecified type>,True
+SRC0015408,27608,Higher,Tree Service,,2026-05-04T17:55:29+00:00,2026-05-05T11:31:03+00:00,Closed,2026-05,Tree Service / <unspecified type>,True
+SRC0015461,27610,Lower,Tree Service,,2026-05-05T16:47:51+00:00,,New,2026-05,Tree Service / <unspecified type>,False
+SRC0015471,27608,Higher,Tree Service,,2026-05-05T18:30:11+00:00,2026-05-08T16:25:17+00:00,Closed,2026-05,Tree Service / <unspecified type>,True
+SRC0015479,27610,Lower,Tree Service,,2026-05-05T19:12:33+00:00,,New,2026-05,Tree Service / <unspecified type>,False
+SRC0015518,27614,Higher,Tree Service,,2026-05-06T14:13:33+00:00,2026-10-19T11:34:53+00:00,Closed,2026-05,Tree Service / <unspecified type>,False
+SRC0015546,27610,Lower,Tree Service,,2026-05-06T19:27:42+00:00,2026-05-12T18:21:23+00:00,Closed,2026-05,Tree Service / <unspecified type>,True
+SRC0015548,27614,Higher,Tree Service,,2026-05-06T19:50:06+00:00,2026-05-11T10:08:14+00:00,Closed,2026-05,Tree Service / <unspecified type>,True
+SRC0015553,27614,Higher,Tree Service,,2026-05-06T20:11:57+00:00,2026-05-07T14:02:24+00:00,Closed,2026-05,Tree Service / <unspecified type>,True
+SRC0015555,27605,Lower,Tree Service,,2026-05-06T20:54:29+00:00,,New,2026-05,Tree Service / <unspecified type>,False
+SRC0015561,27604,Lower,Park and Greenway Service,Greenway,2026-05-06T22:10:05+00:00,2026-05-06T22:23:24+00:00,Closed,2026-05,Park and Greenway Service / Greenway,True
+SRC0015562,27604,Lower,Park and Greenway Service,Greenway,2026-05-06T22:26:56+00:00,2026-05-19T20:22:15+00:00,Closed,2026-05,Park and Greenway Service / Greenway,True
+SRC0015611,27613,Higher,Tree Service,,2026-05-07T23:10:05+00:00,2026-05-12T18:18:14+00:00,Closed,2026-05,Tree Service / <unspecified type>,True
+SRC0015626,27604,Lower,Park and Greenway Service,Greenway,2026-05-08T12:54:40+00:00,2026-05-11T13:49:38+00:00,Closed,2026-05,Park and Greenway Service / Greenway,True
+SRC0015635,27614,Higher,Tree Service,,2026-05-08T15:40:29+00:00,,New,2026-05,Tree Service / <unspecified type>,False
+SRC0015646,27614,Higher,Tree Service,,2026-05-08T19:35:35+00:00,2026-05-11T17:00:18+00:00,Closed,2026-05,Tree Service / <unspecified type>,True
+SRC0015647,27610,Lower,Tree Service,,2026-05-08T19:46:59+00:00,2026-05-28T12:05:51+00:00,Closed,2026-05,Tree Service / <unspecified type>,True
+SRC0015712,27610,Lower,Tree Service,,2026-05-10T21:10:43+00:00,,New,2026-05,Tree Service / <unspecified type>,False
+SRC0015788,27614,Higher,Tree Service,,2026-05-12T14:57:16+00:00,,New,2026-05,Tree Service / <unspecified type>,False
+SRC0015797,27610,Lower,Tree Service,,2026-05-12T17:02:03+00:00,,New,2026-05,Tree Service / <unspecified type>,False
+SRC0015863,27613,Higher,Tree Service,,2026-05-13T19:48:21+00:00,2026-05-18T13:53:10+00:00,Closed,2026-05,Tree Service / <unspecified type>,True
+SRC0015927,27610,Lower,Tree Service,,2026-05-15T12:02:58+00:00,,New,2026-05,Tree Service / <unspecified type>,False
+SRC0015988,27610,Lower,Tree Service,,2026-05-16T22:36:57+00:00,2026-05-20T11:15:32+00:00,Closed,2026-05,Tree Service / <unspecified type>,True
+SRC0016031,27610,Lower,Tree Service,,2026-05-18T15:32:04+00:00,,New,2026-05,Tree Service / <unspecified type>,False
+SRC0016045,27604,Lower,Tree Service,,2026-05-18T18:09:34+00:00,2026-09-25T08:12:59+00:00,Closed,2026-05,Tree Service / <unspecified type>,False
+SRC0016066,27610,Lower,Tree Service,,2026-05-19T04:07:07+00:00,,New,2026-05,Tree Service / <unspecified type>,False
+SRC0016077,27604,Lower,Tree Service,,2026-05-19T13:45:00+00:00,2026-05-29T10:41:19+00:00,Closed,2026-05,Tree Service / <unspecified type>,True
+SRC0016162,27614,Higher,Park and Greenway Service,Greenway,2026-05-20T16:53:07+00:00,,New,2026-05,Park and Greenway Service / Greenway,False
+SRC0016163,27608,Higher,Park and Greenway Service,Grounds,2026-05-20T17:01:59+00:00,2026-06-30T17:59:00+00:00,Closed,2026-05,Park and Greenway Service / Grounds,True
+SRC0016166,27614,Higher,Tree Service,,2026-05-20T17:57:12+00:00,,New,2026-05,Tree Service / <unspecified type>,False
+SRC0016204,27610,Lower,Tree Service,,2026-05-21T13:41:55+00:00,,New,2026-05,Tree Service / <unspecified type>,False
+SRC0016219,27604,Lower,Tree Service,,2026-05-21T16:31:16+00:00,,New,2026-05,Tree Service / <unspecified type>,False
+SRC0016257,27614,Higher,Tree Service,,2026-05-22T17:48:19+00:00,,New,2026-05,Tree Service / <unspecified type>,False
+SRC0016315,27610,Lower,Tree Service,,2026-05-25T21:13:19+00:00,2026-07-15T11:48:38+00:00,Closed,2026-05,Tree Service / <unspecified type>,True
+SRC0016330,27614,Higher,Tree Service,,2026-05-26T13:18:01+00:00,2026-05-28T11:41:15+00:00,Closed,2026-05,Tree Service / <unspecified type>,True
+SRC0016349,27605,Lower,Tree Service,,2026-05-26T15:38:27+00:00,2026-05-27T14:08:31+00:00,Closed,2026-05,Tree Service / <unspecified type>,True
+SRC0016377,27610,Lower,Tree Service,,2026-05-26T18:54:00+00:00,2026-09-22T18:17:20+00:00,Closed,2026-05,Tree Service / <unspecified type>,False
+SRC0016408,27613,Higher,Tree Service,,2026-05-27T13:24:38+00:00,2026-07-29T16:05:09+00:00,Closed,2026-05,Tree Service / <unspecified type>,True
+SRC0016413,27604,Lower,Tree Service,,2026-05-27T14:03:26+00:00,2026-06-29T11:38:58+00:00,Closed,2026-05,Tree Service / <unspecified type>,True
+SRC0016428,27614,Higher,Park and Greenway Service,Grounds,2026-05-27T15:08:56+00:00,,New,2026-05,Park and Greenway Service / Grounds,False
+SRC0016438,27613,Higher,Tree Service,,2026-05-27T18:04:22+00:00,2026-05-28T15:48:32+00:00,Closed,2026-05,Tree Service / <unspecified type>,True
+SRC0016467,27610,Lower,Park and Greenway Service,Grounds,2026-05-28T12:56:53+00:00,2026-06-01T14:47:48+00:00,Closed,2026-05,Park and Greenway Service / Grounds,True
+SRC0016533,27604,Lower,Tree Service,,2026-05-29T16:46:46+00:00,,New,2026-05,Tree Service / <unspecified type>,False
+SRC0016552,27614,Higher,Tree Service,,2026-05-29T19:27:26+00:00,,New,2026-05,Tree Service / <unspecified type>,False
+SRC0016597,27604,Lower,Tree Service,,2026-05-31T09:12:20+00:00,2026-06-03T09:06:56+00:00,Closed,2026-05,Tree Service / <unspecified type>,True
+SRC0016601,27610,Lower,Park and Greenway Service,Greenway,2026-05-31T14:27:03+00:00,2026-06-03T18:34:02+00:00,Closed,2026-05,Park and Greenway Service / Greenway,True
+SRC0016669,27610,Lower,Tree Service,,2026-06-01T18:44:51+00:00,2026-09-25T08:16:12+00:00,Closed,2026-06,Tree Service / <unspecified type>,False
+SRC0016671,27614,Higher,Tree Service,,2026-06-01T19:03:43+00:00,2026-09-25T08:18:05+00:00,Closed,2026-06,Tree Service / <unspecified type>,False
+SRC0016693,27610,Lower,Tree Service,,2026-06-02T12:29:27+00:00,,New,2026-06,Tree Service / <unspecified type>,False
+SRC0016701,27608,Higher,Tree Service,,2026-06-02T14:21:00+00:00,2026-06-05T16:39:07+00:00,Closed,2026-06,Tree Service / <unspecified type>,True
+SRC0016777,27613,Higher,Playgrounds,,2026-06-03T18:46:33+00:00,,New,2026-06,Playgrounds / <unspecified type>,False
+SRC0016781,27610,Lower,Tree Service,,2026-06-03T19:03:52+00:00,2026-06-15T11:32:04+00:00,Closed,2026-06,Tree Service / <unspecified type>,True
+SRC0016795,27608,Higher,Tree Service,,2026-06-04T00:00:30+00:00,2026-06-05T17:48:08+00:00,Closed,2026-06,Tree Service / <unspecified type>,True
+SRC0016852,27608,Higher,Tree Service,,2026-06-05T14:00:34+00:00,2026-06-09T14:46:13+00:00,Closed,2026-06,Tree Service / <unspecified type>,True
+SRC0016864,27614,Higher,Tree Service,,2026-06-05T16:48:20+00:00,,New,2026-06,Tree Service / <unspecified type>,False
+SRC0016936,27604,Lower,Tree Service,,2026-06-08T15:45:34+00:00,,New,2026-06,Tree Service / <unspecified type>,False
+SRC0016971,27610,Lower,Tree Service,,2026-06-08T20:37:26+00:00,2026-06-15T10:20:58+00:00,Closed,2026-06,Tree Service / <unspecified type>,True
+SRC0016989,27604,Lower,Park and Greenway Service,Grounds,2026-06-09T12:23:11+00:00,2026-06-23T18:07:10+00:00,Closed,2026-06,Park and Greenway Service / Grounds,True
+SRC0017013,27610,Lower,Park and Greenway Service,Greenway,2026-06-09T16:19:33+00:00,,New,2026-06,Park and Greenway Service / Greenway,False
+SRC0017018,27604,Lower,Tree Service,,2026-06-09T17:47:11+00:00,,New,2026-06,Tree Service / <unspecified type>,False
+SRC0017201,27604,Lower,Tree Service,,2026-06-14T23:50:55+00:00,2026-06-15T14:43:54+00:00,Closed,2026-06,Tree Service / <unspecified type>,True
+SRC0017217,27608,Higher,Tree Service,,2026-06-15T13:45:33+00:00,,New,2026-06,Tree Service / <unspecified type>,False
+SRC0017250,27604,Lower,Tree Service,,2026-06-15T20:48:19+00:00,,New,2026-06,Tree Service / <unspecified type>,False
+SRC0017282,27608,Higher,Park and Greenway Service,Litter,2026-06-16T16:11:00+00:00,,New,2026-06,Park and Greenway Service / Litter,False
+SRC0017278,27608,Higher,Tree Service,,2026-06-16T15:53:00+00:00,2026-06-29T11:42:37+00:00,Closed,2026-06,Tree Service / <unspecified type>,True
+SRC0017273,27604,Lower,Tree Service,,2026-06-16T15:46:03+00:00,,New,2026-06,Tree Service / <unspecified type>,False
+SRC0017281,27610,Lower,Park and Greenway Service,Grounds,2026-06-16T16:12:32+00:00,,New,2026-06,Park and Greenway Service / Grounds,False
+SRC0017322,27610,Lower,Park and Greenway Service,Greenway,2026-06-17T11:59:26+00:00,2026-06-17T18:00:45+00:00,Closed,2026-06,Park and Greenway Service / Greenway,True
+SRC0017377,27610,Lower,Tree Service,,2026-06-18T12:14:34+00:00,,New,2026-06,Tree Service / <unspecified type>,False
+SRC0017414,27604,Lower,Tree Service,,2026-06-18T18:33:04+00:00,2026-06-29T12:42:28+00:00,Closed,2026-06,Tree Service / <unspecified type>,True
+SRC0017411,27610,Lower,Tree Service,,2026-06-18T18:08:07+00:00,,New,2026-06,Tree Service / <unspecified type>,False
+SRC0017438,27610,Lower,Park and Greenway Service,Greenway,2026-06-19T19:23:23+00:00,2026-06-26T10:39:00+00:00,Closed,2026-06,Park and Greenway Service / Greenway,True
+SRC0017454,27605,Lower,Tree Service,,2026-06-20T14:19:58+00:00,2026-06-24T16:49:13+00:00,Closed,2026-06,Tree Service / <unspecified type>,True
+SRC0017478,27604,Lower,Tree Service,,2026-06-21T19:49:07+00:00,2026-06-25T18:33:28+00:00,Closed,2026-06,Tree Service / <unspecified type>,True
+SRC0017542,27614,Higher,Tree Service,,2026-06-22T23:52:59+00:00,2026-06-29T12:18:59+00:00,Closed,2026-06,Tree Service / <unspecified type>,True
+SRC0017630,27608,Higher,Tree Service,,2026-06-24T13:45:03+00:00,,New,2026-06,Tree Service / <unspecified type>,False
+SRC0017642,27610,Lower,Tree Service,,2026-06-24T16:14:19+00:00,,New,2026-06,Tree Service / <unspecified type>,False
+SRC0017648,27614,Higher,Tree Service,,2026-06-24T17:03:30+00:00,2026-08-13T16:32:45+00:00,Closed,2026-06,Tree Service / <unspecified type>,True
+SRC0017649,27610,Lower,Tree Service,,2026-06-24T17:08:37+00:00,,New,2026-06,Tree Service / <unspecified type>,False
+SRC0017628,27604,Lower,Tree Service,,2026-06-24T13:12:02+00:00,,New,2026-06,Tree Service / <unspecified type>,False
+SRC0017623,27604,Lower,Park and Greenway Service,Grounds,2026-06-24T12:37:12+00:00,,New,2026-06,Park and Greenway Service / Grounds,False
+SRC0017640,27610,Lower,Tree Service,,2026-06-24T15:25:48+00:00,,New,2026-06,Tree Service / <unspecified type>,False
+SRC0017665,27614,Higher,Park and Greenway Service,Grounds,2026-06-24T19:59:54+00:00,,New,2026-06,Park and Greenway Service / Grounds,False
+SRC0017611,27604,Lower,Tree Service,,2026-06-24T10:37:30+00:00,,New,2026-06,Tree Service / <unspecified type>,False
+SRC0017719,27614,Higher,Tree Service,,2026-06-25T18:02:21+00:00,2026-07-01T12:12:47+00:00,Closed,2026-06,Tree Service / <unspecified type>,True
+SRC0017731,27608,Higher,Tree Service,,2026-06-25T20:05:33+00:00,,New,2026-06,Tree Service / <unspecified type>,False
+SRC0017709,27614,Higher,Tree Service,,2026-06-25T17:00:01+00:00,2026-07-07T17:07:46+00:00,Closed,2026-06,Tree Service / <unspecified type>,True
+SRC0017835,27613,Higher,Tree Service,,2026-06-29T13:51:29+00:00,2026-07-09T13:30:33+00:00,Closed,2026-06,Tree Service / <unspecified type>,True
+SRC0017897,27610,Lower,Park and Greenway Service,Greenway,2026-06-30T16:48:18+00:00,,New,2026-06,Park and Greenway Service / Greenway,False
+SRC0017943,27610,Lower,Park and Greenway Service,Grounds,2026-07-01T17:49:30+00:00,,Awaiting Info,2026-07,Park and Greenway Service / Grounds,False
+SRC0017942,27604,Lower,Park and Greenway Service,Grounds,2026-07-01T17:31:01+00:00,,New,2026-07,Park and Greenway Service / Grounds,False
+SRC0018003,27613,Higher,Tree Service,,2026-07-02T19:30:29+00:00,2026-07-13T17:24:42+00:00,Closed,2026-07,Tree Service / <unspecified type>,True
+SRC0017981,27604,Lower,Tree Service,,2026-07-02T14:33:18+00:00,2026-11-02T12:02:12+00:00,Closed,2026-07,Tree Service / <unspecified type>,False
+SRC0018121,27610,Lower,Tree Service,,2026-07-07T11:51:04+00:00,,New,2026-07,Tree Service / <unspecified type>,False
+SRC0018137,27608,Higher,Park and Greenway Service,Greenway,2026-07-07T14:36:59+00:00,,New,2026-07,Park and Greenway Service / Greenway,False
+SRC0018236,27614,Higher,Park and Greenway Service,Greenway,2026-07-08T17:00:07+00:00,,New,2026-07,Park and Greenway Service / Greenway,False
+SRC0018267,27614,Higher,Tree Service,,2026-07-09T00:22:06+00:00,,New,2026-07,Tree Service / <unspecified type>,False
+SRC0018268,27614,Higher,Tree Service,,2026-07-09T00:26:31+00:00,,New,2026-07,Tree Service / <unspecified type>,False
+SRC0018228,27605,Lower,Tree Service,,2026-07-08T16:22:52+00:00,2026-07-16T18:32:48+00:00,Closed,2026-07,Tree Service / <unspecified type>,True
+SRC0018340,27610,Lower,Tree Service,,2026-07-10T15:10:33+00:00,,New,2026-07,Tree Service / <unspecified type>,False
+SRC0018350,27608,Higher,Tree Service,,2026-07-10T16:12:31+00:00,2026-07-16T17:17:32+00:00,Closed,2026-07,Tree Service / <unspecified type>,True
+SRC0018331,27613,Higher,Park and Greenway Service,Greenway,2026-07-10T12:51:27+00:00,2026-07-14T10:36:22+00:00,Closed,2026-07,Park and Greenway Service / Greenway,True
+SRC0018368,27614,Higher,Tree Service,,2026-07-10T19:40:14+00:00,2026-07-14T16:22:42+00:00,Closed,2026-07,Tree Service / <unspecified type>,True
+SRC0018391,27610,Lower,Park and Greenway Service,Greenway,2026-07-11T15:38:21+00:00,2026-07-20T10:58:59+00:00,Closed,2026-07,Park and Greenway Service / Greenway,True
+SRC0018394,27610,Lower,Park and Greenway Service,Greenway,2026-07-11T16:46:37+00:00,2026-07-20T17:55:07+00:00,Closed,2026-07,Park and Greenway Service / Greenway,True
+SRC0018422,27610,Lower,Park and Greenway Service,Greenway,2026-07-12T17:41:53+00:00,,New,2026-07,Park and Greenway Service / Greenway,False
+SRC0018417,27604,Lower,Tree Service,,2026-07-12T15:56:19+00:00,2026-07-20T13:18:43+00:00,Closed,2026-07,Tree Service / <unspecified type>,True
+SRC0018465,27605,Lower,Tree Service,,2026-07-13T14:45:46+00:00,2026-07-24T17:12:10+00:00,Closed,2026-07,Tree Service / <unspecified type>,True
+SRC0018437,27605,Lower,Park and Greenway Service,Litter,2026-07-13T08:16:32+00:00,2026-07-27T10:34:52+00:00,Closed,2026-07,Park and Greenway Service / Litter,True
+SRC0018475,27614,Higher,Tree Service,,2026-07-13T16:23:10+00:00,,New,2026-07,Tree Service / <unspecified type>,False
+SRC0018488,27610,Lower,Tree Service,,2026-07-13T18:05:28+00:00,2026-07-20T13:26:40+00:00,Closed,2026-07,Tree Service / <unspecified type>,True
+SRC0018547,27614,Higher,Tree Service,,2026-07-14T15:35:36+00:00,2026-10-09T14:49:10+00:00,Closed,2026-07,Tree Service / <unspecified type>,True
+SRC0018544,27610,Lower,Tree Service,,2026-07-14T14:47:55+00:00,,New,2026-07,Tree Service / <unspecified type>,False
+SRC0018549,27614,Higher,Tree Service,,2026-07-14T15:38:02+00:00,,New,2026-07,Tree Service / <unspecified type>,False
+SRC0018565,27614,Higher,Park and Greenway Service,Grounds,2026-07-14T17:32:42+00:00,2026-07-22T17:04:44+00:00,Closed,2026-07,Park and Greenway Service / Grounds,True
+SRC0018574,27604,Lower,Tree Service,,2026-07-14T19:09:51+00:00,,New,2026-07,Tree Service / <unspecified type>,False
+SRC0018576,27614,Higher,Tree Service,,2026-07-14T19:59:28+00:00,,New,2026-07,Tree Service / <unspecified type>,False
+SRC0018581,27614,Higher,Tree Service,,2026-07-14T20:30:29+00:00,,New,2026-07,Tree Service / <unspecified type>,False
+SRC0018649,27604,Lower,Park and Greenway Service,Greenway,2026-07-15T19:48:53+00:00,,New,2026-07,Park and Greenway Service / Greenway,False
+SRC0018622,27613,Higher,Tree Service,,2026-07-15T15:00:27+00:00,2026-07-20T18:00:31+00:00,Closed,2026-07,Tree Service / <unspecified type>,True
+SRC0018633,27614,Higher,Tree Service,,2026-07-15T15:59:25+00:00,,New,2026-07,Tree Service / <unspecified type>,False
+SRC0018598,27614,Higher,Tree Service,,2026-07-15T12:39:08+00:00,2026-07-17T16:56:32+00:00,Closed,2026-07,Tree Service / <unspecified type>,True
+SRC0018653,27604,Lower,Tree Service,,2026-07-15T22:12:17+00:00,,New,2026-07,Tree Service / <unspecified type>,False
+SRC0018643,27610,Lower,Tree Service,,2026-07-15T17:54:09+00:00,,New,2026-07,Tree Service / <unspecified type>,False
+SRC0018691,27614,Higher,Tree Service,,2026-07-16T17:25:57+00:00,2026-10-02T16:25:46+00:00,Closed,2026-07,Tree Service / <unspecified type>,True
+SRC0018743,27610,Lower,Tree Service,,2026-07-17T16:53:11+00:00,2026-08-28T09:19:05+00:00,Closed,2026-07,Tree Service / <unspecified type>,True
+SRC0018738,27610,Lower,Tree Service,,2026-07-17T15:30:27+00:00,2026-07-17T16:45:17+00:00,Closed,2026-07,Tree Service / <unspecified type>,True
+SRC0018732,27604,Lower,Tree Service,,2026-07-17T14:35:45+00:00,,New,2026-07,Tree Service / <unspecified type>,False
+SRC0018731,27604,Lower,Tree Service,,2026-07-17T14:17:07+00:00,,New,2026-07,Tree Service / <unspecified type>,False
+SRC0018762,27608,Higher,Park and Greenway Service,Litter,2026-07-17T23:38:55+00:00,2026-07-20T14:07:44+00:00,Closed,2026-07,Park and Greenway Service / Litter,True
+SRC0018749,27604,Lower,Tree Service,,2026-07-17T18:23:42+00:00,,New,2026-07,Tree Service / <unspecified type>,False
+SRC0018779,27610,Lower,Park and Greenway Service,Grounds,2026-07-18T20:08:38+00:00,,New,2026-07,Park and Greenway Service / Grounds,False
+SRC0018838,27608,Higher,Park and Greenway Service,Litter,2026-07-20T15:58:44+00:00,2026-07-22T18:24:41+00:00,Closed,2026-07,Park and Greenway Service / Litter,True
+SRC0018862,27614,Higher,Tree Service,,2026-07-20T18:56:07+00:00,2026-07-21T16:20:39+00:00,Closed,2026-07,Tree Service / <unspecified type>,True
+SRC0018876,27614,Higher,Tree Service,,2026-07-20T22:46:50+00:00,,New,2026-07,Tree Service / <unspecified type>,False
+SRC0018825,27608,Higher,Park and Greenway Service,Litter,2026-07-20T14:02:46+00:00,2026-07-22T18:26:06+00:00,Closed,2026-07,Park and Greenway Service / Litter,True
+SRC0018928,27608,Higher,Tree Service,,2026-07-21T15:45:00+00:00,2026-07-30T15:25:32+00:00,Closed,2026-07,Tree Service / <unspecified type>,True
+SRC0018902,27610,Lower,Tree Service,,2026-07-21T13:53:43+00:00,2026-07-30T13:57:48+00:00,Closed,2026-07,Tree Service / <unspecified type>,True
+SRC0018965,27605,Lower,Park and Greenway Service,Litter,2026-07-21T21:19:26+00:00,2026-09-02T16:08:59+00:00,Closed,2026-07,Park and Greenway Service / Litter,True
+SRC0019021,27608,Higher,Tree Service,,2026-07-22T18:04:10+00:00,,New,2026-07,Tree Service / <unspecified type>,False
+SRC0019056,27613,Higher,Tree Service,,2026-07-23T01:30:44+00:00,2026-07-30T17:10:47+00:00,Closed,2026-07,Tree Service / <unspecified type>,True
+SRC0019033,27605,Lower,Tree Service,,2026-07-22T19:20:30+00:00,,New,2026-07,Tree Service / <unspecified type>,False
+SRC0019090,27610,Lower,Tree Service,,2026-07-23T15:22:04+00:00,2026-09-01T16:39:59+00:00,Closed,2026-07,Tree Service / <unspecified type>,True
+SRC0019084,27610,Lower,Tree Service,,2026-07-23T14:29:02+00:00,2026-07-24T10:53:57+00:00,Closed,2026-07,Tree Service / <unspecified type>,True
+SRC0019117,27614,Higher,Park and Greenway Service,Greenway,2026-07-23T21:07:04+00:00,2026-07-30T12:36:20+00:00,Closed,2026-07,Park and Greenway Service / Greenway,True
+SRC0019131,27605,Lower,Tree Service,,2026-07-24T02:55:55+00:00,2026-07-30T18:04:47+00:00,Closed,2026-07,Tree Service / <unspecified type>,True
+SRC0019132,27605,Lower,Tree Service,,2026-07-24T02:58:47+00:00,2026-07-30T18:09:01+00:00,Closed,2026-07,Tree Service / <unspecified type>,True
+SRC0019177,27604,Lower,Park and Greenway Service,Greenway,2026-07-24T18:50:05+00:00,2026-09-17T18:27:56+00:00,Closed,2026-07,Park and Greenway Service / Greenway,True
+SRC0019175,27613,Higher,Tree Service,,2026-07-24T18:45:35+00:00,2026-08-14T16:56:47+00:00,Closed,2026-07,Tree Service / <unspecified type>,True
+SRC0019207,27610,Lower,Tree Service,,2026-07-25T15:25:51+00:00,,New,2026-07,Tree Service / <unspecified type>,False
+SRC0019281,27604,Lower,Tree Service,,2026-07-27T15:36:07+00:00,2026-07-27T15:53:57+00:00,Closed,2026-07,Tree Service / <unspecified type>,True
+SRC0019375,27610,Lower,Tree Service,,2026-07-28T15:36:38+00:00,2026-08-17T11:31:43+00:00,Closed,2026-07,Tree Service / <unspecified type>,True
+SRC0019350,27614,Higher,Tree Service,,2026-07-28T12:32:09+00:00,2026-10-06T11:04:29+00:00,Closed,2026-07,Tree Service / <unspecified type>,True
+SRC0019489,27614,Higher,Tree Service,,2026-07-29T19:01:51+00:00,,New,2026-07,Tree Service / <unspecified type>,False
+SRC0019456,27614,Higher,Tree Service,,2026-07-29T16:27:38+00:00,2026-07-30T17:22:33+00:00,Closed,2026-07,Tree Service / <unspecified type>,True
+SRC0019440,27614,Higher,Park and Greenway Service,Grounds,2026-07-29T13:47:55+00:00,,New,2026-07,Park and Greenway Service / Grounds,False
+SRC0019492,27605,Lower,Tree Service,,2026-07-29T19:16:34+00:00,,New,2026-07,Tree Service / <unspecified type>,False
+SRC0019502,27613,Higher,Tree Service,,2026-07-29T22:14:52+00:00,2026-07-31T15:14:29+00:00,Closed,2026-07,Tree Service / <unspecified type>,True
+SRC0019455,27613,Higher,Tree Service,,2026-07-29T16:08:08+00:00,2026-07-31T18:22:52+00:00,Closed,2026-07,Tree Service / <unspecified type>,True
+SRC0019498,27610,Lower,Tree Service,,2026-07-29T20:45:08+00:00,2026-07-31T17:09:38+00:00,Closed,2026-07,Tree Service / <unspecified type>,True
+SRC0019469,27613,Higher,Tree Service,,2026-07-29T17:46:33+00:00,2026-07-31T18:17:29+00:00,Closed,2026-07,Tree Service / <unspecified type>,True
+SRC0019480,27604,Lower,Tree Service,,2026-07-29T18:16:11+00:00,2026-08-03T18:05:56+00:00,Closed,2026-07,Tree Service / <unspecified type>,True
+SRC0019427,27608,Higher,Tree Service,,2026-07-29T12:28:25+00:00,,New,2026-07,Tree Service / <unspecified type>,False
+SRC0019550,27613,Higher,Tree Service,,2026-07-30T16:11:18+00:00,2026-07-31T18:10:15+00:00,Closed,2026-07,Tree Service / <unspecified type>,True
+SRC0019567,27610,Lower,Tree Service,,2026-07-30T17:58:29+00:00,,New,2026-07,Tree Service / <unspecified type>,False
+SRC0019600,27604,Lower,Tree Service,,2026-07-31T03:10:48+00:00,,New,2026-07,Tree Service / <unspecified type>,False
+SRC0019579,27608,Higher,Tree Service,,2026-07-30T18:47:09+00:00,2026-08-07T16:29:03+00:00,Closed,2026-07,Tree Service / <unspecified type>,True
+SRC0019603,27614,Higher,Tree Service,,2026-07-31T12:19:13+00:00,,New,2026-07,Tree Service / <unspecified type>,False
+SRC0019643,27613,Higher,Tree Service,,2026-07-31T19:13:56+00:00,2026-08-03T14:51:37+00:00,Closed,2026-07,Tree Service / <unspecified type>,True
