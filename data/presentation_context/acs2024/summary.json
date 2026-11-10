@@ -1,0 +1,153 @@
+{
+  "retrieved_at_utc": "2026-11-10T08:28:23.373285+00:00",
+  "release": "2024 ACS 5-year (2020\u20132024)",
+  "dollar_year": 2024,
+  "scope": "Presentation area context only; no change to analysis populations or models.",
+  "geographies": {
+    "27610": [
+      "860",
+      "27610"
+    ],
+    "Raleigh": [
+      "160",
+      "3755000"
+    ],
+    "Wake County": [
+      "050",
+      "37183"
+    ]
+  },
+  "sources": {
+    "B19013": {
+      "source": "https://www2.census.gov/programs-surveys/acs/summary_file/2024/table-based-SF/data/5YRData/acsdt5y2024-b19013.dat",
+      "source_sha256": "b25a176b0e6c339b6f3a2a0d3d8446bf06f5f080b4395993ec9a8313efb1c229",
+      "source_bytes": 17917916,
+      "selected_file": "b19013-selected.csv",
+      "selected_sha256": "2658515b57195bc0702a9c689989089de2def8d552efb05c526c5c4983933c8e"
+    },
+    "B02001": {
+      "source": "https://www2.census.gov/programs-surveys/acs/summary_file/2024/table-based-SF/data/5YRData/acsdt5y2024-b02001.dat",
+      "source_sha256": "986de39e0b80716a925ee916db65bfd85efc62e0b532ea570c25bd1c3a074f8e",
+      "source_bytes": 54179219,
+      "selected_file": "b02001-selected.csv",
+      "selected_sha256": "c75408c345ccc0b08b4107b0acc88cac9b49efc600757091b71abd291b74e378"
+    },
+    "B03003": {
+      "source": "https://www2.census.gov/programs-surveys/acs/summary_file/2024/table-based-SF/data/5YRData/acsdt5y2024-b03003.dat",
+      "source_sha256": "d1028ce03da02a6e625cd25443e1445ed0116b666d56dcdfe2def026ac68a327",
+      "source_bytes": 24753322,
+      "selected_file": "b03003-selected.csv",
+      "selected_sha256": "5d0334f4f843f4d38b254b16c2ed5ec0b50f398eb234f6e276635d5c88e3f9fb"
+    },
+    "B17001": {
+      "source": "https://www2.census.gov/programs-surveys/acs/summary_file/2024/table-based-SF/data/5YRData/acsdt5y2024-b17001.dat",
+      "source_sha256": "707adda8aaff136382f4fe0858617d09062da48b1a3d2ab2e9a1047def09b531",
+      "source_bytes": 118607125,
+      "selected_file": "b17001-selected.csv",
+      "selected_sha256": "f05192ae0dae802ad52beb611471eebe36e8c165f68c02f43085373d22f69304"
+    }
+  },
+  "margin_of_error": "90%; proportion MOE = 100*sqrt(M_num^2-p^2*M_den^2)/den; plus inside sqrt if radicand negative.",
+  "summary": {
+    "27610": {
+      "median_household_income": 67932,
+      "income_moe_90": 6108,
+      "population": 81419,
+      "population_moe_90": 3191,
+      "black_alone": {
+        "percent": 54.74152224910648,
+        "numerator": 44570,
+        "denominator": 81419,
+        "numerator_moe_90": 3128,
+        "denominator_moe_90": 3191,
+        "moe_pp_90": 3.18698999098864,
+        "moe_method": "subset proportion"
+      },
+      "hispanic_any_race": {
+        "percent": 20.09236173374765,
+        "numerator": 16359,
+        "denominator": 81419,
+        "numerator_moe_90": 2310,
+        "denominator_moe_90": 3191,
+        "moe_pp_90": 2.725703955320413,
+        "moe_method": "subset proportion"
+      },
+      "poverty": {
+        "percent": 15.72527654796688,
+        "numerator": 12325,
+        "denominator": 78377,
+        "numerator_moe_90": 2151,
+        "denominator_moe_90": 3242,
+        "moe_pp_90": 2.666229634477976,
+        "moe_method": "subset proportion"
+      }
+    },
+    "Raleigh": {
+      "median_household_income": 85395,
+      "income_moe_90": 2159,
+      "population": 481031,
+      "population_moe_90": 391,
+      "black_alone": {
+        "percent": 26.569597385615477,
+        "numerator": 127808,
+        "denominator": 481031,
+        "numerator_moe_90": 3439,
+        "denominator_moe_90": 391,
+        "moe_pp_90": 0.7145964612076324,
+        "moe_method": "subset proportion"
+      },
+      "hispanic_any_race": {
+        "percent": 12.577567765902822,
+        "numerator": 60502,
+        "denominator": 481031,
+        "numerator_moe_90": 3267,
+        "denominator_moe_90": 391,
+        "moe_pp_90": 0.679089255699595,
+        "moe_method": "subset proportion"
+      },
+      "poverty": {
+        "percent": 11.887174631586001,
+        "numerator": 54989,
+        "denominator": 462591,
+        "numerator_moe_90": 3511,
+        "denominator_moe_90": 637,
+        "moe_pp_90": 0.7588092654312382,
+        "moe_method": "subset proportion"
+      }
+    },
+    "Wake County": {
+      "median_household_income": 105768,
+      "income_moe_90": 1626,
+      "population": 1178653,
+      "population_moe_90": null,
+      "black_alone": {
+        "percent": 18.785427093470258,
+        "numerator": 221415,
+        "denominator": 1178653,
+        "numerator_moe_90": 2130,
+        "denominator_moe_90": -555555555,
+        "moe_pp_90": null,
+        "moe_method": "not computed: source uses special MOE codes"
+      },
+      "hispanic_any_race": {
+        "percent": 11.554206369474308,
+        "numerator": 136184,
+        "denominator": 1178653,
+        "numerator_moe_90": -555555555,
+        "denominator_moe_90": -555555555,
+        "moe_pp_90": null,
+        "moe_method": "not computed: source uses special MOE codes"
+      },
+      "poverty": {
+        "percent": 8.129155058506853,
+        "numerator": 94044,
+        "denominator": 1156873,
+        "numerator_moe_90": 4533,
+        "denominator_moe_90": 663,
+        "moe_pp_90": 0.3918044229190538,
+        "moe_method": "subset proportion"
+      }
+    }
+  },
+  "special_value_handling": "Negative Census MOE sentinel codes are retained in raw selected rows; derived MOEs are null where either input uses a sentinel. Sentinels are never treated as numeric uncertainty."
+}

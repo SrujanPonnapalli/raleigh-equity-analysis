@@ -1,0 +1,14 @@
+{
+  "zcta27610": {
+    "url": "https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/tigerWMS_ACS2024/MapServer/2/query?where=ZCTA5%3D%2727610%27&outFields=GEOID%2CNAME&returnGeometry=true&outSR=4326&geometryPrecision=5&maxAllowableOffset=0.00015&f=geojson",
+    "sha256": "40d305c949efff3532869255f123d3146134ba55f88ec18a394602e850b7ce30",
+    "vintage": "TIGERweb ACS2024; ZCTA polygons are 2020 delineations",
+    "simplification_degrees": 0.00015
+  },
+  "raleigh": {
+    "url": "https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/tigerWMS_ACS2024/MapServer/28/query?where=GEOID%3D%273755000%27&outFields=GEOID%2CNAME&returnGeometry=true&outSR=4326&geometryPrecision=5&maxAllowableOffset=0.00015&f=geojson",
+    "sha256": "bd98bd36ae83fbb64325b8ccbe5f55b322cb6af350361791ea3e067f8a5209ed",
+    "vintage": "TIGERweb ACS2024; ZCTA polygons are 2020 delineations",
+    "simplification_degrees": 0.00015
+  }
+}

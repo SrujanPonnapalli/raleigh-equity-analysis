@@ -8,6 +8,21 @@ and Wake County's Community Vulnerability Index.
 The findings below use the snapshot downloaded on **November 10, 2026**, with
 submissions through November 9. The analysis is exploratory.
 
+## Presentation
+
+The [Wealth & Wait Times briefing](presentation/raleigh-briefing/index.html) is a
+self-contained HTML presentation for a 10–15 minute talk with city staff and
+leadership. Its 17 speaking slides cover the overall project before narrowing to
+parks, 27610, and the Atlas follow-up; five appendix slides support technical
+questions. Fonts, figures, and the area map are embedded for offline use.
+
+Open it in a browser and use the arrow keys or bottom timeline to navigate. The
+[presenter notes](presentation/raleigh-briefing/presenter-notes.md) include pacing,
+interpretation, controls, and evidence links. The 27610 introduction uses
+[verified Census context](data/presentation_context/README.md) with explicit
+geographies and margins of error. To host the deck at the repository's GitHub
+Pages address, follow the [deployment guide](docs/presentation-deployment.md).
+
 ## What we found
 
 **Parks requests in ZIP 27610 warrant a targeted records and process review.**
