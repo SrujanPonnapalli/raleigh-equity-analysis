@@ -1,0 +1,63 @@
+{
+  "verified_at_utc": "2026-11-10T07:23:32.195918+00:00",
+  "selection": "First request ID per published band in the pilot cohort, plus first outside-Atlas request ID",
+  "scope": "Six sampled points; this is not exhaustive geographic verification",
+  "checks": [
+    {
+      "request_id": "SRC0003697",
+      "expected_geoids": [
+        "371830505001"
+      ],
+      "server_geoids": [
+        "371830505001"
+      ],
+      "agreement": true
+    },
+    {
+      "request_id": "SRC0003698",
+      "expected_geoids": [
+        "371830517003"
+      ],
+      "server_geoids": [
+        "371830517003"
+      ],
+      "agreement": true
+    },
+    {
+      "request_id": "SRC0003702",
+      "expected_geoids": [
+        "371830541181"
+      ],
+      "server_geoids": [
+        "371830541181"
+      ],
+      "agreement": true
+    },
+    {
+      "request_id": "SRC0003713",
+      "expected_geoids": [
+        "371830524071"
+      ],
+      "server_geoids": [
+        "371830524071"
+      ],
+      "agreement": true
+    },
+    {
+      "request_id": "SRC0003758",
+      "expected_geoids": [
+        "371830541062"
+      ],
+      "server_geoids": [
+        "371830541062"
+      ],
+      "agreement": true
+    },
+    {
+      "request_id": "SRC0003804",
+      "expected_geoids": [],
+      "server_geoids": [],
+      "agreement": true
+    }
+  ]
+}

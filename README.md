@@ -212,25 +212,37 @@ estimate. Most locations remain inconclusive because the comparable samples
 are small. The source data and boundary files also need further geographic
 validation before making claims about complete city coverage.
 
-## Proposed extension: Wake County Social Equity Atlas
+## Atlas feasibility pilot on the exploratory branch
 
-The Atlas has **not yet been joined to the requests or tested in this project**.
-County planning materials describe vulnerability and economic-health measures
-using ACS data at the Census block-group level. These could provide more detailed
-neighborhood context than ZIP-level income. See the
-[Wake County planning materials](https://s3.us-west-1.amazonaws.com/wakegov.com.if-us-west-1/s3fs-public/documents/2025-09/Meeting%20Packet%209-3-25.pdf).
+The branch `explore/wake-equity-atlas-pilot` now links request locations to the
+county-published [2020 to 2024 Community Vulnerability Index](https://www.arcgis.com/home/item.html?id=eb973c734de14652bcadd9af211c751d).
+The initial pilot examined geography, index definitions, and sample sizes without
+resolution outcomes. A separate comparison then followed a specification fixed
+before calculating Atlas outcome differences.
 
-A bounded feasibility check would verify the actual layer's availability, source
-years, geographic boundaries, and index construction, then assign geocoded
-requests to those areas. In the mature parks cohort used for the local screen,
-762 of 773 requests have coordinates. Missing locations would need their own
-coverage check.
+The join provides usable neighborhood context for **761 of 773 parks requests
+(98.4%)** in the original local-screen cohort. Eleven requests lack coordinates,
+and one lies in a zero-population area. The 761 usable matches span 201 Census
+block groups, with a median of only three requests per group. Pooling requests
+across vulnerability bands is feasible; separate outcome tests for each small
+area would be poorly supported.
 
-Any subsequent analysis should specify its primary vulnerability measure before
-examining the outcome relationship and retain the task and submission-period
-controls. The Atlas may reveal neighborhood patterns hidden by ZIP averages;
-it may also weaken the existing pattern. It cannot resolve the meaning of a
-resolved ticket or prove who benefited from work at a particular park.
+The pilot also found undocumented tie handling in the index's ranks. Equal raw
+indicator values can receive different ranks, and the source contains no margins
+of error. A future outcome analysis needs a simpler-indicator sensitivity check
+and an explicit decision about city/service boundaries. The county Atlas alone
+does not establish Raleigh jurisdiction.
+
+The [pilot specification and results](docs/atlas-pilot.md) explain the source
+lineage, coverage, common-task sample sizes, and remaining limits. In the
+[subsequent outcome comparison](docs/atlas-outcome-results.md), higher-vulnerability
+areas had a 4.3-percentage-point lower adjusted 90-day resolution rate. The
+direction reversed in the later period and in the poverty-rate sensitivity, so
+the analysis did not meet its rule for an additional follow-up lead. We stopped
+at the specified comparison.
+
+The existing 27610 finding is unchanged. The Atlas cannot establish what a
+resolved ticket means or identify everyone who benefits from work at a park.
 
 ## Reproduce the analysis
 
@@ -250,6 +262,13 @@ The 15 automated tests passed at this documentation update. Independent
 calculations also reproduced the adjusted income comparison and all four
 flagged local comparisons. The original income-comparison CSV and JSON outputs
 were unchanged when the local screen was added.
+
+The exploratory Atlas work adds five spatial tests and two outcome-comparison
+tests. Install `requirements-atlas.txt` for the full 22-test suite. Run
+`python atlas_pilot.py` for the geographic checks and `python atlas_outcomes.py`
+for the specified outcome comparison. See the
+[pilot reproduction instructions](docs/atlas-pilot.md#reproduce) for downloading
+or verifying a new county snapshot.
 
 To fetch new source snapshots, run `python refresh_data.py`. Refreshing changes
 the active inputs; rerun the analyses and review the conclusions before reusing
